@@ -5,7 +5,8 @@
     "@angular/cdk": "^13.3.2",
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
-    "@angular/forms": "^13.2.0"
+    "@angular/forms": "^13.2.0",
+    "@xofttion-enterprise/utils": "1.0.5"
   },
   "dependencies": {
     "tslib": "^2.3.0"

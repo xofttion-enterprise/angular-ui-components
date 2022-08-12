@@ -1,0 +1,40 @@
+/*!
+ * Xofttion Themes Styles
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 03/Mar/2022
+ * Updated: 12/Ago/2022
+*/
+
+:root {
+  --font-color-primary: var(--color-dark-800);
+
+  --font-color-secondary: var(--color-dark-400);
+
+  --background-body: var(--color-light-900);
+}
+
+.dark {
+  --font-color-primary: var(--color-light-900);
+
+  --font-color-secondary: var(--color-light-600);
+
+  --background-body: var(--color-dark-800);
+}
+
+body {
+  background: var(--background-body);
+}
+
+.background-body {
+  background: var(--background-body);
+}
+
+.font-primary {
+  color: var(--font-color-primary);
+}
+
+.font-secondary {
+  color: var(--font-color-secondary);
+}

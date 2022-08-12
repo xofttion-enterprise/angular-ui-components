@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { Optional } from '@xofttion-enterprise/utils';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,10 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {}
+export class AppComponent {
+  constructor() {
+    const o = Optional.of('Daniel Castillo Uchiha');
+
+    console.log(o.get());
+  }
+}

@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { Optional } from '@xofttion-enterprise/utils';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,7 @@ import { Optional } from '@xofttion-enterprise/utils';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  constructor() {
-    const o = Optional.of('Daniel Castillo Uchiha');
+  public inputControl = new FormControl('Daniel Andres Castillo');
 
-    console.log(o.get());
-  }
+  constructor() {}
 }

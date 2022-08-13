@@ -1,4 +1,18 @@
-<div class="background-body">
-  <div class="col-sm font-primary">Hola soy Daniel Castillo Pedroza!!</div>
-  <div class="col-sm font-secondary">Hola soy Adrian Castillo Pedroza!!</div>
+<div class="app__content">
+  <xft-text-field
+    label="Nombre completo"
+    [enabled]="false"
+    placeholder="Direccion actual"
+    [inputControl]="inputControl"
+  >
+  </xft-text-field>
+</div>
+
+<div class="app__content dark">
+  <xft-text-field
+    label="Direccion de residencia"
+    placeholder="Direccion actual"
+    [enabled]="true"
+  >
+  </xft-text-field>
 </div>

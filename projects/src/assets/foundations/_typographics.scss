@@ -1,0 +1,352 @@
+/**
+ * Xofttion Typographics Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 13/Ago/2022
+*/
+
+:root {
+  --font-weight-thin: 100;
+
+  --font-weight-extra-light: 200;
+  
+  --font-weight-light: 300;
+
+  --font-weight-regular: 400;
+
+  --font-weight-medium: 500;
+
+  --font-weight-semi-bold: 600;
+
+  --font-weight-bold: 700;
+
+  --font-weight-extra-bold: 800;
+
+  --font-weight-black: 900;
+}
+
+h1, .h1-default {
+  font-size: var(--heading-1-size);
+  letter-spacing: var(--heading-1-letter-spacing);
+  min-height: var(--heading-1-line-height);
+  line-height: var(--heading-1-line-height);
+}
+
+h2, .h2-default {
+  font-size: var(--heading-2-size);
+  letter-spacing: var(--heading-2-letter-spacing);
+  min-height: var(--heading-2-line-height);
+  line-height: var(--heading-2-line-height);
+}
+
+h3, .h3-default {
+  font-size: var(--heading-3-size);
+  letter-spacing: var(--heading-3-letter-spacing);
+  min-height: var(--heading-3-line-height);
+  line-height: var(--heading-3-line-height);
+}
+
+h4, .h4-default {
+  font-size: var(--heading-4-size);
+  letter-spacing: var(--heading-4-letter-spacing);
+  min-height: var(--heading-4-line-height);
+  line-height: var(--heading-4-line-height);
+}
+
+h5, .h5-default {
+  font-size: var(--heading-5-size);
+  letter-spacing: var(--heading-5-letter-spacing);
+  min-height: var(--heading-5-line-height);
+  line-height: var(--heading-5-line-height);
+}
+
+.title1-default {
+  font-size: var(--title-1-size);
+  letter-spacing: var(--title-1-letter-spacing);
+  min-height: var(--title-1-line-height);
+  line-height: var(--title-1-line-height);
+}
+
+.title2-default {
+  font-size: var(--title-2-size);
+  letter-spacing: var(--title-2-letter-spacing);
+  min-height: var(--title-2-line-height);
+  line-height: var(--title-2-line-height);
+}
+
+.body1-default {
+  font-size: var(--body-1-size);
+  letter-spacing: var(--body-1-letter-spacing);
+  min-height: var(--body-1-line-height);
+  line-height: var(--body-1-line-height);
+}
+
+.body2-default {
+  font-size: var(--body-2-size);
+  letter-spacing: var(--body-2-letter-spacing);
+  min-height: var(--body-2-line-height);
+  line-height: var(--body-2-line-height);
+}
+
+.smalltext-default {
+  font-size: var(--smalltext-size);
+  letter-spacing: var(--smalltext-letter-spacing);
+  min-height: var(--smalltext-line-height);
+  line-height: var(--smalltext-line-height);
+}
+
+.caption-default {
+  font-size: var(--caption-size);
+  letter-spacing: var(--caption-letter-spacing);
+  min-height: var(--caption-line-height);
+  line-height: var(--caption-line-height);
+}
+
+.overline-default {
+  font-size: var(--overline-size);
+  letter-spacing: var(--overline-letter-spacing);
+  min-height: var(--overline-line-height);
+  line-height: var(--overline-line-height);
+}
+
+.h1-regular {
+  @extend .h1-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h1-medium {
+  @extend .h1-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h1-semibold {
+  @extend .h1-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h1-bold {
+  @extend .h1-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.h2-regular {
+  @extend .h2-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h2-medium {
+  @extend .h2-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h2-semibold {
+  @extend .h2-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h2-bold {
+  @extend .h2-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.h3-regular {
+  @extend .h3-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h3-medium {
+  @extend .h3-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h3-semibold {
+  @extend .h3-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h3-bold {
+  @extend .h3-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.h4-regular {
+  @extend .h4-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h4-medium {
+  @extend .h4-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h4-semibold {
+  @extend .h4-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h4-bold {
+  @extend .h4-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.h5-regular {
+  @extend .h5-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h5-medium {
+  @extend .h5-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h5-semibold {
+  @extend .h5-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h5-bold {
+  @extend .h5-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.title1-regular {
+  @extend .title1-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.title1-medium {
+  @extend .title1-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.title1-semibold {
+  @extend .title1-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.title1-bold {
+  @extend .title1-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.title2-regular {
+  @extend .title2-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.title2-medium {
+  @extend .title2-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.title2-semibold {
+  @extend .title2-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.title2-bold {
+  @extend .title2-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.body1-regular {
+  @extend .body1-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.body1-medium {
+  @extend .body1-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.body1-semibold {
+  @extend .body1-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.body1-bold {
+  @extend .body1-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.body2-regular {
+  @extend .body2-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.body2-medium {
+  @extend .body2-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.body2-semibold {
+  @extend .body2-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.body2-bold {
+  @extend .body2-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.smalltext-regular {
+  @extend .smalltext-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.smalltext-medium {
+  @extend .smalltext-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.smalltext-semibold {
+  @extend .smalltext-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.smalltext-bold {
+  @extend .smalltext-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.caption-regular {
+  @extend .caption-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.caption-medium {
+  @extend .caption-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.caption-semibold {
+  @extend .caption-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.caption-bold {
+  @extend .caption-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.overline-regular {
+  @extend .overline-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.overline-medium {
+  @extend .overline-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.overline-semibold {
+  @extend .overline-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.overline-bold {
+  @extend .overline-default;
+  font-weight: var(--font-weight-bold);
+}

@@ -1,1 +1,22 @@
-<div class="xft-input-field__content"></div>
+<div
+  class="xft-input-field__content"
+  [class.xft-input-field__content--disabled]="statusField.disabled"
+  [class.xft-input-field__content--active]="statusField.active"
+>
+  <input
+    class="xft-input-field__component"
+    [id]="elementId"
+    [type]="type"
+    [value]="input"
+    autocomplete="off"
+    [placeholder]="placeholder"
+    [disabled]="statusField.disabled"
+    (focus)="onFocus()"
+    (blur)="onBlur()"
+    (input)="onInput($event)"
+  />
+
+  <span class="xft-input-field__value">
+    <ng-content></ng-content>
+  </span>
+</div>

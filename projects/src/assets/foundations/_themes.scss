@@ -1,5 +1,5 @@
 /*!
- * Xofttion Themes Styles
+ * Xofttion Themes Foundations
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
@@ -8,33 +8,49 @@
 */
 
 :root {
-  --font-color-primary: var(--color-dark-800);
+  --color-primary-800: var(--color-light-800);
 
-  --font-color-secondary: var(--color-dark-400);
+  --color-primary-600: var(--color-light-600);
 
-  --background-body: var(--color-light-900);
+  --color-primary-400: var(--color-light-400);
+
+  --color-primary-200: var(--color-light-200);
+  
+  --color-secondary-800: var(--color-dark-800);
+
+  --color-secondary-600: var(--color-dark-600);
+
+  --color-secondary-400: var(--color-dark-400);
+
+  --color-secondary-200: var(--color-dark-200);
 }
 
 .dark {
-  --font-color-primary: var(--color-light-900);
+  --color-primary-800: var(--color-dark-800);
 
-  --font-color-secondary: var(--color-light-600);
+  --color-primary-600: var(--color-dark-600);
 
-  --background-body: var(--color-dark-800);
+  --color-primary-400: var(--color-dark-400);
+
+  --color-primary-200: var(--color-dark-200);
+  
+  --color-secondary-800: var(--color-light-800);
+
+  --color-secondary-600: var(--color-light-600);
+
+  --color-secondary-400: var(--color-light-400);
+
+  --color-secondary-200: var(--color-light-200);
 }
 
 body {
-  background: var(--background-body);
-}
-
-.background-body {
-  background: var(--background-body);
+  background: var(--color-primary-600);
 }
 
 .font-primary {
-  color: var(--font-color-primary);
+  color: var(--color-secondary-800);
 }
 
 .font-secondary {
-  color: var(--font-color-secondary);
+  color: var(--color-secondary-400);
 }

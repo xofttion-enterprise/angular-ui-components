@@ -1,5 +1,5 @@
 /*!
- * Xofttion Colors Styles
+ * Xofttion Colors Foundations
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
@@ -8,23 +8,19 @@
 */
 
 :root {
-  --color-light-900: rgba(255, 255, 255, 1);
+  --color-light-800: rgb(255, 255, 255);
 
-  --color-light-800: rgba(215, 224, 238, 1);
+  --color-light-600: rgb(248, 248, 248);
 
-  --color-light-600: rgba(173, 186, 230, 1);
+  --color-light-400: rgb(241, 242, 243);
 
-  --color-light-400: rgba(85, 95, 131, 1);
+  --color-light-200: rgb(225, 227, 230);
 
-  --color-light-200: rgba(78, 85, 108, 1);
+  --color-dark-800: rgb(55, 71, 79);
 
-  --color-dark-900: rgba(10, 10, 10, 1);
+  --color-dark-600: rgb(90, 100, 116);
 
-  --color-dark-800: rgba(27, 28, 30, 1);
+  --color-dark-400: rgb(117, 125, 138);
 
-  --color-dark-600: rgba(55, 71, 79, 1);
-
-  --color-dark-400: rgba(125, 141, 149, 1);
-
-  --color-dark-200: rgba(205, 205, 205, 1);
+  --color-dark-200: rgb(195, 199, 206);
 }

@@ -1,0 +1,55 @@
+/*!
+ * Xofttion TextField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 13/Ago/2022
+*/
+
+.xft-text-field {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    transition: height 160ms 0ms var(--standard-curve);
+
+    &--disabled {
+      .xft-text-field__body {
+        background: var(--color-primary-400);
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    margin-bottom: var(--size-4);
+    color: var(--color-secondary-400);
+  }
+
+  &__body {
+    padding: var(--size-4) var(--size-6);
+    box-sizing: border-box;
+    border-radius: var(--size-6);
+    border: var(--size-2) solid var(--color-primary-200);
+    background: var(--color-primary-800);
+
+    .xft-input-field {
+      width: 100%;
+    }
+  }
+
+  &__helper {
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    margin-top: var(--size-4);
+    color: var(--color-secondary-400);
+  }
+}

@@ -52,3 +52,13 @@
     background: var(--gradient-theme-700);
   }
 }
+
+.dark {
+  .xft-radiobutton {
+    &__content {
+      &--checked {
+        border: var(--border-size) solid var(--color-theme-300);
+      }
+    }
+  }
+}

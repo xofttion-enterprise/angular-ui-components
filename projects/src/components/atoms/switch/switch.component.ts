@@ -9,12 +9,12 @@ import {
 import { ComponentDOM } from '../../utils/dom';
 
 @Component({
-  selector: 'xft-radiobutton',
-  templateUrl: './radiobutton.component.html',
-  styleUrls: ['./radiobutton.component.scss'],
+  selector: 'xft-switch',
+  templateUrl: './switch.component.html',
+  styleUrls: ['./switch.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RadiobuttonComponent implements OnInit {
+export class SwitchComponent implements OnInit {
   @Input()
   public checked = false;
 
@@ -28,7 +28,7 @@ export class RadiobuttonComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this._componentDOM.addClass('xft-radiobutton');
+    this._componentDOM.addClass('xft-switch');
     this._componentDOM.setAttribute('tabindex', '0');
   }
 }

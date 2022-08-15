@@ -6,6 +6,7 @@ import {
   ButtonComponentModule,
   CheckboxLabelComponentModule,
   RadiobuttonLabelComponentModule,
+  SwitchLabelComponentModule,
   TextFieldComponentModule
 } from 'projects';
 
@@ -16,7 +17,8 @@ import {
     TextFieldComponentModule,
     ButtonComponentModule,
     CheckboxLabelComponentModule,
-    RadiobuttonLabelComponentModule
+    RadiobuttonLabelComponentModule,
+    SwitchLabelComponentModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

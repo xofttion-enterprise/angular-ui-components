@@ -1,0 +1,17 @@
+<div
+  class="xft-switch-label__content"
+  [class.xft-switch-label__content--disabled]="!enabled"
+  (click)="onClickContent()"
+>
+  <xft-switch
+    class="xft-switch-label__component"
+    [id]="elementId"
+    [enabled]="enabled"
+    [checked]="value"
+  >
+  </xft-switch>
+
+  <div class="xft-switch-label__text body2-medium">
+    <ng-content></ng-content>
+  </div>
+</div>

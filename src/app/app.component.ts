@@ -8,7 +8,7 @@ import { FormControl, Validators } from '@angular/forms';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('Daniel Andres Castillo', [
+  public inputControl = new FormControl('Daniel Andrés Castillo Pedroza', [
     Validators.required
   ]);
 

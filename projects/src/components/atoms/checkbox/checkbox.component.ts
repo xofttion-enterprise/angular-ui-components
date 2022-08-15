@@ -16,7 +16,7 @@ import { ComponentDOM } from '../../utils/dom';
 })
 export class CheckboxComponent implements OnInit {
   @Input()
-  public checked = true;
+  public checked = false;
 
   @Input()
   public enabled = true;

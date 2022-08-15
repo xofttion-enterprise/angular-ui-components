@@ -1,4 +1,6 @@
 // Atoms components
+export * from './src/components/atoms/avatar/avatar.component';
+export * from './src/components/atoms/avatar/avatar.component.module';
 export * from './src/components/atoms/button/button.component';
 export * from './src/components/atoms/button/button.component.module';
 export * from './src/components/atoms/checkbox/checkbox.component';
@@ -13,6 +15,8 @@ export * from './src/components/atoms/switch/switch.component';
 export * from './src/components/atoms/switch/switch.component.module';
 
 // Molecules components
+export * from './src/components/molecules/ballot/ballot.component';
+export * from './src/components/molecules/ballot/ballot.component.module';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component.module';
 export * from './src/components/molecules/money-field/money-field.component';

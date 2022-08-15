@@ -1,0 +1,28 @@
+/*!
+ * Xofttion Avatar Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 15/Ago/2022
+ * Updated: 15/Ago/2022
+*/
+
+.xft-avatar {
+  position: relative;
+  float: left;
+  width: var(--size-48);
+  height: var(--size-48);
+  overflow: hidden;
+  border-radius: var(--size-12);
+  background: var(--gradient-theme-700);
+  color: var(--color-light-800);
+
+  &__content {
+    display: flex;
+    height: 100%;
+
+    span {
+      margin: auto;
+    }
+  }
+}

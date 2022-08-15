@@ -1,0 +1,20 @@
+<div
+  class="xft-ballot__content"
+  [class.xft-ballot__content--bordered]="bordered"
+>
+  <xft-avatar class="xft-ballot__avatar" *ngIf="hasAvatar">
+    <span *ngIf="initials"> {{ initials }} </span>
+
+    <img *ngIf="photo" [src]="photo" />
+  </xft-avatar>
+
+  <div class="xft-ballot__component">
+    <label class="xft-ballot__title title2-medium">
+      <ng-content></ng-content>
+    </label>
+
+    <label class="xft-ballot__subtitle body2-regular" *ngIf="subtitle">
+      {{ subtitle }}
+    </label>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import {
+  BallotComponentModule,
   ButtonComponentModule,
   CheckboxLabelComponentModule,
   MoneyFieldComponentModule,
@@ -24,7 +25,8 @@ registerLocaleData(localeCo);
     ButtonComponentModule,
     CheckboxLabelComponentModule,
     RadiobuttonLabelComponentModule,
-    SwitchLabelComponentModule
+    SwitchLabelComponentModule,
+    BallotComponentModule
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],

@@ -15,6 +15,8 @@ export * from './src/components/atoms/switch/switch.component.module';
 // Molecules components
 export * from './src/components/molecules/checkbox-label/checkbox-label.component';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component.module';
+export * from './src/components/molecules/money-field/money-field.component';
+export * from './src/components/molecules/money-field/money-field.component.module';
 export * from './src/components/molecules/radiobutton-label/radiobutton-label.component';
 export * from './src/components/molecules/radiobutton-label/radiobutton-label.component.module';
 export * from './src/components/molecules/switch-label/switch-label.component';

@@ -1,0 +1,127 @@
+/*!
+ * Xofttion Button Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 13/Ago/2022
+*/
+
+.xft-button {
+  position: relative;
+  float: left;
+  padding: 0rem;
+  background: transparent;
+  overflow: hidden;
+  outline: none;
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  &:not(:active) {
+    .xft-button__content::before {
+      animation: ripple-squarecenter 1000ms var(--standard-curve);
+    }
+  }
+
+  &:focus {
+    .xft-button__content::before {
+      visibility: visible;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    height: var(--size-40);
+    line-height: var(--size-40);
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    border-radius: var(--size-8);
+    color: var(--color-theme-700);
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 50%;
+      padding-top: calc(100% - var(--size-32));
+      padding-left: calc(100% - var(--size-32));
+      margin-top: calc(-50% + var(--size-16));
+      margin-left: calc(-50% + var(--size-16));
+      border-radius: 50%;
+      opacity: 0.26;
+      visibility: hidden;
+      transform: scale(0);
+      z-index: var(--z-index-2);
+      background: var(--color-secondary-400);
+    }
+
+    &--flat {
+      background: transparent;
+    }
+
+    &--outline {
+      border: var(--border-size) solid var(--color-theme-500);
+      background: transparent;
+
+      &::before {
+        background-color: var(--color-theme-300);
+      }
+    }
+
+    &--raised {
+      color: var(--color-theme-100);
+      background: var(--gradient-theme-700);
+
+      &::before {
+        background-color: var(--color-theme-100);
+      }
+    }
+  }
+
+  &__icon {
+    margin: auto var(--size-4);
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    margin: auto 0rem;
+    padding: 0rem var(--size-4);
+  }
+}
+
+.dark {
+  .xft-button {
+    &__content {
+      color: var(--color-theme-300);
+
+      &--outline {
+        border: var(--border-size) solid var(--color-theme-300);
+      }
+
+      &--raised {
+        color: var(--color-theme-100);
+      }
+    }
+  }
+}
+
+@keyframes ripple-squarecenter {
+  0% {
+    transform: scale(0);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

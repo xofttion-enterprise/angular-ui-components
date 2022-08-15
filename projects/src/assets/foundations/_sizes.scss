@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 12/Ago/2022
+ * Updated: 14/Ago/2022
 */
 
 :root {
@@ -43,6 +43,8 @@
   --size-60: 3.75rem;
 
   --size-64: 4rem;
+
+  --border-size: 1px;
 }
 
 @supports (padding-top: constant(safe-area-inset-top)) {

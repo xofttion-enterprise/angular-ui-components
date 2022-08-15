@@ -3,7 +3,7 @@
  * v1.0.0
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 10/May/2022
+ * Updated: 13/Ago/2022
 */
 
 :root {
@@ -19,99 +19,40 @@
 
   --z-index-32: 32;
 
-  --z-bottom-lighter-2: 0px 2px 2px rgba(173, 186, 230, 0.4);
+  --z-shadow-1: 0px 4px 2px -2px rgba(27, 46, 94, 0.02);
 
-  --z-bottom-lighter-4: 0px 4px 4px rgba(173, 186, 230, 0.4);
+  --z-shadow-2: 0px 4px 8px -2px rgba(27, 46, 94, 0.04);
 
-  --z-bottom-lighter-8: 0px 8px 8px rgba(173, 186, 230, 0.4);
+  --z-shadow-3: 0px 2px 4px -2px rgba(27, 46, 94, 0.08);
 
-  --z-bottom-lighter-16: 0px 16px 16px rgba(173, 186, 230, 0.4);
+  --z-shadow-4: 0px 4px 8px -6px rgba(27, 46, 94, 0.03),
+    0px 16px 8px -4px rgba(27, 46, 94, 0.03);
 
-  --z-bottom-lighter-24: 0px 24px 24px rgba(173, 186, 230, 0.4);
+  --z-shadow-5: 0px 8px 24px -4px rgba(27, 46, 94, 0.08);
 
-  --z-bottom-lighter-32: 0px 32px 32px rgba(173, 186, 230, 0.4);
+  --z-shadow-6: 0px 8px 24px -4px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-2: 0px -2px 2px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-2: 0px 2px 2px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-4: 0px -4px 4px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-4: 0px 4px 4px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-8: 0px -8px 8px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-8: 0px 8px 8px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-16: 0px -16px 16px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-16: 0px 16px 16px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-24: 0px -24px 24px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-24: 0px 24px 24px rgba(27, 46, 94, 0.12);
 
-  --z-top-lighter-32: 0px -32px 32px rgba(173, 186, 230, 0.4);
+  --z-bottom-light-32: 0px 32px 32px rgba(27, 46, 94, 0.12);
 
-  --z-right-lighter-2: 2px 0px 2px rgba(173, 186, 230, 0.4);
+  --z-bottom-dark-2: 0px 2px 2px rgba(195, 199, 206, 0.4);
 
-  --z-right-lighter-4: 4px 0px 4px rgba(173, 186, 230, 0.4);
+  --z-bottom-dark-4: 0px 4px 4px rgba(225, 227, 230, 0.12);
 
-  --z-right-lighter-8: 8px 0px 8px rgba(173, 186, 230, 0.4);
+  --z-bottom-dark-8: 0px 8px 8px rgba(195, 199, 206, 0.4);
 
-  --z-right-lighter-16: 16px 0px 16px rgba(173, 186, 230, 0.4);
+  --z-bottom-dark-16: 0px 16px 16px rgba(195, 199, 206, 0.4);
 
-  --z-right-lighter-24: 24px 0px 24px rgba(173, 186, 230, 0.4);
+  --z-bottom-dark-24: 0px 24px 24px rgba(195, 199, 206, 0.4);
 
-  --z-right-lighter-32: 32px 0px 32px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-2: -2px 0px 2px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-4: -4px 0px 4px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-8: -8px 0px 8px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-16: -16px 0px 16px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-24: -24px 0px 24px rgba(173, 186, 230, 0.4);
-
-  --z-left-lighter-32: -32px 0px 32px rgba(173, 186, 230, 0.4);
-
-  --z-bottom-darker-2: 0px 2px 2px rgba(0, 36, 111, 0.4);
-
-  --z-bottom-darker-4: 0px 4px 4px rgba(0, 36, 111, 0.4);
-
-  --z-bottom-darker-8: 0px 8px 8px rgba(0, 36, 111, 0.4);
-
-  --z-bottom-darker-16: 0px 16px 16px rgba(0, 36, 111, 0.4);
-
-  --z-bottom-darker-24: 0px 24px 24px rgba(0, 36, 111, 0.4);
-
-  --z-bottom-darker-32: 0px 32px 32px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-2: 0px -2px 2px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-4: 0px -4px 4px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-8: 0px -8px 8px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-16: 0px -16px 16px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-24: 0px -24px 24px rgba(0, 36, 111, 0.4);
-
-  --z-top-darker-32: 0px -32px 32px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-2: 2px 0px 2px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-4: 4px 0px 4px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-8: 8px 0px 8px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-16: 16px 0px 16px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-24: 24px 0px 24px rgba(0, 36, 111, 0.4);
-
-  --z-right-darker-32: 32px 0px 32px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-2: -2px 0px 2px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-4: -4px 0px 4px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-8: -8px 0px 8px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-16: -16px 0px 16px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-24: -24px 0px 24px rgba(0, 36, 111, 0.4);
-
-  --z-left-darker-32: -32px 0px 32px rgba(0, 36, 111, 0.4);
+  --z-bottom-dark-32: 0px 32px 32px rgba(195, 199, 206, 0.4);
 }

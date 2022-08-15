@@ -1,0 +1,19 @@
+<div class="xft-button__content" [class]="classButton">
+  <xft-icon
+    class="xft-button__icon xft-button__icon--prefix"
+    *ngIf="prefixIcon"
+    [value]="prefixIcon"
+  >
+  </xft-icon>
+
+  <span class="xft-button__label body1-semibold">
+    <ng-content></ng-content>
+  </span>
+  
+  <xft-icon
+    class="xft-button__icon xft-button__icon--suffix"
+    *ngIf="suffixIcon"
+    [value]="suffixIcon"
+  >
+  </xft-icon>
+</div>

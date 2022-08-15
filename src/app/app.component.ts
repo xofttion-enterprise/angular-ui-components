@@ -1,5 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +8,8 @@ import { FormControl } from '@angular/forms';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('Daniel Andres Castillo');
+  public inputControl = new FormControl('Daniel Andres Castillo', [Validators.required]);
+  public addressControl = new FormControl('Calle 44a # 5 bis 88', [Validators.required]);
 
   constructor() {}
 }

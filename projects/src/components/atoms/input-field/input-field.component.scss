@@ -72,3 +72,13 @@
     letter-spacing: var(--body-1-letter-spacing);
   }
 }
+
+.dark {
+  .xft-input-field {
+    &__component {
+      &::placeholder {
+        color: var(--color-primary-200);
+      }
+    }
+  }
+}

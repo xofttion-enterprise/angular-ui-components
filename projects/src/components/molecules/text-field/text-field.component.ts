@@ -35,6 +35,9 @@ export class TextFieldComponent implements OnInit {
   @Input()
   public enabled = true;
 
+  @Input()
+  public suffixIcon?: string;
+
   private _componentDOM: ComponentDOM;
 
   private _status: InputFieldStatus;

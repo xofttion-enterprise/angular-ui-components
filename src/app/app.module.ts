@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { TextFieldComponentModule } from 'projects';
+import { ButtonComponentModule, TextFieldComponentModule } from 'projects';
 
 @NgModule({
-  imports: [BrowserModule, ReactiveFormsModule, TextFieldComponentModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    TextFieldComponentModule,
+    ButtonComponentModule
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })

@@ -23,6 +23,20 @@
   --color-secondary-400: var(--color-dark-400);
 
   --color-secondary-200: var(--color-dark-200);
+
+  --color-theme-900: var(--color-xofttion-900);
+
+  --color-theme-700: var(--color-xofttion-700);
+
+  --color-theme-500: var(--color-xofttion-500);
+
+  --color-theme-300: var(--color-xofttion-300);
+
+  --color-theme-100: var(--color-xofttion-100);
+
+  --gradient-theme-900: var(--gradient-xofttion-900);
+
+  --gradient-theme-700: var(--gradient-xofttion-700);
 }
 
 .dark {
@@ -45,12 +59,4 @@
 
 body {
   background: var(--color-primary-600);
-}
-
-.font-primary {
-  color: var(--color-secondary-800);
-}
-
-.font-secondary {
-  color: var(--color-secondary-400);
 }

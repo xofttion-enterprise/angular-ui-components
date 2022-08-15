@@ -3,16 +3,20 @@
     <div class="xft-card__content">
       <xft-text-field
         elementId="name-input"
-        label="Nombre completo"
         placeholder="Digite nombre completo"
         [inputControl]="inputControl"
       >
+        Nombre completo<span>*</span>
       </xft-text-field>
 
-      <xft-text-field elementId="job-input" label="Cargo actual">
+      <xft-text-field elementId="job-input"> Cargo actual </xft-text-field>
+      <xft-text-field elementId="city-input">
+        Ciudad de residencia
       </xft-text-field>
-      <xft-text-field elementId="city-input" label="Ciudad de residencia">
-      </xft-text-field>
+
+      <xft-checkbox-label [enabled]="true">
+        Cliente es preferencial
+      </xft-checkbox-label>
 
       <div class="app__buttons">
         <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">

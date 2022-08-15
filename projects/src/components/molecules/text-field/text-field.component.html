@@ -4,8 +4,12 @@
   [class.xft-text-field__content--error]="status.error"
   [class.xft-text-field__content--disabled]="status.disabled"
 >
-  <label class="xft-text-field__label smalltext-semibold" [for]="elementId">
-    {{ label }}
+  <label
+    class="xft-text-field__label smalltext-semibold"
+    [for]="elementId"
+    *ngIf="label"
+  >
+    <ng-content></ng-content>
   </label>
 
   <div class="xft-text-field__component">

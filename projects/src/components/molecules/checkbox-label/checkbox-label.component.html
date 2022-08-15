@@ -1,0 +1,17 @@
+<div
+  class="xft-checkbox-label__content"
+  [class.xft-checkbox-label__content--disabled]="!enabled"
+  (click)="onClickContent()"
+>
+  <xft-checkbox
+    class="xft-checkbox-label__component"
+    [id]="elementId"
+    [enabled]="enabled"
+    [checked]="value"
+  >
+  </xft-checkbox>
+
+  <div class="xft-checkbox-label__text body2-medium">
+    <ng-content></ng-content>
+  </div>
+</div>

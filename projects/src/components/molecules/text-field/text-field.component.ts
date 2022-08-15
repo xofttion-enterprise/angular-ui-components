@@ -27,7 +27,7 @@ export class TextFieldComponent implements OnInit {
   public type: InputType = 'text';
 
   @Input()
-  public label = '';
+  public label = true;
 
   @Input()
   public placeholder = '';

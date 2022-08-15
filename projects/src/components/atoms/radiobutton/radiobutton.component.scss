@@ -1,0 +1,54 @@
+/*!
+ * Xofttion Radiobutton Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Ago/2022
+*/
+
+.xft-radiobutton {
+  position: relative;
+  float: left;
+  width: var(--size-24);
+  height: var(--size-24);
+  box-sizing: border-box;
+  outline: none;
+
+  &__content {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    border: var(--border-size) solid var(--color-secondary-200);
+    border-radius: 50%;
+    background: var(--color-primary-900);
+
+    &:hover {
+      border: var(--border-size) solid var(--color-theme-500);
+    }
+
+    &--checked {
+      border: var(--border-size) solid var(--color-theme-700);
+
+      .xft-radiobutton__component {
+        transform: scale(1);
+      }
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__component {
+    width: var(--size-12);
+    height: var(--size-12);
+    margin: auto;
+    transform: scale(0);
+    transform-origin: 50% 50%;
+    border-radius: 50%;
+    transition: all 160ms 0ms var(--standard-curve);
+    background: var(--gradient-theme-700);
+  }
+}

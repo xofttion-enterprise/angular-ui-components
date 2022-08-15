@@ -1,0 +1,38 @@
+/*!
+ * Xofttion RadiobuttonLabel Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Ago/2022
+*/
+
+.xft-radiobutton-label {
+  position: relative;
+  float: left;
+  
+  &__content {
+    &--disabled {
+      pointer-events: none;
+
+      .xft-radiobutton-label__text {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__component {
+    margin-right: var(--size-8);
+  }
+
+  &__text {
+    width: calc(100% - var(--size-32));
+    color: var(--color-secondary-400);
+    height: var(--size-24);
+    line-height: var(--size-24);
+    user-select: none;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

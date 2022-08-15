@@ -1,22 +1,37 @@
 <div class="app__content">
   <div class="xft-card">
     <div class="xft-card__content">
-      <xft-text-field
-        elementId="name-input"
-        placeholder="Digite nombre completo"
-        [inputControl]="inputControl"
-      >
+      <xft-text-field elementId="name-input" [inputControl]="inputControl">
         Nombre completo<span>*</span>
       </xft-text-field>
 
-      <xft-text-field elementId="job-input"> Cargo actual </xft-text-field>
-      <xft-text-field elementId="city-input">
-        Ciudad de residencia
+      <xft-text-field elementId="job-input" [inputControl]="jobControl">
+        Cargo actual<span>*</span>
       </xft-text-field>
 
-      <xft-checkbox-label [enabled]="true">
-        Cliente es preferencial
+      <xft-text-field elementId="city-input" [inputControl]="cityControl">
+        Ciudad de residencia<span>*</span>
+      </xft-text-field>
+
+      <xft-checkbox-label class="col-sm" [enabled]="true">
+        Cliente requiere capacitación
       </xft-checkbox-label>
+
+      <xft-radiobutton-label
+        class="col-sm"
+        value="elite"
+        [formControl]="radioControl"
+      >
+        Cliente es élite
+      </xft-radiobutton-label>
+
+      <xft-radiobutton-label
+        class="col-sm"
+        value="preferencial"
+        [formControl]="radioControl"
+      >
+        Cliente es preferencial
+      </xft-radiobutton-label>
 
       <div class="app__buttons">
         <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">

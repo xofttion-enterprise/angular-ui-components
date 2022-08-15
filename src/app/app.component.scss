@@ -6,8 +6,10 @@
   box-sizing: border-box;
   background: var(--color-primary-600);
 
-  .xft-text-field {
-    margin-bottom: var(--size-12);
+  .xft-card__content > * {
+    & + * {
+      margin-top: var(--size-12);
+    }
   }
 }
 

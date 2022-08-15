@@ -8,8 +8,19 @@ import { FormControl, Validators } from '@angular/forms';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('Daniel Andres Castillo', [Validators.required]);
-  public addressControl = new FormControl('Calle 44a # 5 bis 88', [Validators.required]);
+  public inputControl = new FormControl('Daniel Andres Castillo', [
+    Validators.required
+  ]);
+
+  public jobControl = new FormControl('Ingeniero de sistemas', [
+    Validators.required
+  ]);
+
+  public cityControl = new FormControl('Valledupar, Cesar', [
+    Validators.required
+  ]);
+
+  public radioControl = new FormControl(null);
 
   constructor() {}
 }

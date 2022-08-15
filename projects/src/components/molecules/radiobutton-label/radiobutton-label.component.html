@@ -1,0 +1,17 @@
+<div
+  class="xft-radiobutton-label__content"
+  [class.xft-radiobutton-label__content--disabled]="!enabled"
+  (click)="onClickContent()"
+>
+  <xft-radiobutton
+    class="xft-radiobutton-label__component"
+    [id]="elementId"
+    [enabled]="enabled"
+    [checked]="checked"
+  >
+  </xft-radiobutton>
+
+  <div class="xft-radiobutton-label__text body2-medium">
+    <ng-content></ng-content>
+  </div>
+</div>

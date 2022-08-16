@@ -1,3 +1,6 @@
+// Module components
+export * from './src/components/components.module';
+
 // Atoms components
 export * from './src/components/atoms/avatar/avatar.component';
 export * from './src/components/atoms/avatar/avatar.component.module';
@@ -27,3 +30,7 @@ export * from './src/components/molecules/switch-label/switch-label.component';
 export * from './src/components/molecules/switch-label/switch-label.component.module';
 export * from './src/components/molecules/text-field/text-field.component';
 export * from './src/components/molecules/text-field/text-field.component.module';
+
+// Organisms components
+export * from './src/components/organisms/select-field/select-field.component';
+export * from './src/components/organisms/select-field/select-field.component.module';

@@ -1,0 +1,170 @@
+/*!
+ * Xofttion Listfield Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Ago/2022
+*/
+
+.xft-list-field {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    transition: height 160ms 0ms var(--standard-curve);
+
+    &--active {
+      .xft-list-field__label {
+        color: var(--color-theme-500);
+      }
+
+      .xft-list-field__body {
+        background: var(--color-primary-800);
+        border: var(--border-size) solid var(--color-theme-500);
+        box-shadow: 0px 0px 0px 3px var(--color-theme-100);
+      }
+    }
+
+    &--disabled {
+      .xft-list-field__label {
+        opacity: 0.5;
+      }
+
+      .xft-list-field__body {
+        background: var(--color-primary-400);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-bottom: var(--size-4);
+    color: var(--color-secondary-400);
+
+    span {
+      color: var(--color-danger-500);
+    }
+  }
+
+  &__body {
+    display: flex;
+    overflow: hidden;
+    padding: var(--size-6) var(--size-8);
+    box-sizing: border-box;
+    border-radius: var(--size-4);
+    border: var(--border-size) solid var(--color-primary-200);
+    background: var(--color-primary-600);
+  }
+
+  &__control {
+    position: relative;
+    float: left;
+    width: calc(100% - var(--size-28));
+    height: var(--size-24);
+    line-height: var(--size-24);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    color: var(--color-secondary-800);
+    background: transparent;
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-1-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-secondary-200);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__action {
+    width: var(--size-24);
+    height: var(--size-24);
+    padding: 0rem;
+    margin-left: var(--size-4);
+    background: transparent;
+  }
+
+  &__ul {
+    position: absolute;
+    top: var(--size-44);
+    left: 0rem;
+    width: 100%;
+    z-index: 4;
+    opacity: 0;
+    padding: var(--size-8) 0rem;
+    border-radius: 0.5rem;
+    box-sizing: border-box;
+    max-height: 16rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: var(--color-primary-800);
+    box-shadow: var(--z-bottom-light-4);
+    will-change: opacity, transform;
+    transform-origin: 0% 0%;
+    border: var(--border-size) solid var(--color-primary-200);
+    transition: transform 240ms 0ms var(--standard-curve),
+      opacity 240ms 0ms var(--standard-curve);
+
+    &--hide {
+      height: 0rem;
+      opacity: 0;
+      transform: scale(0, 0);
+    }
+
+    &--show {
+      opacity: 1;
+      transform: scale(1, 1);
+    }
+
+    &--higher {
+      top: initial;
+      bottom: var(--size-44);
+      transform-origin: 0% 100%;
+    }
+  }
+
+  &__element {
+    padding: 0rem var(--size-4);
+    box-sizing: border-box;
+    outline: none;
+
+    &:hover {
+      background: var(--color-theme-100);
+    }
+
+    &:not(:hover):focus {
+      background: var(--color-theme-900);
+
+      .xft-ballot {
+        &__title {
+          color: var(--color-light-800);
+        }
+
+        &__subtitle {
+          color: var(--color-theme-100);
+        }
+      }
+    }
+
+    .xft-ballot {
+      &__subtitle {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}

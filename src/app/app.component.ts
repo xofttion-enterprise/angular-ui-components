@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { persons } from './persons';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,8 @@ export class AppComponent {
   ]);
 
   public radioControl = new FormControl(null);
+
+  public persons = persons;
 
   constructor() {}
 }

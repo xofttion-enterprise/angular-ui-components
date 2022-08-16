@@ -54,6 +54,9 @@ export class InputFieldComponent
   public enabled = true;
 
   @Input()
+  public readonly = false;
+
+  @Input()
   public valueFormat = '';
 
   @Output()

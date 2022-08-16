@@ -1,0 +1,110 @@
+/*!
+ * Xofttion DayPicker Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Ago/2022
+*/
+
+.xft-day-picker {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    max-width: 280px;
+    user-select: none;
+  }
+
+  &__header {
+    display: flex;
+    margin-bottom: var(--size-8);
+    background-color: var(--color-theme-100);
+    color: var(--color-secondary-800);
+  }
+
+  &__label {
+    padding: var(--size-12) 0rem;
+    text-align: center;
+    font-size: var(--size-12);
+    font-weight: var(--font-weight-bold);
+  }
+
+  &__week {
+    display: flex;
+  }
+
+  &__day {
+    text-align: center;
+    padding: var(--size-2);
+    box-sizing: border-box;
+
+    &__span {
+      position: relative;
+      display: block;
+      color: var(--color-secondary-800);
+      border-radius: var(--size-8);
+      height: var(--size-32);
+      line-height: var(--size-32);
+      font-size: 0.875rem;
+      font-weight: var(--font-weight-bold);
+
+      &:hover {
+        color: var(--color-light-800);
+        background: var(--color-theme-500);
+      }
+    }
+
+    &--selected {
+      .xft-day-picker__day__span:not(:hover) {
+        color: var(--color-theme-500);
+      }
+    }
+
+    &--forbidden {
+      pointer-events: none;
+      opacity: 0.5;
+
+      span {
+        background: var(--color-primary-200);
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+.dark {
+  .xft-day-picker {
+    &__header {
+      background-color: var(--color-theme-500);
+      color: var(--color-secondary-800);
+    }
+
+    &__day {
+      &__span {
+        &:hover {
+          color: var(--color-light-800);
+          background: var(--color-theme-500);
+        }
+      }
+
+      &--selected {
+        .xft-day-picker__day__span:not(:hover) {
+          color: var(--color-theme-300);
+        }
+      }
+
+      &--forbidden {
+        span {
+          background: var(--color-primary-400);
+        }
+      }
+    }
+  }
+}

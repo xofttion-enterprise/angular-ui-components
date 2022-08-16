@@ -22,6 +22,8 @@ export * from './src/components/molecules/ballot/ballot.component';
 export * from './src/components/molecules/ballot/ballot.component.module';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component.module';
+export * from './src/components/molecules/day-picker/day-picker.component';
+export * from './src/components/molecules/day-picker/day-picker.component.module';
 export * from './src/components/molecules/money-field/money-field.component';
 export * from './src/components/molecules/money-field/money-field.component.module';
 export * from './src/components/molecules/month-picker/month-picker.component';

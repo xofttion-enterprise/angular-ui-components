@@ -1,5 +1,5 @@
 /*!
- * Xofttion YearPicker Component
+ * Xofttion MonthPicker Component
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
@@ -7,61 +7,25 @@
  * Updated: 16/Ago/2022
 */
 
-.xft-year-picker {
+.xft-month-picker {
   position: relative;
   float: left;
+  width: 100%;
+  max-width: 17.5rem;
   box-sizing: border-box;
 
   &__content {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 17.5rem;
-    user-select: none;
-    overflow: hidden;
-  }
-
-  &__header {
-    display: flex;
-    box-sizing: border-box;
-    padding: var(--size-8) var(--size-12);
-    background: var(--color-theme-100);
-    color: var(--color-theme-900);
-  }
-
-  &__title {
-    width: 100%;
-    height: var(--size-32);
-    line-height: var(--size-32);
-    text-align: center;
-    font-weight: var(--font-weight-700);
-  }
-
-  &__action {
-    width: var(--size-32);
-    height: var(--size-32);
-    line-height: var(--size-32);
-
-    button {
-      color: var(--color-theme-900);
-      background: transparent;
-      outline: none;
-      width: inherit;
-      height: inherit;
-    }
-  }
-
-  &__component {
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--size-8);
+    gap: var(--size-4);
     width: 100%;
     float: left;
-    padding: var(--size-8);
+    padding: var(--size-2);
     box-sizing: border-box;
   }
 
-  &__year {
+  &__component {
     position: relative;
     float: left;
     display: flex;
@@ -73,11 +37,12 @@
 
     &:hover {
       background: var(--color-theme-500);
+      border: none;
       color: var(--color-light-800);
     }
 
     &--selected {
-      &:not(:hover):not(.xft-year-picker__component--disabled) {
+      &:not(:hover):not(.xft-month-picker__component--disabled) {
         color: var(--color-theme-700);
         border: 3px solid var(--color-theme-300);
       }
@@ -90,6 +55,7 @@
     }
 
     &__span {
+      font-size: 0.725rem;
       margin: auto;
       cursor: default;
       pointer-events: none;
@@ -99,26 +65,15 @@
 }
 
 .dark {
-  .xft-year-picker {
-    &__header {
-      background: var(--color-theme-700);
-      color: var(--color-theme-100);
-    }
-
-    &__action {
-      button {
-        color: var(--color-theme-100);
-      }
-    }
-
-    &__year {
+  .xft-month-picker {
+    &__component {
       &:hover {
         background: var(--color-theme-300);
         color: var(--color-dark-600);
       }
 
       &--selected {
-        &:not(:hover):not(.xft-year-picker__component--disabled) {
+        &:not(:hover):not(.xft-month-picker__component--disabled) {
           color: var(--color-theme-100);
           border: 3px solid var(--color-theme-500);
         }

@@ -25,7 +25,7 @@ export class AppComponent {
 
   public persons = persons;
 
-  public maxDate = new Date(2011, 1, 1);
+  public maxDate = new Date(2022, 1, 1);
 
   constructor() {}
 }

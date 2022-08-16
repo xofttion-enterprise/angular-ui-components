@@ -1,0 +1,54 @@
+<div
+  class="xft-list-field__content"
+  [class.xft-list-field__content--active]="status.active"
+  [class.xft-list-field__content--disabled]="status.disabled"
+  [class.xft-list-field__content--selected]="isSelected"
+>
+  <label
+    class="xft-list-field__label smalltext-semibold"
+    [for]="elementId"
+    *ngIf="label"
+  >
+    <ng-content></ng-content>
+  </label>
+
+  <div class="xft-list-field__component">
+    <div class="xft-list-field__body">
+      <input
+        class="xft-list-field__control"
+        type="text"
+        [disabled]="!enabled"
+        [value]="suggestion"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        (input)="onInput($event)"
+        (keydown)="onKeydownInput($event)"
+      />
+
+      <button
+        class="xft-list-field__action"
+        [hidden]="!isSelected"
+        (click)="onClickAction()"
+      ></button>
+    </div>
+
+    <ul
+      class="xft-list-field__ul"
+      [class.xft-list-field__ul--show]="status.show"
+      [class.xft-list-field__ul--hide]="status.hide"
+    >
+      <xft-ballot
+        *ngFor="let element of coincidences"
+        class="xft-list-field__element"
+        tabindex="-1"
+        [initials]="element?.initials"
+        [photo]="element?.photo"
+        [subtitle]="element?.subtitle"
+        (click)="onSelect(element)"
+        (keydown)="onKeydownElement($event, element)"
+      >
+        {{ element?.title }}
+      </xft-ballot>
+    </ul>
+  </div>
+</div>

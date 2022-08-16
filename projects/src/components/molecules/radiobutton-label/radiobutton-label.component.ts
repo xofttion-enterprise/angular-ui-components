@@ -58,7 +58,7 @@ export class RadiobuttonLabelComponent implements OnInit, ControlValueAccessor {
     return !!this.formControl && this.formControl.value === this.value;
   }
 
-  public onClickContent(): void {
+  public onClickToggle(): void {
     this.onTouch(this.value);
     this.onChange(this.value);
   }

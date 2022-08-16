@@ -1,17 +1,20 @@
 <div
   class="xft-radiobutton-label__content"
   [class.xft-radiobutton-label__content--disabled]="!enabled"
-  (click)="onClickContent()"
 >
   <xft-radiobutton
     class="xft-radiobutton-label__component"
     [id]="elementId"
     [enabled]="enabled"
     [checked]="checked"
+    (click)="onClickToggle()"
   >
   </xft-radiobutton>
 
-  <div class="xft-radiobutton-label__text body2-medium">
+  <label
+    class="xft-radiobutton-label__text body2-medium"
+    (click)="onClickToggle()"
+  >
     <ng-content></ng-content>
-  </div>
+  </label>
 </div>

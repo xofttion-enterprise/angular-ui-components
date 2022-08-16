@@ -10,6 +10,7 @@
 .xft-list-field {
   position: relative;
   float: left;
+  width: 100%;
   box-sizing: border-box;
 
   &__content {
@@ -90,6 +91,7 @@
   }
 
   &__action {
+    color: var(--color-secondary-800);
     width: var(--size-24);
     height: var(--size-24);
     padding: 0rem;
@@ -142,7 +144,7 @@
     outline: none;
 
     &:hover {
-      background: var(--color-theme-100);
+      background: var(--color-primary-400);
     }
 
     &:not(:hover):focus {

@@ -4,4 +4,6 @@ export interface ListFieldElement {
   photo?: string;
   subtitle?: string;
   title: string;
+
+  isCoincidence(value: string): boolean;
 }

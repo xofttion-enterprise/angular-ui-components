@@ -57,7 +57,7 @@ export class SwitchLabelComponent implements OnInit, ControlValueAccessor {
     return this._value;
   }
 
-  public onClickContent(): void {
+  public onClickToggle(): void {
     this.value = !this._value;
 
     this.onTouch(this.value);

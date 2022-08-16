@@ -8,8 +8,12 @@
 */
 
 xft-select-field {
-  &.xft-list-field {
-    .xft-list-field__action {
+  .xft-list-field {
+    &__control {
+      cursor: default;
+    }
+
+    &__action {
       transition: transform 160ms 0ms var(--sharp-curve);
 
       &--show {

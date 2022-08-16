@@ -26,7 +26,8 @@
   }
 
   &__text {
-    width: calc(100% - var(--size-56));
+    float: left;
+    max-width: calc(100% - var(--size-56));
     color: var(--color-secondary-400);
     height: var(--size-24);
     line-height: var(--size-24);

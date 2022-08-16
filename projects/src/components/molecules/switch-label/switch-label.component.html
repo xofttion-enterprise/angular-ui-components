@@ -1,17 +1,17 @@
 <div
   class="xft-switch-label__content"
   [class.xft-switch-label__content--disabled]="!enabled"
-  (click)="onClickContent()"
 >
   <xft-switch
     class="xft-switch-label__component"
     [id]="elementId"
     [enabled]="enabled"
     [checked]="value"
+    (click)="onClickToggle()"
   >
   </xft-switch>
 
-  <div class="xft-switch-label__text body2-medium">
+  <label class="xft-switch-label__text body2-medium" (click)="onClickToggle()">
     <ng-content></ng-content>
-  </div>
+  </label>
 </div>

@@ -1,0 +1,78 @@
+<div class="xft-date-picker__content">
+  <div class="xft-date-picker__header">
+    <div class="xft-date-picker__title xft-date-picker__title--description">
+      <span (click)="onClickDay()">
+        {{ title }}
+      </span>
+    </div>
+    <div class="xft-date-picker__title xft-date-picker__title--year">
+      <span (click)="onClickYear()">
+        {{ year }}
+      </span>
+    </div>
+    <div class="xft-date-picker__title xft-date-picker__title--month">
+      <span (click)="onClickMonth()">
+        {{ month }}
+      </span>
+    </div>
+  </div>
+
+  <div class="xft-date-picker__component" [formGroup]="date">
+    <xft-day-picker
+      [formControl]="date.day"
+      [date]="value"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [hidden]="!visibility.day"
+    >
+    </xft-day-picker>
+
+    <xft-month-picker
+      [formControl]="date.month"
+      [date]="value"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [hidden]="!visibility.month"
+    >
+    </xft-month-picker>
+
+    <xft-year-picker
+      [formControl]="date.year"
+      [minDate]="minDate"
+      [maxDate]="maxDate"
+      [hidden]="!visibility.year"
+    >
+    </xft-year-picker>
+  </div>
+
+  <div
+    class="xft-date-picker__footer"
+    [class.xft-date-picker__footer--hidden]="automatic"
+  >
+    <div class="xft-date-picker__actions">
+      <button
+        xft-button="outline"
+        class="xft-date-picker__button xft-date-picker__button--cancel"
+        (click)="onCancel()"
+      >
+        <span>Cancelar</span>
+      </button>
+
+      <button
+        xft-button="outline"
+        class="xft-date-picker__button xft-date-picker__button--today"
+        (click)="onToday()"
+      >
+        <span>Fecha actual</span>
+      </button>
+
+      <button
+        xft-button="raised"
+        class="xft-date-picker__button xft-date-picker__button--ok"
+        (click)="onSelect()"
+      >
+        <span>Establecer</span>
+      </button>
+    </div>
+  </div>
+</div>

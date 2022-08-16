@@ -40,5 +40,7 @@ export * from './src/components/molecules/year-picker/year-picker.component.modu
 // Organisms components
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component';
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component.module';
+export * from './src/components/organisms/date-picker/date-picker.component';
+export * from './src/components/organisms/date-picker/date-picker.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';

@@ -21,8 +21,8 @@
   &__header {
     display: flex;
     margin-bottom: var(--size-8);
-    background-color: var(--color-theme-100);
-    color: var(--color-secondary-800);
+    background: var(--color-theme-100);
+    color: var(--color-dark-600);
   }
 
   &__label {
@@ -59,7 +59,8 @@
 
     &--selected {
       .xft-day-picker__day__span:not(:hover) {
-        color: var(--color-theme-500);
+        background: var(--color-theme-300);
+        color: var(--color-dark-800);
       }
     }
 
@@ -82,21 +83,22 @@
 .dark {
   .xft-day-picker {
     &__header {
-      background-color: var(--color-theme-500);
-      color: var(--color-secondary-800);
+      background: var(--color-theme-900);
+      color: var(--color-light-800);
     }
 
     &__day {
       &__span {
         &:hover {
-          color: var(--color-light-800);
-          background: var(--color-theme-500);
+          background: var(--color-theme-300);
+          color: var(--color-dark-600);
         }
       }
 
       &--selected {
         .xft-day-picker__day__span:not(:hover) {
-          color: var(--color-theme-300);
+          color: var(--color-light-800);
+          background: var(--color-theme-700);
         }
       }
 

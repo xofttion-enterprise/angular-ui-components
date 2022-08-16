@@ -24,8 +24,8 @@
     display: flex;
     box-sizing: border-box;
     padding: var(--size-8) var(--size-12);
+    color: var(--color-dark-600);
     background: var(--color-theme-100);
-    color: var(--color-theme-900);
   }
 
   &__title {
@@ -42,11 +42,15 @@
     line-height: var(--size-32);
 
     button {
-      color: var(--color-theme-900);
+      color: var(--color-dark-600);
       background: transparent;
       outline: none;
       width: inherit;
       height: inherit;
+
+      &:disabled {
+        opacity: 0.5;
+      }
     }
   }
 
@@ -77,9 +81,9 @@
     }
 
     &--selected {
-      &:not(:hover):not(.xft-year-picker__component--disabled) {
-        color: var(--color-theme-700);
-        border: 3px solid var(--color-theme-300);
+      &:not(:hover) {
+        background: var(--color-theme-300);
+        color: var(--color-dark-800);
       }
     }
 
@@ -101,13 +105,13 @@
 .dark {
   .xft-year-picker {
     &__header {
-      background: var(--color-theme-700);
-      color: var(--color-theme-100);
+      background: var(--color-theme-900);
+      color: var(--color-light-800);
     }
 
     &__action {
       button {
-        color: var(--color-theme-100);
+        color: var(--color-light-800);
       }
     }
 
@@ -118,9 +122,9 @@
       }
 
       &--selected {
-        &:not(:hover):not(.xft-year-picker__component--disabled) {
-          color: var(--color-theme-100);
-          border: 3px solid var(--color-theme-500);
+        &:not(:hover) {
+          background: var(--color-theme-700);
+          color: var(--color-light-800);
         }
       }
     }

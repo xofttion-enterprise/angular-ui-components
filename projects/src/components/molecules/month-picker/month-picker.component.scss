@@ -37,20 +37,18 @@
 
     &:hover {
       background: var(--color-theme-500);
-      border: none;
       color: var(--color-light-800);
     }
 
     &--selected {
-      &:not(:hover):not(.xft-month-picker__component--disabled) {
-        color: var(--color-theme-700);
-        border: 3px solid var(--color-theme-300);
+      &:not(:hover) {
+        background: var(--color-theme-300);
+        color: var(--color-dark-800);
       }
     }
 
     &--disabled {
       pointer-events: none;
-      border: none;
       opacity: 0.5;
     }
 
@@ -73,9 +71,9 @@
       }
 
       &--selected {
-        &:not(:hover):not(.xft-month-picker__component--disabled) {
-          color: var(--color-theme-100);
-          border: 3px solid var(--color-theme-500);
+        &:not(:hover) {
+          background: var(--color-theme-700);
+          color: var(--color-light-800);
         }
       }
     }

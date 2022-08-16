@@ -30,7 +30,11 @@ export * from './src/components/molecules/switch-label/switch-label.component';
 export * from './src/components/molecules/switch-label/switch-label.component.module';
 export * from './src/components/molecules/text-field/text-field.component';
 export * from './src/components/molecules/text-field/text-field.component.module';
+export * from './src/components/molecules/year-picker/year-picker.component';
+export * from './src/components/molecules/year-picker/year-picker.component.module';
 
 // Organisms components
+export * from './src/components/organisms/autocomplete-field/autocomplete-field.component';
+export * from './src/components/organisms/autocomplete-field/autocomplete-field.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';

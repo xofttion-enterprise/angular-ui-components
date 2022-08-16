@@ -52,10 +52,6 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     return !!this.value;
   }
 
-  public onClickValue(): void {
-    this.focusInput();
-  }
-
   public override onFocus(): void {
     super.onFocus();
 

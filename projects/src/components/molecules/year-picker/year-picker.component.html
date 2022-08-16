@@ -1,0 +1,36 @@
+<div
+  class="xft-year-picker__content"
+  [class.xft-year-picker__content--disabled]="status.disabled"
+>
+  <div class="xft-year-picker__header">
+    <div class="xft-year-picker__action xft-year-picker__action--prev">
+      <button [disabled]="isPrevDisabled" (click)="onClickPrev()">
+        <xft-icon value="arrow-ios-left"></xft-icon>
+      </button>
+    </div>
+
+    <div class="xft-year-picker__title">
+      <label class="title1-bold">{{ minYearRange }} - {{ maxYearRange }}</label>
+    </div>
+
+    <div class="xft-year-picker__action xft-year-picker__action--next">
+      <button [disabled]="isNextDisabled" (click)="onClickNext()">
+        <xft-icon value="arrow-ios-right"></xft-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="xft-year-picker__component">
+    <div
+      *ngFor="let year of years"
+      class="xft-year-picker__year"
+      [class.xft-year-picker__year--selected]="year.status.selected"
+      [class.xft-year-picker__year--disabled]="year.status.disabled"
+      (click)="onClickYear(year)"
+    >
+      <span class="xft-year-picker__year__span body1-medium">
+        {{ year.value || '????' }}
+      </span>
+    </div>
+  </div>
+</div>

@@ -5,6 +5,7 @@ import { MoneyFieldComponentModule } from './money-field/money-field.component.m
 import { RadiobuttonLabelComponentModule } from './radiobutton-label/radiobutton-label.component.module';
 import { SwitchLabelComponentModule } from './switch-label/switch-label.component.module';
 import { TextFieldComponentModule } from './text-field/text-field.component.module';
+import { YearPickerComponentModule } from './year-picker/year-picker.component.module';
 
 const components = [
   BallotComponentModule,
@@ -12,7 +13,8 @@ const components = [
   MoneyFieldComponentModule,
   RadiobuttonLabelComponentModule,
   SwitchLabelComponentModule,
-  TextFieldComponentModule
+  TextFieldComponentModule,
+  YearPickerComponentModule
 ];
 
 @NgModule({

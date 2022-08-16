@@ -1,15 +1,9 @@
 <div class="app__content">
   <div class="xft-card">
     <div class="xft-card__content">
-      <xft-ballot initials="16%" subtitle="ADL Digital Labs" [bordered]="true">
-        Daniel Andrés Castillo Pedroza
-      </xft-ballot>
+      <xft-year-picker [maxDate]="maxDate"></xft-year-picker>
 
-      <xft-ballot photo="../assets/cr7.jpg" subtitle="Real Madrid C.F.">
-        Cristiano Ronaldo Aveiro
-      </xft-ballot>
-
-      <xft-autocomplete-field [suggestions]="persons"> 
+      <xft-autocomplete-field [suggestions]="persons">
         Seleccionar ingeniero para el puesto
       </xft-autocomplete-field>
 
@@ -29,7 +23,7 @@
         Salario <span>(COP)</span>
       </xft-money-field>
 
-      <xft-select-field [suggestions]="persons"> 
+      <xft-select-field [suggestions]="persons">
         Seleccionar ingeniero para el puesto
       </xft-select-field>
 

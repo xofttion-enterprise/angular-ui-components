@@ -9,30 +9,16 @@
 
 xft-autocomplete-field {
   .xft-list-field {
-    &--selected {
-      .xft-input-field {
-        &__control {
-          width: calc(100% - var(--size-52));
+    &__content {
+      &--selected {
+        .xft-list-field__control {
+          width: calc(100% - var(--size-28));
         }
       }
     }
-  }
-
-  .xft-input-field {
-    &--disabled {
-      .xft-input-field__icon {
-        color: var(--font-color-disabled);
-        cursor: not-allowed;
-        pointer-events: none;
-      }
-    }
-
-    &__label {
-      cursor: text;
-    }
 
     &__control {
-      cursor: text;
+      width: 100%;
     }
   }
 }

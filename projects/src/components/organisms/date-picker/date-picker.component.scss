@@ -69,7 +69,7 @@
   }
 
   &__actions {
-    padding: var(--size-8);
+    padding: var(--size-8) var(--size-16) var(--size-12) var(--size-16);
     box-sizing: border-box;
     overflow: hidden;
   }

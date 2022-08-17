@@ -42,5 +42,8 @@ export * from './src/components/organisms/autocomplete-field/autocomplete-field.
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component.module';
 export * from './src/components/organisms/date-picker/date-picker.component';
 export * from './src/components/organisms/date-picker/date-picker.component.module';
+export * from './src/components/organisms/modal/modal.component';
+export * from './src/components/organisms/modal/modal.component.service';
+export * from './src/components/organisms/modal/modal.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';

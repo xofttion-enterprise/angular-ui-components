@@ -1,5 +1,4 @@
 <div class="app__content">
-  <xft-date-picker [maxDate]="maxDate"></xft-date-picker>
   <div class="xft-card">
     <div class="xft-card__content">
       <xft-autocomplete-field [suggestions]="persons">
@@ -58,7 +57,9 @@
         <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">
           Eliminar
         </button>
-        <button xft-button="raised" [disabled]="false">Registrar</button>
+        <button xft-button="raised" [disabled]="false" (click)="openModal()">
+          Registrar
+        </button>
       </div>
     </div>
   </div>

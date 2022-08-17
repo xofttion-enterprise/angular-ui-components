@@ -14,13 +14,19 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {
+  changeDay,
+  changeMonth,
+  changeYear,
   getDateFormat,
   getDateWeight,
   MONTHS_NAME
 } from '@xofttion-enterprise/utils';
 import { Subscription } from 'rxjs';
-import { DateFactory } from '../../molecules/day-picker/day-utils';
 import { ComponentDOM } from '../../utils/dom';
+import {
+  ModalOverlayComponent,
+  OnModalOverlay
+} from '../modal/modal.component.service';
 import { DatePickerForm } from './date-picker.form';
 import { DatePickerListener, DatePickerListenerName } from './date-utils';
 
@@ -48,7 +54,12 @@ interface ComponentVisibility {
   ]
 })
 export class DatePickerComponent
-  implements OnInit, OnDestroy, AfterViewChecked, ControlValueAccessor
+  implements
+    OnInit,
+    OnDestroy,
+    AfterViewChecked,
+    ControlValueAccessor,
+    OnModalOverlay<DatePickerComponent>
 {
   @Input()
   public enabled = true;
@@ -69,6 +80,8 @@ export class DatePickerComponent
   public listener: EventEmitter<DatePickerListener>;
 
   private _componentDOM: ComponentDOM;
+
+  private _overlayComponent?: ModalOverlayComponent<DatePickerComponent>;
 
   public value: Date;
 
@@ -112,21 +125,21 @@ export class DatePickerComponent
     this._componentDOM.addClass('xft-date-picker');
 
     const yearSubscription = this.date.yearSubscribe((year) => {
-      const newValue = DateFactory.setYear(this.value, year);
+      const newValue = changeYear(this.value, year);
 
       this._setValue(newValue);
       this._showComponent('day');
     });
 
     const monthSubscription = this.date.monthSubscribe((month) => {
-      const newValue = DateFactory.setMonth(this.value, month);
+      const newValue = changeMonth(this.value, month);
 
       this._setValue(newValue);
       this._showComponent('day');
     });
 
     const daySubscription = this.date.daySubscribe((day) => {
-      const newValue = DateFactory.setDay(this.value, day);
+      const newValue = changeDay(this.value, day);
 
       this._setValue(newValue);
 
@@ -147,6 +160,12 @@ export class DatePickerComponent
 
   public ngAfterViewChecked(): void {
     this._changedDetectorRef.detectChanges();
+  }
+
+  public ngOnOverlay(
+    overlayComponent: ModalOverlayComponent<DatePickerComponent>
+  ): void {
+    this._overlayComponent = overlayComponent;
   }
 
   public get title(): string {
@@ -197,6 +216,8 @@ export class DatePickerComponent
 
   private _emitListener(name: DatePickerListenerName, value?: Date): void {
     this.listener.emit({ name, value });
+
+    this._overlayComponent?.close(); // Ocultando modal
   }
 
   private _showComponent(key: string): void {

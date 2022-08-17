@@ -128,14 +128,14 @@ export class DatePickerComponent
       const newValue = changeYear(this.value, year);
 
       this._setValue(newValue);
-      this._showComponent('day');
+      this._show('day');
     });
 
     const monthSubscription = this.date.monthSubscribe((month) => {
       const newValue = changeMonth(this.value, month);
 
       this._setValue(newValue);
-      this._showComponent('day');
+      this._show('day');
     });
 
     const daySubscription = this.date.daySubscribe((day) => {
@@ -181,15 +181,15 @@ export class DatePickerComponent
   }
 
   public onClickDay(): void {
-    this._showComponent('day');
+    this._show('day');
   }
 
   public onClickMonth(): void {
-    this._showComponent('month');
+    this._show('month');
   }
 
   public onClickYear(): void {
-    this._showComponent('year');
+    this._show('year');
   }
 
   public onSelect(): void {
@@ -217,10 +217,12 @@ export class DatePickerComponent
   private _emitListener(name: DatePickerListenerName, value?: Date): void {
     this.listener.emit({ name, value });
 
-    this._overlayComponent?.close(); // Ocultando modal
+    this._overlayComponent?.emit({ key: name, value });
+
+    this._overlayComponent?.close();
   }
 
-  private _showComponent(key: string): void {
+  private _show(key: string): void {
     Object.keys(this.visibility).forEach((keyComponent) => {
       (this.visibility as any)[keyComponent] = false;
     });

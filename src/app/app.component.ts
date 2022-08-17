@@ -1,10 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import {
-  DatePickerComponent,
-  ModalComponentService,
-  ModalOverlayComponent
-} from 'projects';
+import { ModalComponentService } from 'projects';
 import { persons } from './persons';
 
 @Component({
@@ -32,13 +28,5 @@ export class AppComponent {
 
   public maxDate = new Date(2024, 1, 1);
 
-  private _modalDate: ModalOverlayComponent<DatePickerComponent>;
-
-  constructor(private modalService: ModalComponentService) {
-    this._modalDate = this.modalService.build(DatePickerComponent);
-  }
-
-  public openModal(): void {
-    this._modalDate.open();
-  }
+  constructor(private modalService: ModalComponentService) {}
 }

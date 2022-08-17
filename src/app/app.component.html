@@ -1,6 +1,8 @@
 <div class="app__content">
   <div class="xft-card">
     <div class="xft-card__content">
+      <xft-date-field>Fecha de ingreso</xft-date-field>
+
       <xft-autocomplete-field [suggestions]="persons">
         Seleccionar ingeniero para el puesto
       </xft-autocomplete-field>
@@ -57,7 +59,7 @@
         <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">
           Eliminar
         </button>
-        <button xft-button="raised" [disabled]="false" (click)="openModal()">
+        <button xft-button="raised" [disabled]="false">
           Registrar
         </button>
       </div>

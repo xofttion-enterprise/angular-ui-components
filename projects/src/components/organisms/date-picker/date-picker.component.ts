@@ -6,21 +6,20 @@ import {
   EventEmitter,
   forwardRef,
   Input,
-  OnChanges,
   OnDestroy,
   OnInit,
   Output,
   Renderer2,
-  SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { Subscription } from 'rxjs';
 import {
-  DateFactory,
-  DateParams,
-  DateUtils
-} from '../../molecules/day-picker/day-utils';
+  getDateFormat,
+  getDateWeight,
+  MONTHS_NAME
+} from '@xofttion-enterprise/utils';
+import { Subscription } from 'rxjs';
+import { DateFactory } from '../../molecules/day-picker/day-utils';
 import { ComponentDOM } from '../../utils/dom';
 import { DatePickerForm } from './date-picker.form';
 import { DatePickerListener, DatePickerListenerName } from './date-utils';
@@ -151,7 +150,7 @@ export class DatePickerComponent
   }
 
   public get title(): string {
-    return DateUtils.format(this.value, 'DW, MX DD de AA');
+    return getDateFormat(this.value, 'dw, mx dd de aa');
   }
 
   public get year(): string {
@@ -159,7 +158,7 @@ export class DatePickerComponent
   }
 
   public get month(): string {
-    return DateParams.months.year[this.value.getMonth()];
+    return MONTHS_NAME[this.value.getMonth()];
   }
 
   public onClickDay(): void {
@@ -234,25 +233,15 @@ export class DatePickerComponent
   }
 
   private _isOverflowMin(date: Date): boolean {
-    if (this.minDate) {
-      const weightDate = DateUtils.weight(date);
-      const weightMinDate = DateUtils.weight(this.minDate);
-
-      return weightDate < weightMinDate;
-    }
-
-    return false;
+    return this.minDate
+      ? getDateWeight(date) < getDateWeight(this.minDate)
+      : false;
   }
 
   private _isOverflowMax(date: Date): boolean {
-    if (this.maxDate) {
-      const weightDate = DateUtils.weight(date);
-      const weightMaxDate = DateUtils.weight(this.maxDate);
-
-      return weightDate > weightMaxDate;
-    }
-
-    return false;
+    return this.maxDate
+      ? getDateWeight(date) > getDateWeight(this.maxDate)
+      : false;
   }
 
   public writeValue(value?: Date): void {

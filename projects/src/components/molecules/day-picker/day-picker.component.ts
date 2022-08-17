@@ -10,11 +10,14 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
+import {
+  DAYS_NAME_MIN,
+  getDateWeight,
+  getDaysMonth
+} from '@xofttion-enterprise/utils';
 import { ComponentDOM } from '../../utils/dom';
 import {
   DateFactory,
-  DateParams,
-  DateUtils,
   DayModel,
   DayPickerStatus,
   DayToModel,
@@ -55,7 +58,7 @@ export class DayPickerComponent
 
   public status: DayPickerStatus;
 
-  public titles: Array<string>;
+  public titles = DAYS_NAME_MIN;
 
   public weeks: Array<WeekModel> = [];
 
@@ -67,8 +70,6 @@ export class DayPickerComponent
 
   constructor(private _ref: ElementRef, private _renderer: Renderer2) {
     this._componentDOM = ComponentDOM.build(this._ref, this._renderer);
-
-    this.titles = DateParams.days.weekmin;
 
     this.date = new Date();
 
@@ -255,10 +256,7 @@ export class DayPickerComponent
   }
 
   private _getDaysMonth(): number {
-    const year = this.date.getFullYear();
-    const month = this.date.getMonth();
-
-    return DateUtils.getDaysMonth(year, month);
+    return getDaysMonth(this.date.getFullYear(), this.date.getMonth());
   }
 
   private _getDayModel(value?: number): DayModel {
@@ -275,10 +273,7 @@ export class DayPickerComponent
     if (this.minDate) {
       const newDate = DateFactory.setDay(date, day);
 
-      const weightDate = DateUtils.weight(newDate);
-      const weightMinDate = DateUtils.weight(this.minDate);
-
-      return weightDate < weightMinDate;
+      return getDateWeight(newDate) < getDateWeight(this.minDate);
     }
 
     return false;
@@ -288,10 +283,7 @@ export class DayPickerComponent
     if (this.maxDate) {
       const newDate = DateFactory.setDay(date, day);
 
-      const weightDate = DateUtils.weight(newDate);
-      const weightMaxDate = DateUtils.weight(this.maxDate);
-
-      return weightDate > weightMaxDate;
+      return getDateWeight(newDate) > getDateWeight(this.maxDate);
     }
 
     return false;

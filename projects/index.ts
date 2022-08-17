@@ -16,6 +16,7 @@ export * from './src/components/atoms/radiobutton/radiobutton.component';
 export * from './src/components/atoms/radiobutton/radiobutton.component.module';
 export * from './src/components/atoms/switch/switch.component';
 export * from './src/components/atoms/switch/switch.component.module';
+export * from './src/components/atoms/atoms.module';
 
 // Molecules components
 export * from './src/components/molecules/ballot/ballot.component';
@@ -36,6 +37,7 @@ export * from './src/components/molecules/text-field/text-field.component';
 export * from './src/components/molecules/text-field/text-field.component.module';
 export * from './src/components/molecules/year-picker/year-picker.component';
 export * from './src/components/molecules/year-picker/year-picker.component.module';
+export * from './src/components/molecules/molecules.module';
 
 // Organisms components
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component';
@@ -49,3 +51,4 @@ export * from './src/components/organisms/modal/modal.component.service';
 export * from './src/components/organisms/modal/modal.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';
+export * from './src/components/organisms/organisms.module';

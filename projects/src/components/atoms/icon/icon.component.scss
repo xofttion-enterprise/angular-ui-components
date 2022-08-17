@@ -1,0 +1,24 @@
+/*!
+ * Xofttion Icon Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 14/Ago/2022
+*/
+
+.xft-icon {
+  position: relative;
+  float: left;
+  width: var(--size-24);
+  height: var(--size-24);
+  font-size: var(--size-24);
+
+  i {
+    color: inherit;
+    float: left;
+    width: 100%;
+    height: 100%;
+    font-size: inherit;
+  }
+}

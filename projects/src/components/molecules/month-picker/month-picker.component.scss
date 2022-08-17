@@ -1,0 +1,81 @@
+/*!
+ * Xofttion MonthPicker Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Ago/2022
+*/
+
+.xft-month-picker {
+  position: relative;
+  float: left;
+  width: 100%;
+  max-width: 17.5rem;
+  box-sizing: border-box;
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-4);
+    width: 100%;
+    float: left;
+    padding: var(--size-2);
+    box-sizing: border-box;
+  }
+
+  &__component {
+    position: relative;
+    float: left;
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    height: var(--size-36);
+    border-radius: var(--size-8);
+    color: var(--color-secondary-800);
+
+    &:hover {
+      background: var(--color-theme-500);
+      color: var(--color-light-800);
+    }
+
+    &--selected {
+      &:not(:hover) {
+        background: var(--color-theme-300);
+        color: var(--color-dark-800);
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    &__span {
+      font-size: 0.725rem;
+      margin: auto;
+      cursor: default;
+      pointer-events: none;
+      font-weight: var(--font-weight-semi-bold);
+    }
+  }
+}
+
+.dark {
+  .xft-month-picker {
+    &__component {
+      &:hover {
+        background: var(--color-theme-300);
+        color: var(--color-dark-600);
+      }
+
+      &--selected {
+        &:not(:hover) {
+          background: var(--color-theme-700);
+          color: var(--color-light-800);
+        }
+      }
+    }
+  }
+}

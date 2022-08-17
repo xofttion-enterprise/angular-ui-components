@@ -1,0 +1,24 @@
+/*!
+ * Xofttion AutocompleteField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 01/May/2022
+*/
+
+xft-autocomplete-field {
+  .xft-list-field {
+    &__content {
+      &--selected {
+        .xft-list-field__control {
+          width: calc(100% - var(--size-28));
+        }
+      }
+    }
+
+    &__control {
+      width: 100%;
+    }
+  }
+}

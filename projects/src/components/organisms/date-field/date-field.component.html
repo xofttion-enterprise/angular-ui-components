@@ -1,0 +1,34 @@
+<div
+  class="xft-date-field__content"
+  [class.xft-date-field--active]="status.active"
+  [class.xft-date-field--disabled]="status.disabled"
+  [class.xft-date-field--selected]="!!value"
+>
+  <label
+    class="xft-date-field__label smalltext-semibold"
+    [for]="elementId"
+    *ngIf="label"
+  >
+    <ng-content></ng-content>
+  </label>
+
+  <div class="xft-date-field__component">
+    <div class="xft-date-field__body">
+      <input
+        class="xft-date-field__control"
+        type="text"
+        [value]="description"
+        [disabled]="status.disabled"
+        readonly="true"
+        (focus)="onFocus()"
+        (blur)="onBlur()"
+        (click)="onClickInput()"
+        (keydown)="onKeydownInput($event)"
+      />
+
+      <button class="xft-list-field__action" (click)="onClickAction()">
+        <xft-icon [value]="iconAction"></xft-icon>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="xft-day-picker__content">
+  <div class="xft-day-picker__header">
+    <div class="xft-day-picker__label" *ngFor="let dayLabel of titles">
+      {{ dayLabel }}
+    </div>
+  </div>
+
+  <div class="xft-day-picker__component">
+    <div class="xft-day-picker__week" *ngFor="let week of weeks">
+      <div
+        class="xft-day-picker__day"
+        *ngFor="let day of week.days"
+        [class.xft-day-picker__day--selected]="isSelected(day)"
+        [class.xft-day-picker__day--forbidden]="day.status.forbidden"
+        [class.xft-day-picker__day--disabled]="day.status.disabled"
+        (click)="onClickDay(day)"
+      >
+        <span class="xft-day-picker__day__span">
+          {{ day.value || '??' }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

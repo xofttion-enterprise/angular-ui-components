@@ -1,0 +1,138 @@
+/*!
+ * Xofttion Colors Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 03/Mar/2022
+ * Updated: 12/Ago/2022
+*/
+
+:root {
+  --color-light-800: rgb(255, 255, 255);
+
+  --color-light-600: rgb(248, 248, 248);
+
+  --color-light-400: rgb(241, 242, 243);
+
+  --color-light-200: rgb(225, 227, 230);
+
+  --color-dark-800: rgb(55, 71, 79);
+
+  --color-dark-600: rgb(90, 100, 116);
+
+  --color-dark-400: rgb(117, 125, 138);
+
+  --color-dark-200: rgb(195, 199, 206);
+
+  /** Palette colors */
+
+  --color-xofttion-900: rgb(59, 71, 113);
+
+  --color-xofttion-700: rgb(85, 108, 192);
+
+  --color-xofttion-500: rgb(105, 137, 254);
+
+  --color-xofttion-300: rgb(168, 186, 254);
+
+  --color-xofttion-100: rgb(231, 236, 254);
+
+  --gradient-xofttion-900: linear-gradient(
+    180deg,
+    var(--color-xofttion-500) 0%,
+    var(--color-xofttion-900) 100%
+  );
+
+  --gradient-xofttion-700: linear-gradient(
+    180deg,
+    var(--color-xofttion-500) 0%,
+    var(--color-xofttion-700) 100%
+  );
+
+  --color-success-900: rgb(24, 85, 75);
+
+  --color-success-700: rgb(15, 137, 116);
+
+  --color-success-500: rgb(8, 178, 149);
+
+  --color-success-300: rgb(111, 210, 193);
+
+  --color-success-100: rgb(215, 242, 238);
+
+  --gradient-success-900: linear-gradient(
+    180deg,
+    var(--color-success-500) 0%,
+    var(--color-success-900) 100%
+  );
+
+  --gradient-success-700: linear-gradient(
+    180deg,
+    var(--color-success-500) 0%,
+    var(--color-success-700) 100%
+  );
+
+  --color-info-900: rgb(22, 77, 113);
+
+  --color-info-700: rgb(10, 120, 193);
+
+  --color-info-500: rgb(1, 154, 255);
+
+  --color-info-300: rgb(107, 196, 255);
+
+  --color-info-100: rgb(214, 238, 255);
+
+  --gradient-info-900: linear-gradient(
+    180deg,
+    var(--color-info-500) 0%,
+    var(--color-info-900) 100%
+  );
+
+  --gradient-info-700: linear-gradient(
+    180deg,
+    var(--color-info-500) 0%,
+    var(--color-info-700) 100%
+  );
+
+  --color-warning-900: rgb(112, 81, 48);
+
+  --color-warning-700: rgb(190, 128, 62);
+
+  --color-warning-500: rgb(252, 165, 73);
+
+  --color-warning-300: rgb(253, 202, 149);
+
+  --color-warning-100: rgb(254, 240, 225);
+
+  --gradient-warning-900: linear-gradient(
+    180deg,
+    var(--color-warning-500) 0%,
+    var(--color-warning-900) 100%
+  );
+
+  --gradient-warning-700: linear-gradient(
+    180deg,
+    var(--color-warning-500) 0%,
+    var(--color-warning-700) 100%
+  );
+
+  --color-danger-900: rgb(113, 53, 53);
+
+  --color-danger-700: rgb(193, 73, 73);
+
+  --color-danger-500: rgb(255, 89, 89);
+
+  --color-danger-300: rgb(255, 158, 158);
+
+  --color-danger-100: rgb(255, 228, 228);
+
+  --gradient-danger-900: linear-gradient(
+    180deg,
+    var(--color-danger-500) 0%,
+    var(--color-danger-900) 100%
+  );
+
+  --gradient-danger-700: linear-gradient(
+    180deg,
+    var(--color-danger-500) 0%,
+    var(--color-danger-700) 100%
+  );
+}

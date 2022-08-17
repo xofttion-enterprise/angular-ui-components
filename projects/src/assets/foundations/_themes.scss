@@ -1,0 +1,62 @@
+/*!
+ * Xofttion Themes Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 03/Mar/2022
+ * Updated: 12/Ago/2022
+*/
+
+:root {
+  --color-primary-800: var(--color-light-800);
+
+  --color-primary-600: var(--color-light-600);
+
+  --color-primary-400: var(--color-light-400);
+
+  --color-primary-200: var(--color-light-200);
+  
+  --color-secondary-800: var(--color-dark-800);
+
+  --color-secondary-600: var(--color-dark-600);
+
+  --color-secondary-400: var(--color-dark-400);
+
+  --color-secondary-200: var(--color-dark-200);
+
+  --color-theme-900: var(--color-xofttion-900);
+
+  --color-theme-700: var(--color-xofttion-700);
+
+  --color-theme-500: var(--color-xofttion-500);
+
+  --color-theme-300: var(--color-xofttion-300);
+
+  --color-theme-100: var(--color-xofttion-100);
+
+  --gradient-theme-900: var(--gradient-xofttion-900);
+
+  --gradient-theme-700: var(--gradient-xofttion-700);
+}
+
+.dark {
+  --color-primary-800: var(--color-dark-800);
+
+  --color-primary-600: var(--color-dark-600);
+
+  --color-primary-400: var(--color-dark-400);
+
+  --color-primary-200: var(--color-dark-200);
+  
+  --color-secondary-800: var(--color-light-800);
+
+  --color-secondary-600: var(--color-light-600);
+
+  --color-secondary-400: var(--color-light-400);
+
+  --color-secondary-200: var(--color-light-200);
+}
+
+body {
+  background: var(--color-primary-600);
+}

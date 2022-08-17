@@ -1,0 +1,26 @@
+/*!
+ * Xofttion Card Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 13/Ago/2022
+*/
+
+.xft-card {
+  background: var(--color-primary-800);
+  border-radius: var(--size-8);
+  overflow: hidden;
+  box-shadow: var(--z-bottom-light-4);
+
+  &__content {
+    padding: var(--size-16);
+    box-sizing: border-box;
+  }
+}
+
+.dark {
+  .xft-card {
+    box-shadow: var(--z-bottom-dark-4);
+  }
+}

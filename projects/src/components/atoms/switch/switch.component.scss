@@ -1,0 +1,48 @@
+/*!
+ * Xofttion Switch Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 15/Ago/2022
+*/
+
+.xft-switch {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  outline: none;
+
+  &__content {
+    width: var(--size-48);
+    height: var(--size-24);
+    box-sizing: border-box;
+    border-radius: var(--size-12);
+    background: var(--color-primary-200);
+
+    &--checked {
+      background: var(--gradient-theme-700);
+
+      .xft-switch__component {
+        left: var(--size-20);
+        background: var(--color-light-800);
+      }
+    }
+
+    &--disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__component {
+    position: absolute;
+    top: var(--size-4);
+    left: var(--size-4);
+    width: var(--size-24);
+    height: var(--size-16);
+    background: var(--color-primary-800);
+    transition: left 160ms 0ms var(--standard-curve);
+    border-radius: var(--size-12);
+  }
+}

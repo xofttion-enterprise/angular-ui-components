@@ -1,0 +1,37 @@
+<div
+  class="xft-text-field__content"
+  [class.xft-text-field__content--active]="status.active"
+  [class.xft-text-field__content--error]="status.error"
+  [class.xft-text-field__content--disabled]="status.disabled"
+>
+  <label
+    class="xft-text-field__label smalltext-semibold"
+    [for]="elementId"
+    *ngIf="label"
+  >
+    <ng-content></ng-content>
+  </label>
+
+  <div class="xft-text-field__component">
+    <div class="xft-text-field__body">
+      <xft-input-field
+        class="xft-text-field__control"
+        [elementId]="elementId"
+        [type]="type"
+        [placeholder]="placeholder"
+        [enabled]="enabled"
+        (status)="onStatus($event)"
+        [formControl]="inputControl"
+      >
+        {{ inputControl.value }}
+      </xft-input-field>
+    </div>
+  </div>
+
+  <div
+    class="xft-text-field__helper xft-text-field__helper--error overline-regular"
+    *ngIf="status.error"
+  >
+    <span>{{ status.msgError }}</span>
+  </div>
+</div>

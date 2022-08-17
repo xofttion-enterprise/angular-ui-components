@@ -1,0 +1,103 @@
+/*!
+ * Xofttion DateField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 17/Ago/2022
+*/
+
+.xft-date-field {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    transition: height 160ms 0ms var(--standard-curve);
+
+    &--active {
+      .xft-list-field__label {
+        color: var(--color-theme-500);
+      }
+
+      .xft-list-field__body {
+        background: var(--color-primary-800);
+        border: var(--border-size) solid var(--color-theme-500);
+        box-shadow: 0px 0px 0px 3px var(--color-theme-100);
+      }
+    }
+
+    &--disabled {
+      .xft-list-field__label {
+        opacity: 0.5;
+      }
+
+      .xft-list-field__body {
+        background: var(--color-primary-400);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-bottom: var(--size-4);
+    color: var(--color-secondary-400);
+
+    span {
+      color: var(--color-danger-500);
+    }
+  }
+
+  &__body {
+    display: flex;
+    overflow: hidden;
+    padding: var(--size-6) var(--size-8);
+    box-sizing: border-box;
+    border-radius: var(--size-4);
+    border: var(--border-size) solid var(--color-primary-200);
+    background: var(--color-primary-600);
+  }
+
+  &__control {
+    position: relative;
+    float: left;
+    width: calc(100% - var(--size-28));
+    height: var(--size-24);
+    line-height: var(--size-24);
+    padding: 0rem;
+    cursor: default;
+    border: none;
+    outline: none;
+    color: var(--color-secondary-800);
+    background: transparent;
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-1-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-secondary-200);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__action {
+    color: var(--color-secondary-800);
+    width: var(--size-24);
+    height: var(--size-24);
+    padding: 0rem;
+    margin-left: var(--size-4);
+    background: transparent;
+  }
+}
+
+

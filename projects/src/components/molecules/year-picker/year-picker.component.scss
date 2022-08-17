@@ -1,0 +1,132 @@
+/*!
+ * Xofttion YearPicker Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Ago/2022
+*/
+
+.xft-year-picker {
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 17.5rem;
+    user-select: none;
+    overflow: hidden;
+  }
+
+  &__header {
+    display: flex;
+    box-sizing: border-box;
+    padding: var(--size-8) var(--size-12);
+    color: var(--color-dark-600);
+    background: var(--color-theme-100);
+  }
+
+  &__title {
+    width: 100%;
+    height: var(--size-32);
+    line-height: var(--size-32);
+    text-align: center;
+    font-weight: var(--font-weight-700);
+  }
+
+  &__action {
+    width: var(--size-32);
+    height: var(--size-32);
+    line-height: var(--size-32);
+
+    button {
+      color: var(--color-dark-600);
+      background: transparent;
+      outline: none;
+      width: inherit;
+      height: inherit;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__component {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-8);
+    width: 100%;
+    float: left;
+    padding: var(--size-8);
+    box-sizing: border-box;
+  }
+
+  &__year {
+    position: relative;
+    float: left;
+    display: flex;
+    box-sizing: border-box;
+    text-align: center;
+    height: var(--size-36);
+    border-radius: var(--size-8);
+    color: var(--color-secondary-800);
+
+    &:hover {
+      background: var(--color-theme-500);
+      color: var(--color-light-800);
+    }
+
+    &--selected {
+      &:not(:hover) {
+        background: var(--color-theme-300);
+        color: var(--color-dark-800);
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      border: none;
+      opacity: 0.5;
+    }
+
+    &__span {
+      margin: auto;
+      cursor: default;
+      pointer-events: none;
+      font-weight: var(--font-weight-semi-bold);
+    }
+  }
+}
+
+.dark {
+  .xft-year-picker {
+    &__header {
+      background: var(--color-theme-900);
+      color: var(--color-light-800);
+    }
+
+    &__action {
+      button {
+        color: var(--color-light-800);
+      }
+    }
+
+    &__year {
+      &:hover {
+        background: var(--color-theme-300);
+        color: var(--color-dark-600);
+      }
+
+      &--selected {
+        &:not(:hover) {
+          background: var(--color-theme-700);
+          color: var(--color-light-800);
+        }
+      }
+    }
+  }
+}

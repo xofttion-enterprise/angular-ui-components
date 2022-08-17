@@ -1,0 +1,24 @@
+/*!
+ * Xofttion SelectField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 16/Ago/2022
+*/
+
+xft-select-field {
+  .xft-list-field {
+    &__control {
+      cursor: default;
+    }
+
+    &__action {
+      transition: transform 160ms 0ms var(--sharp-curve);
+
+      &--show {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+/*!
+ * Xofttion DatePicker Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 24/Mar/2022
+*/
+
+.xft-date-picker {
+  position: relative;
+  float: left;
+
+  &__content {
+    max-width: 18.75rem;
+    overflow: hidden;
+  }
+
+  &__header {
+    background: var(--color-theme-300);
+    padding: var(--size-8);
+    box-sizing: border-box;
+    margin-bottom: var(--size-8);
+  }
+
+  &__title {
+    color: var(--color-secondary-800);
+    text-align: center;
+    cursor: default;
+    font-weight: var(--font-weight-bold);
+
+    &--description {
+      height: var(--size-32);
+      line-height: var(--size-32);
+      font-size: 1.15rem;
+    }
+
+    &--year {
+      margin: var(--size-8) 0rem var(--size-4) 0rem;
+      height: var(--size-32);
+      line-height: var(--size-32);
+      font-size: var(--size-24);
+      color: var(--color-secondary-600);
+    }
+
+    &--month {
+      height: var(--size-28);
+      line-height: var(--size-28);
+      font-size: var(--size-20);
+      color: var(--color-secondary-600);
+    }
+  }
+
+  &__component {
+    display: flex;
+    padding: 0rem var(--size-4);
+    box-sizing: border-box;
+    margin-bottom: var(--size-8);
+
+    & > * {
+      margin: 0rem auto;
+    }
+  }
+
+  &__footer {
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__actions {
+    padding: var(--size-8) var(--size-16) var(--size-12) var(--size-16);
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__button {
+    &--cancel {
+      width: calc(50% - var(--size-4));
+      margin-right: var(--size-4);
+    }
+
+    &--today {
+      width: calc(50% - var(--size-4));
+      margin-left: var(--size-4);
+    }
+
+    &--ok {
+      margin-top: var(--size-8);
+      width: 100%;
+    }
+  }
+}
+
+.dark {
+  .xft-date-picker {
+    &__header {
+      background: var(--color-theme-700);
+    }
+  }
+}

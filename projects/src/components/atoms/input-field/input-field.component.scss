@@ -1,0 +1,84 @@
+/*!
+ * Xofttion InputField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 13/Ago/2022
+*/
+
+.xft-input-field {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__content {
+    &--active {
+      .xft-input-field__component {
+        color: var(--color-secondary-800);
+      }
+
+      .xft-input-field__value {
+        color: transparent;
+      }
+    }
+
+    &--disabled {
+      .xft-input-field__value {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__component {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: var(--size-24);
+    line-height: var(--size-24);
+    padding: 0rem;
+    cursor: text;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: transparent;
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-1-letter-spacing);
+
+    &::placeholder {
+      color: var(--color-secondary-200);
+    }
+
+    &:disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__value {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    width: 100%;
+    height: var(--size-24);
+    line-height: var(--size-24);
+    background: transparent;
+    pointer-events: none;
+    overflow: hidden;
+    white-space: nowrap;
+    color: var(--color-secondary-800);
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--body-1-letter-spacing);
+  }
+}
+
+.dark {
+  .xft-input-field {
+    &__component {
+      &::placeholder {
+        color: var(--color-primary-200);
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+/*!
+ * Xofttion Breadcrumb Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 11/Abr/2022
+*/
+
+.xft-breadcrumb {
+  display: -webkit-box;
+  width: 100%;
+  min-height: var(--size-52);
+  max-height: var(--size-52);
+  line-height: var(--size-52);
+  overflow: auto;
+  overflow-y: hidden;
+  user-select: none;
+  box-sizing: border-box;
+  font-weight: var(--subtitle-1-weight);
+
+  &::-webkit-scrollbar {
+    width: 0rem;
+    height: 0rem;
+  }
+
+  &__label {
+    display: block;
+    height: inherit;
+    cursor: pointer;
+    font-weight: inherit;
+    font-family: var(--subtitle-1-font);
+    font-size: var(--subtitle-1-size);
+    letter-spacing: var(--subtitle-1-letter-spacing);
+
+    &:first-child {
+      margin-left: var(--size-16);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      padding-right: var(--size-16);
+    }
+
+    &::before {
+      font-family: var(--font-family-icons);
+      display: inline-block;
+      content: '\e922';
+      margin: 0rem var(--size-8);
+      cursor: default;
+      color: var(--font-color-secondary);
+      vertical-align: top;
+      font-size: var(--size-20);
+      font-weight: normal;
+      font-style: normal;
+      letter-spacing: normal;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    &--active {
+      .xft-breadcrumb__label__a {
+        color: var(--theme-material-200);
+      }
+    }
+
+    &__a {
+      display: inline-block;
+      cursor: pointer;
+      color: var(--font-color-primary);
+
+      &:hover {
+        color: var(--theme-material-400);
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.theme__material--dark {
+  .xft-breadcrumb {
+    &__label {
+      &__a {
+        &:hover {
+          color: var(--theme-material-700);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .xft-breadcrumb {
+    font-weight: var(--subtitle-2-weight);
+
+    &__label {
+      font-family: var(--subtitle-2-font);
+      font-size: var(--subtitle-2-size);
+      letter-spacing: var(--subtitle-2-letter-spacing);
+    }
+  }
+}

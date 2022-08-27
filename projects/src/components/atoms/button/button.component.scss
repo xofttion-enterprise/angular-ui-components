@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 13/Ago/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-button {
@@ -40,7 +40,6 @@
     padding: 0rem var(--size-8);
     box-sizing: border-box;
     border-radius: var(--size-4);
-    color: var(--color-theme-700);
 
     &::before {
       position: absolute;
@@ -57,28 +56,26 @@
       visibility: hidden;
       transform: scale(0);
       z-index: var(--z-index-2);
-      background: var(--color-secondary-400);
+      background-color: var(--color-theme-500);
     }
 
     &--flat {
+      color: var(--color-theme-900);
       background: transparent;
     }
 
     &--outline {
-      border: var(--border-size) solid var(--color-theme-500);
+      color: var(--color-theme-900);
+      border: var(--border-size) solid var(--color-theme-700);
       background: transparent;
-
-      &::before {
-        background-color: var(--color-theme-300);
-      }
     }
 
     &--raised {
-      color: var(--color-theme-100);
-      background: var(--gradient-theme-700);
+      color: var(--color-light-900);
+      background: var(--gradient-theme-900);
 
       &::before {
-        background-color: var(--color-theme-100);
+        background-color: var(--color-light-900);
       }
     }
   }
@@ -90,24 +87,10 @@
   &__label {
     position: relative;
     display: block;
-    margin: auto 0rem;
     padding: 0rem var(--size-4);
-  }
-}
-
-.dark {
-  .xft-button {
-    &__content {
-      color: var(--color-theme-300);
-
-      &--outline {
-        border: var(--border-size) solid var(--color-theme-300);
-      }
-
-      &--raised {
-        color: var(--color-theme-100);
-      }
-    }
+    font-size: 1.025rem;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.875px;
   }
 }
 

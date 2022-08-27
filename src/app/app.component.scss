@@ -4,12 +4,28 @@
   width: 100%;
   padding: var(--size-16);
   box-sizing: border-box;
-  background: var(--color-primary-600);
+  background: var(--color-primary-700);
 
-  .xft-card__content > * {
-    & + * {
-      margin-top: var(--size-12);
+  .xft-card__content {
+    & > * {
+      & + * {
+        margin-top: var(--size-12);
+      }
     }
+  }
+
+  &__panel1 {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      padding: 0rem var(--size-8);
+      box-sizing: border-box;
+      margin-bottom: var(--size-16);
+    }
+  }
+
+  &__radiobutton {
+    display: flex;
   }
 }
 

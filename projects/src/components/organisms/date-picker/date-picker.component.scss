@@ -24,7 +24,7 @@
   }
 
   &__title {
-    color: var(--color-secondary-800);
+    color: var(--color-secondary-900);
     text-align: center;
     cursor: default;
     font-weight: var(--font-weight-bold);
@@ -40,14 +40,14 @@
       height: var(--size-32);
       line-height: var(--size-32);
       font-size: var(--size-24);
-      color: var(--color-secondary-600);
+      color: var(--color-secondary-700);
     }
 
     &--month {
       height: var(--size-28);
       line-height: var(--size-28);
       font-size: var(--size-20);
-      color: var(--color-secondary-600);
+      color: var(--color-secondary-700);
     }
   }
 

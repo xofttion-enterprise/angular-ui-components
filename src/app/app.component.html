@@ -1,65 +1,102 @@
 <div class="app__content">
   <div class="xft-card">
     <div class="xft-card__content">
-      <xft-date-field>Fecha de ingreso</xft-date-field>
+      <h4 class="font-primary-900">1065642202</h4>
+      <h4 class="font-primary-700">1065642202</h4>
+      <h4 class="font-primary-500">1065642202</h4>
+      <div class="app__content__panel1">
+        <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+          Sucursal<span>*</span>
+        </xft-select-field>
 
-      <xft-autocomplete-field [suggestions]="persons">
-        Seleccionar ingeniero para el puesto
-      </xft-autocomplete-field>
+        <xft-select-field class="col-sm col-lg-40" [suggestions]="persons">
+          Resolucion de facturación<span>*</span>
+        </xft-select-field>
 
-      <xft-text-field elementId="name-input" [inputControl]="inputControl">
-        Nombre completo<span>*</span>
-      </xft-text-field>
+        <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+          Almacen<span>*</span>
+        </xft-select-field>
 
-      <xft-text-field elementId="job-input" [inputControl]="jobControl">
-        Cargo actual<span>*</span>
-      </xft-text-field>
+        <xft-date-field class="col-sm col-lg-30">
+          Fecha de expedición<span>*</span>
+        </xft-date-field>
 
-      <xft-text-field elementId="city-input" [inputControl]="cityControl">
-        Ciudad de residencia<span>*</span>
-      </xft-text-field>
+        <xft-autocomplete-field
+          class="col-sm col-lg-40"
+          [suggestions]="persons"
+        >
+          Cliente<span>*</span>
+        </xft-autocomplete-field>
 
-      <xft-money-field elementId="salary-input" symbol="$" locale="es-CO">
-        Salario <span>(COP)</span>
-      </xft-money-field>
+        <xft-text-field
+          elementId="name-input"
+          class="col-sm col-lg-30"
+          [inputControl]="inputControl"
+        >
+          Identificación
+        </xft-text-field>
 
-      <xft-select-field [suggestions]="persons">
-        Seleccionar ingeniero para el puesto
-      </xft-select-field>
+        <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+          Catálogo de precio<span>*</span>
+        </xft-select-field>
 
-      <xft-checkbox-label class="col-sm" [enabled]="true">
-        Cliente requiere capacitación
-      </xft-checkbox-label>
+        <xft-select-field class="col-sm col-lg-40" [suggestions]="persons" xofttionTheme="warning">
+          Estado de factura<span>*</span>
+        </xft-select-field>
 
-      <xft-radiobutton-label
-        class="col-sm"
-        value="elite"
-        [formControl]="radioControl"
-      >
-        Cliente es élite
-      </xft-radiobutton-label>
+        <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+          Plazo de pago (días)<span>*</span>
+        </xft-select-field>
 
-      <xft-radiobutton-label
-        class="col-sm"
-        value="preferencial"
-        [formControl]="radioControl"
-      >
-        Cliente es preferencial
-      </xft-radiobutton-label>
+        <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+          Garantía (dias)<span>*</span>
+        </xft-select-field>
 
-      <xft-switch-label class="col-sm" [enabled]="true">
-        Cliente es V.I.P.
-      </xft-switch-label>
+        <div class="app__content__radiobutton">
+          <xft-radiobutton-label
+            class="col-sm"
+            value="elite"
+            [formControl]="radioControl"
+            xofttionTheme="info"
+          >
+            Imprimir recibo
+          </xft-radiobutton-label>
 
-      <xft-switch-label class="col-sm" [enabled]="true">
-        Acepto <a>terminos y condiciones</a>
-      </xft-switch-label>
+          <xft-radiobutton-label
+            class="col-sm"
+            value="preferencial"
+            [formControl]="radioControl"
+            xofttionTheme="success"
+          >
+            Imprimir ticket
+          </xft-radiobutton-label>
+
+          <xft-radiobutton-label
+            class="col-sm"
+            value="ninguno"
+            [formControl]="radioControl"
+            xofttionTheme="danger"
+          >
+            No imprimir recibo
+          </xft-radiobutton-label>
+        </div>
+      </div>
+
+      <div class="app__content__panel2"></div>
 
       <div class="app__buttons">
-        <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">
+        <button xft-button="flat" [disabled]="false" prefixIcon="trash-2">
+          Cancelar venta
+        </button>
+        <button
+          xft-button="outline"
+          [disabled]="false"
+          prefixIcon="trash-2"
+          xofttionTheme="danger"
+        >
           Eliminar
         </button>
-        <button xft-button="raised" [disabled]="false">
+        <button xft-button="raised" [disabled]="false" xofttionTheme="happy">
           Registrar
         </button>
       </div>

@@ -52,3 +52,11 @@ export * from './src/components/organisms/modal/modal.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';
 export * from './src/components/organisms/organisms.module';
+
+// Directives
+export * from './src/directives/theme.directive';
+export * from './src/directives/theme.directive.module';
+
+// Utils
+export * from './src/components/utils/dom';
+export * from './src/components/utils/overlay';

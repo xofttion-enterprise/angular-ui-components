@@ -18,14 +18,14 @@
     height: var(--size-24);
     box-sizing: border-box;
     border-radius: var(--size-12);
-    background: var(--color-primary-200);
+    background: var(--color-primary-300);
 
     &--checked {
-      background: var(--gradient-theme-700);
+      background: var(--gradient-theme-900);
 
       .xft-switch__component {
         left: var(--size-20);
-        background: var(--color-light-800);
+        background: var(--color-light-900);
       }
     }
 
@@ -41,7 +41,7 @@
     left: var(--size-4);
     width: var(--size-24);
     height: var(--size-16);
-    background: var(--color-primary-800);
+    background: var(--color-primary-900);
     transition: left 160ms 0ms var(--standard-curve);
     border-radius: var(--size-12);
   }

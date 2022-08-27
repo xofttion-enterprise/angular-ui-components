@@ -15,7 +15,7 @@
   &__content {
     &--active {
       .xft-input-field__component {
-        color: var(--color-secondary-800);
+        color: var(--color-secondary-900);
       }
 
       .xft-input-field__value {
@@ -47,7 +47,7 @@
     letter-spacing: var(--body-1-letter-spacing);
 
     &::placeholder {
-      color: var(--color-secondary-200);
+      color: var(--color-secondary-300);
     }
 
     &:disabled {
@@ -66,7 +66,7 @@
     pointer-events: none;
     overflow: hidden;
     white-space: nowrap;
-    color: var(--color-secondary-800);
+    color: var(--color-secondary-900);
     font-size: var(--body-1-size);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-1-letter-spacing);
@@ -77,7 +77,7 @@
   .xft-input-field {
     &__component {
       &::placeholder {
-        color: var(--color-primary-200);
+        color: var(--color-primary-300);
       }
     }
   }

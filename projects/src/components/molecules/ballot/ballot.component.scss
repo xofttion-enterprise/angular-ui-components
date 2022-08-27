@@ -20,7 +20,7 @@
 
     &--bordered {
       border-radius: var(--size-8);
-      border: var(--border-size) solid var(--color-primary-300);
+      border: var(--border-size) solid var(--font-primary-500);
     }
   }
 
@@ -43,7 +43,7 @@
     position: relative;
     float: left;
     width: 100%;
-    color: var(--color-secondary-900);
+    color: var(--font-primary-900);
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -53,6 +53,6 @@
     position: relative;
     float: left;
     width: 100%;
-    color: var(--color-secondary-500);
+    color: var(--font-primary-700);
   }
 }

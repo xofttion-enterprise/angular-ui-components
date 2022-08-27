@@ -40,7 +40,11 @@
           Catálogo de precio<span>*</span>
         </xft-select-field>
 
-        <xft-select-field class="col-sm col-lg-40" [suggestions]="persons" xofttionTheme="warning">
+        <xft-select-field
+          class="col-sm col-lg-40"
+          [suggestions]="persons"
+          xofttionTheme="warning"
+        >
           Estado de factura<span>*</span>
         </xft-select-field>
 
@@ -80,6 +84,11 @@
             No imprimir recibo
           </xft-radiobutton-label>
         </div>
+
+        <xft-checkbox-label xofttionTheme="happy">
+          Pagar todo en 1 cuota
+        </xft-checkbox-label>
+        <xft-switch-label xofttionTheme="warning">Notificar transacción</xft-switch-label>
       </div>
 
       <div class="app__content__panel2"></div>

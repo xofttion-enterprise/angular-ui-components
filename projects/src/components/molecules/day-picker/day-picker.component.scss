@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 16/Ago/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-day-picker {
@@ -53,14 +53,14 @@
 
       &:hover {
         color: var(--color-light-900);
-        background: var(--color-theme-500);
+        background: var(--color-theme-900);
       }
     }
 
     &--selected {
       .xft-day-picker__day__span:not(:hover) {
-        background: var(--color-theme-300);
         color: var(--color-dark-900);
+        background: var(--color-theme-300);
       }
     }
 
@@ -76,37 +76,6 @@
     &--disabled {
       pointer-events: none;
       opacity: 0.5;
-    }
-  }
-}
-
-.dark {
-  .xft-day-picker {
-    &__header {
-      background: var(--color-theme-900);
-      color: var(--color-light-900);
-    }
-
-    &__day {
-      &__span {
-        &:hover {
-          background: var(--color-theme-300);
-          color: var(--color-dark-700);
-        }
-      }
-
-      &--selected {
-        .xft-day-picker__day__span:not(:hover) {
-          color: var(--color-light-900);
-          background: var(--color-theme-700);
-        }
-      }
-
-      &--forbidden {
-        span {
-          background: var(--color-primary-500);
-        }
-      }
     }
   }
 }

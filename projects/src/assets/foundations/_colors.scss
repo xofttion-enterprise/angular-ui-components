@@ -24,6 +24,10 @@
 
   --font-light-500: rgba(255, 255, 255, 0.4);
 
+  --font-light-300: rgba(255, 255, 255, 0.24);
+
+  --font-light-100: rgba(255, 255, 255, 0.08);
+
   /** Colors Dark */
 
   --color-dark-900: rgb(55, 71, 79);
@@ -39,6 +43,10 @@
   --font-dark-700: rgba(55, 71, 79, 0.64);
 
   --font-dark-500: rgba(55, 71, 79, 0.4);
+
+  --font-dark-300: rgba(55, 71, 79, 0.24);
+
+  --font-dark-100: rgba(55, 71, 79, 0.12);
 
   /** Palette xofttion */
 
@@ -57,6 +65,10 @@
   --font-xofttion-700: rgba(78, 115, 248, 0.64);
 
   --font-xofttion-500: rgba(78, 115, 248, 0.4);
+
+  --font-xofttion-300: rgba(78, 115, 248, 0.24);
+
+  --font-xofttion-100: rgba(78, 115, 248, 0.12);
 
   --gradient-xofttion-900: linear-gradient(
     180deg,
@@ -82,6 +94,10 @@
 
   --font-success-500: rgba(7, 162, 135, 0.4);
 
+  --font-success-300: rgba(7, 162, 135, 0.24);
+
+  --font-success-100: rgba(7, 162, 135, 0.08);
+
   --gradient-success-900: linear-gradient(
     180deg,
     rgb(8, 179, 149) 0%,
@@ -105,6 +121,10 @@
   --font-info-700: rgba(78, 115, 248, 0.64);
 
   --font-info-500: rgba(78, 115, 248, 0.4);
+
+  --font-info-300: rgba(78, 115, 248, 0.24);
+
+  --font-info-100: rgba(78, 115, 248, 0.08);
 
   --gradient-info-900: linear-gradient(
     180deg,
@@ -130,6 +150,10 @@
 
   --font-happy-500: rgba(255, 75, 110, 0.4);
 
+  --font-happy-300: rgba(255, 75, 110, 0.24);
+
+  --font-happy-100: rgba(255, 75, 110, 0.08);
+
   --gradient-happy-900: linear-gradient(
     180deg,
     rgb(255, 75, 110) 0%,
@@ -154,6 +178,10 @@
 
   --font-warning-500: rgba(252, 165, 73, 0.4);
 
+  --font-warning-300: rgba(252, 165, 73, 0.24);
+
+  --font-warning-100: rgba(252, 165, 73, 0.08);
+
   --gradient-warning-900: linear-gradient(
     180deg,
     rgb(252, 165, 73) 0%,
@@ -177,6 +205,10 @@
   --font-danger-700: rgba(244, 60, 60, 0.64);
 
   --font-danger-500: rgba(244, 60, 60, 0.4);
+
+  --font-danger-300: rgba(244, 60, 60, 0.24);
+
+  --font-danger-100: rgba(244, 60, 60, 0.08);
 
   --gradient-danger-900: linear-gradient(
     180deg,

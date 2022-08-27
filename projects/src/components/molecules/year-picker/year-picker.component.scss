@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 16/Ago/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-year-picker {
@@ -76,7 +76,7 @@
     color: var(--color-secondary-900);
 
     &:hover {
-      background: var(--color-theme-500);
+      background: var(--color-theme-900);
       color: var(--color-light-900);
     }
 
@@ -98,35 +98,6 @@
       cursor: default;
       pointer-events: none;
       font-weight: var(--font-weight-semi-bold);
-    }
-  }
-}
-
-.dark {
-  .xft-year-picker {
-    &__header {
-      background: var(--color-theme-900);
-      color: var(--color-light-900);
-    }
-
-    &__action {
-      button {
-        color: var(--color-light-900);
-      }
-    }
-
-    &__year {
-      &:hover {
-        background: var(--color-theme-300);
-        color: var(--color-dark-700);
-      }
-
-      &--selected {
-        &:not(:hover) {
-          background: var(--color-theme-700);
-          color: var(--color-light-900);
-        }
-      }
     }
   }
 }

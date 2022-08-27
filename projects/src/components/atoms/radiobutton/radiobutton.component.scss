@@ -19,12 +19,11 @@
     display: flex;
     height: 100%;
     box-sizing: border-box;
-    border: var(--border-size) solid var(--color-secondary-300);
     border-radius: 50%;
-    background: var(--color-primary-900);
+    border: var(--border-size) solid var(--font-primary-500);
 
     &:hover {
-      border: var(--border-size) solid var(--color-theme-500);
+      border: var(--border-size) solid var(--color-theme-900);
     }
 
     &--checked {
@@ -50,15 +49,5 @@
     border-radius: 50%;
     transition: all 160ms 0ms var(--standard-curve);
     background: var(--gradient-theme-900);
-  }
-}
-
-.dark {
-  .xft-radiobutton {
-    &__content {
-      &--checked {
-        border: var(--border-size) solid var(--color-theme-300);
-      }
-    }
   }
 }

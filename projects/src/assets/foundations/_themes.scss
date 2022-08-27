@@ -24,6 +24,10 @@
 
   --font-theme-500: var(--color-#{$name}-500);
 
+  --font-theme-300: var(--color-#{$name}-300);
+
+  --font-theme-100: var(--color-#{$name}-100);
+
   --gradient-theme-900: var(--gradient-#{$name}-900);
 }
 
@@ -41,7 +45,11 @@
   --font-primary-700: var(--font-dark-700);
 
   --font-primary-500: var(--font-dark-500);
-  
+
+  --font-primary-300: var(--font-dark-300);
+
+  --font-primary-100: var(--font-dark-100);
+
   --color-secondary-900: var(--color-dark-900);
 
   --color-secondary-700: var(--color-dark-700);
@@ -55,7 +63,11 @@
   --font-secondary-700: var(--font-light-700);
 
   --font-secondary-500: var(--font-light-500);
-  
+
+  --font-secondary-300: var(--font-light-300);
+
+  --font-secondary-100: var(--font-light-100);
+
   @include theme(xofttion);
 }
 
@@ -73,7 +85,11 @@
   --font-primary-700: var(--font-light-700);
 
   --font-primary-500: var(--font-light-500);
-  
+
+  --font-primary-300: var(--font-light-300);
+
+  --font-primary-100: var(--font-light-100);
+
   --color-secondary-900: var(--color-light-900);
 
   --color-secondary-700: var(--color-light-700);
@@ -87,10 +103,15 @@
   --font-secondary-700: var(--font-dark-700);
 
   --font-secondary-500: var(--font-dark-500);
+
+  --font-secondary-300: var(--font-dark-300);
+
+  --font-secondary-100: var(--font-dark-100);
 }
 
 body {
   background: var(--color-primary-700);
+  color: var(--font-primary-900);
 }
 
 .font-primary-900 {
@@ -125,7 +146,7 @@ body {
   &--info {
     @include theme(info);
   }
-  
+
   &--happy {
     @include theme(happy);
   }

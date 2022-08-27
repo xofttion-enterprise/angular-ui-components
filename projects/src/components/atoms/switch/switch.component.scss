@@ -10,8 +10,8 @@
 .xft-switch {
   position: relative;
   float: left;
-  box-sizing: border-box;
   outline: none;
+  box-sizing: border-box;
 
   &__content {
     width: var(--size-48);

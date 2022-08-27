@@ -4,6 +4,8 @@ export * from './src/components/components.module';
 // Atoms components
 export * from './src/components/atoms/avatar/avatar.component';
 export * from './src/components/atoms/avatar/avatar.component.module';
+export * from './src/components/atoms/breadcrumb/breadcrumb.component';
+export * from './src/components/atoms/breadcrumb/breadcrumb.component.module';
 export * from './src/components/atoms/button/button.component';
 export * from './src/components/atoms/button/button.component.module';
 export * from './src/components/atoms/checkbox/checkbox.component';

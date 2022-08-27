@@ -33,7 +33,7 @@
     padding: 0rem var(--size-4);
     box-sizing: border-box;
 
-    label {
+    & > label {
       position: relative;
       float: left;
       width: 100%;
@@ -42,5 +42,24 @@
 
   &__subtitle {
     color: var(--font-primary-700);
+  }
+
+  &__breadcrumb {
+    .xft-breadcrumb {
+      padding: 0rem;
+      height: var(--size-20);
+      line-height: var(--size-20);
+
+      label {
+        font-size: var(--caption-size);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.65px;
+
+        &::before {
+          font-size: var(--size-16);
+          line-height: inherit;
+        }
+      }
+    }
   }
 }

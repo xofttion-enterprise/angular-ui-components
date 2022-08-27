@@ -22,6 +22,9 @@ export class ToolbarComponent {
   @Input()
   public icon?: string;
 
+  @Input()
+  public breadcrumbs: string[] = [];
+
   @Output()
   public action: EventEmitter<MouseEvent>;
 

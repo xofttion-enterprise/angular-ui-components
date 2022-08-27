@@ -4,20 +4,21 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 11/Abr/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-breadcrumb {
   display: -webkit-box;
   width: 100%;
-  min-height: var(--size-52);
-  max-height: var(--size-52);
-  line-height: var(--size-52);
+  height: var(--size-36);
+  line-height: var(--size-36);
+  padding: 0rem var(--size-16);
+  box-sizing: border-box;
+  user-select: none;
   overflow: auto;
   overflow-y: hidden;
-  user-select: none;
-  box-sizing: border-box;
-  font-weight: var(--subtitle-1-weight);
+  color: var(--font-primary-700);
+  font-weight: var(--font-weight-medium);
 
   &::-webkit-scrollbar {
     width: 0rem;
@@ -27,78 +28,49 @@
   &__label {
     display: block;
     height: inherit;
+    line-height: inherit;
     cursor: pointer;
     font-weight: inherit;
-    font-family: var(--subtitle-1-font);
-    font-size: var(--subtitle-1-size);
-    letter-spacing: var(--subtitle-1-letter-spacing);
+    color: inherit;
+    font-size: var(--body1-size);
+    letter-spacing: var(--body1-letter-spacing);
 
     &:first-child {
-      margin-left: var(--size-16);
-
       &::before {
         display: none;
       }
     }
 
-    &:last-child {
-      padding-right: var(--size-16);
-    }
-
     &::before {
-      font-family: var(--font-family-icons);
+      font-family: -xofttion-icons;
       display: inline-block;
-      content: '\e922';
-      margin: 0rem var(--size-8);
+      content: '\e911';
+      margin: 0rem var(--size-4);
       cursor: default;
-      color: var(--font-color-secondary);
-      vertical-align: top;
-      font-size: var(--size-20);
+      color: inherit;
+      font-size: var(--size-24);
       font-weight: normal;
       font-style: normal;
       letter-spacing: normal;
+      vertical-align: top;
       -webkit-font-smoothing: antialiased;
     }
 
     &--active {
       .xft-breadcrumb__label__a {
-        color: var(--theme-material-200);
+        color: var(--font-theme-900);
       }
     }
 
     &__a {
       display: inline-block;
       cursor: pointer;
-      color: var(--font-color-primary);
+      color: var(--font-primary-700);
 
       &:hover {
-        color: var(--theme-material-400);
+        color: var(--font-theme-700);
         text-decoration: underline;
       }
-    }
-  }
-}
-
-.theme__material--dark {
-  .xft-breadcrumb {
-    &__label {
-      &__a {
-        &:hover {
-          color: var(--theme-material-700);
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .xft-breadcrumb {
-    font-weight: var(--subtitle-2-weight);
-
-    &__label {
-      font-family: var(--subtitle-2-font);
-      font-size: var(--subtitle-2-size);
-      letter-spacing: var(--subtitle-2-letter-spacing);
     }
   }
 }

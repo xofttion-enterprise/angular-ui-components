@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { AvatarComponentModule } from './avatar/avatar.component.module';
+import { BreadcrumbComponentModule } from './breadcrumb/breadcrumb.component.module';
 import { ButtonComponentModule } from './button/button.component.module';
 import { CheckboxComponentModule } from './checkbox/checkbox.component.module';
 import { IconComponentModule } from './icon/icon.component.module';
@@ -9,6 +10,7 @@ import { SwitchComponentModule } from './switch/switch.component.module';
 
 const components = [
   AvatarComponentModule,
+  BreadcrumbComponentModule,
   ButtonComponentModule,
   CheckboxComponentModule,
   IconComponentModule,

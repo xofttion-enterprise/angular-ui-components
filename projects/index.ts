@@ -35,6 +35,8 @@ export * from './src/components/molecules/switch-label/switch-label.component';
 export * from './src/components/molecules/switch-label/switch-label.component.module';
 export * from './src/components/molecules/text-field/text-field.component';
 export * from './src/components/molecules/text-field/text-field.component.module';
+export * from './src/components/molecules/toolbar/toolbar.component';
+export * from './src/components/molecules/toolbar/toolbar.component.module';
 export * from './src/components/molecules/year-picker/year-picker.component';
 export * from './src/components/molecules/year-picker/year-picker.component.module';
 export * from './src/components/molecules/molecules.module';

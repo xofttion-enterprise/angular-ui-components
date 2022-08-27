@@ -7,6 +7,7 @@ import { MonthPickerComponentModule } from './month-picker/month-picker.componen
 import { RadiobuttonLabelComponentModule } from './radiobutton-label/radiobutton-label.component.module';
 import { SwitchLabelComponentModule } from './switch-label/switch-label.component.module';
 import { TextFieldComponentModule } from './text-field/text-field.component.module';
+import { ToolbarComponentModule } from './toolbar/toolbar.component.module';
 import { YearPickerComponentModule } from './year-picker/year-picker.component.module';
 
 const components = [
@@ -18,6 +19,7 @@ const components = [
   RadiobuttonLabelComponentModule,
   SwitchLabelComponentModule,
   TextFieldComponentModule,
+  ToolbarComponentModule,
   YearPickerComponentModule
 ];
 

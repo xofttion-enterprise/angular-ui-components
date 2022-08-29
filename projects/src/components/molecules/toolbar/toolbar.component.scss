@@ -14,7 +14,8 @@
 
   &__content {
     display: flex;
-    padding: var(--size-8) var(--size-12);
+    height: 100%;
+    padding: var(--size-4) var(--size-12);
     box-sizing: border-box;
   }
 
@@ -32,12 +33,20 @@
   &__description {
     padding: 0rem var(--size-4);
     box-sizing: border-box;
+    margin: auto 0rem;
 
     & > label {
       position: relative;
       float: left;
       width: 100%;
     }
+  }
+
+  &__title {
+    height: var(--size-24);
+    line-height: var(--size-24);
+    font-size: 1.075rem;
+    font-weight: var(--font-weight-bold);
   }
 
   &__subtitle {

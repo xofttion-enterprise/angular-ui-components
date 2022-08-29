@@ -20,14 +20,15 @@
     height: 100%;
     box-sizing: border-box;
     border-radius: 50%;
-    border: var(--border-size) solid var(--font-primary-500);
+    border: var(--border-size) solid var(--font-primary-300);
 
     &:hover {
       border: var(--border-size) solid var(--color-theme-900);
     }
 
     &--checked {
-      border: var(--border-size) solid var(--color-theme-700);
+      background: var(--gradient-theme-900);
+      border: none;
 
       .xft-radiobutton__component {
         transform: scale(1);
@@ -47,7 +48,7 @@
     transform: scale(0);
     transform-origin: 50% 50%;
     border-radius: 50%;
+    background: var(--color-light-900);
     transition: all 160ms 0ms var(--standard-curve);
-    background: var(--gradient-theme-900);
   }
 }

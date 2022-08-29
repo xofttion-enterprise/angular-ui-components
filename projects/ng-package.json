@@ -6,6 +6,7 @@
   },
   "assets": [
     "./LICENSE",
+    "./src/assets/components/_app.scss",
     "./src/assets/components/_card.scss",
     "./src/assets/components/_components.scss",
 

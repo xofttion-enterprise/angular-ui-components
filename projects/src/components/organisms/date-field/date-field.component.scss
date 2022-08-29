@@ -49,6 +49,9 @@
     box-sizing: border-box;
     margin-bottom: var(--size-4);
     color: var(--font-primary-700);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     span {
       color: var(--font-danger-900);

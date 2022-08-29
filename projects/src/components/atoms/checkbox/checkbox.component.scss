@@ -16,11 +16,12 @@
   outline: none;
 
   &__content {
+    display: flex;
     height: 100%;
     box-sizing: border-box;
     border-radius: var(--size-4);
     background: var(--color-primary-900);
-    border: var(--border-size) solid var(--font-primary-500);
+    border: var(--border-size) solid var(--font-primary-300);
 
     &:hover {
       border: var(--border-size) solid var(--color-theme-900);
@@ -42,17 +43,13 @@
   }
 
   &__component {
-    display: flex;
-    height: 100%;
+    width: 0.8125rem;
+    height: 0.8125rem;
+    border-radius: var(--size-2);
+    margin: auto;
     transform: scale(0);
-    color: var(--color-light-900);
+    transform-origin: 50% 50%;
+    background: var(--color-light-900);
     transition: all 160ms 0ms var(--standard-curve);
-
-    .xft-icon {
-      font-size: var(--size-16);
-      margin: auto;
-      width: var(--size-16);
-      height: var(--size-16);
-    }
   }
 }

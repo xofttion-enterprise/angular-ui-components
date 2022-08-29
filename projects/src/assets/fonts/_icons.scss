@@ -4,16 +4,16 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 14/Ago/2022
- * Updated: 14/Ago/2022
+ * Updated: 29/Ago/2022
 */
 
 @font-face {
   font-family: -xofttion-icons;
-  src: url('icons/xofttion-icons.eot?plzp7f');
-  src: url('icons/xofttion-icons.eot?plzp7f#iefix') format('embedded-opentype'),
-    url('icons/xofttion-icons.ttf?plzp7f') format('truetype'),
-    url('icons/xofttion-icons.woff?plzp7f') format('woff'),
-    url('icons/xofttion-icons.svg?plzp7f#icomoon') format('svg');
+  src: url('icons/xofttion-icons.eot?9iewo3');
+  src: url('icons/xofttion-icons.eot?9iewo3#iefix') format('embedded-opentype'),
+    url('icons/xofttion-icons.ttf?9iewo3') format('truetype'),
+    url('icons/xofttion-icons.woff?9iewo3') format('woff'),
+    url('icons/xofttion-icons.svg?9iewo3#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -771,4 +771,7 @@
 }
 .xft-icon-wifi-off:before {
   content: '\e9f6';
+}
+.xft-icon-xofttion:before {
+  content: '\e9f7';
 }

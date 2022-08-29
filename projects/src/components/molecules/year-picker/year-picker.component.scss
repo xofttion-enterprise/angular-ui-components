@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 16/Ago/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-year-picker {
@@ -24,7 +24,7 @@
     display: flex;
     box-sizing: border-box;
     padding: var(--size-8) var(--size-12);
-    color: var(--color-dark-600);
+    color: var(--color-dark-700);
     background: var(--color-theme-100);
   }
 
@@ -42,7 +42,7 @@
     line-height: var(--size-32);
 
     button {
-      color: var(--color-dark-600);
+      color: var(--color-dark-700);
       background: transparent;
       outline: none;
       width: inherit;
@@ -73,17 +73,17 @@
     text-align: center;
     height: var(--size-36);
     border-radius: var(--size-8);
-    color: var(--color-secondary-800);
+    color: var(--color-secondary-900);
 
     &:hover {
-      background: var(--color-theme-500);
-      color: var(--color-light-800);
+      background: var(--color-theme-900);
+      color: var(--color-light-900);
     }
 
     &--selected {
       &:not(:hover) {
         background: var(--color-theme-300);
-        color: var(--color-dark-800);
+        color: var(--color-dark-900);
       }
     }
 
@@ -98,35 +98,6 @@
       cursor: default;
       pointer-events: none;
       font-weight: var(--font-weight-semi-bold);
-    }
-  }
-}
-
-.dark {
-  .xft-year-picker {
-    &__header {
-      background: var(--color-theme-900);
-      color: var(--color-light-800);
-    }
-
-    &__action {
-      button {
-        color: var(--color-light-800);
-      }
-    }
-
-    &__year {
-      &:hover {
-        background: var(--color-theme-300);
-        color: var(--color-dark-600);
-      }
-
-      &--selected {
-        &:not(:hover) {
-          background: var(--color-theme-700);
-          color: var(--color-light-800);
-        }
-      }
     }
   }
 }

@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 11/Abr/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-modal {
@@ -35,7 +35,7 @@
     overflow: hidden;
     border-radius: var(--size-8);
     visibility: hidden;
-    background: var(--color-primary-800);
+    background: var(--color-primary-900);
     box-shadow: var(--z-bottom-light-4);
     will-change: transform;
     transform: translateY(10rem) scale(0.6);
@@ -61,13 +61,13 @@
     opacity: 0;
     z-index: 1;
     will-change: opacity;
-    background: var(--color-theme-900);
+    background: var(--color-secondary-900);
     transition: opacity 120ms 0ms var(--deceleration-curve),
       bottom 120ms 0ms var(--deceleration-curve);
 
     &--show {
       bottom: 0rem;
-      opacity: 0.78;
+      opacity: 0.86;
     }
   }
 }

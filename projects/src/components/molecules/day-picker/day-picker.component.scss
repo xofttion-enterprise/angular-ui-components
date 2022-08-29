@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 16/Ago/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-day-picker {
@@ -22,7 +22,7 @@
     display: flex;
     margin-bottom: var(--size-8);
     background: var(--color-theme-100);
-    color: var(--color-dark-600);
+    color: var(--color-dark-700);
   }
 
   &__label {
@@ -44,7 +44,7 @@
     &__span {
       position: relative;
       display: block;
-      color: var(--color-secondary-800);
+      color: var(--color-secondary-900);
       border-radius: var(--size-8);
       height: var(--size-32);
       line-height: var(--size-32);
@@ -52,15 +52,15 @@
       font-weight: var(--font-weight-bold);
 
       &:hover {
-        color: var(--color-light-800);
-        background: var(--color-theme-500);
+        color: var(--color-light-900);
+        background: var(--color-theme-900);
       }
     }
 
     &--selected {
       .xft-day-picker__day__span:not(:hover) {
+        color: var(--color-dark-900);
         background: var(--color-theme-300);
-        color: var(--color-dark-800);
       }
     }
 
@@ -69,44 +69,13 @@
       opacity: 0.5;
 
       span {
-        background: var(--color-primary-200);
+        background: var(--color-primary-300);
       }
     }
 
     &--disabled {
       pointer-events: none;
       opacity: 0.5;
-    }
-  }
-}
-
-.dark {
-  .xft-day-picker {
-    &__header {
-      background: var(--color-theme-900);
-      color: var(--color-light-800);
-    }
-
-    &__day {
-      &__span {
-        &:hover {
-          background: var(--color-theme-300);
-          color: var(--color-dark-600);
-        }
-      }
-
-      &--selected {
-        .xft-day-picker__day__span:not(:hover) {
-          color: var(--color-light-800);
-          background: var(--color-theme-700);
-        }
-      }
-
-      &--forbidden {
-        span {
-          background: var(--color-primary-400);
-        }
-      }
     }
   }
 }

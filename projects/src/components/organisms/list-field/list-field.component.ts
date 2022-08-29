@@ -11,12 +11,12 @@ import { ControlValueAccessor } from '@angular/forms';
 import { ComponentDOM } from '../../utils/dom';
 import { ListFieldElement } from './list-field-element';
 
-const MAX_POSITION_VISIBLE = 4;
-const LIST_SIZE_REM = 16;
-const ELEMENT_SIZE_REM = 3;
-const BASE_SIZE_PX = 18;
-const ELEMENT_SIZE_PX = BASE_SIZE_PX * ELEMENT_SIZE_REM;
-const MAX_LIST_SIZE_PX = BASE_SIZE_PX * LIST_SIZE_REM;
+const maxPositionVisible = 4;
+const listSizeRem = 16;
+const elementSizeRem = 4;
+const baseSizePx = 18;
+const elementSizePx = baseSizePx * elementSizeRem;
+const maxListSizePx = baseSizePx * listSizeRem;
 
 interface ListFieldStatus {
   active: boolean;
@@ -190,12 +190,12 @@ export class ListFieldComponent
 
       this._elements?.item(this._positionElement).focus();
 
-      if (this._positionElement > MAX_POSITION_VISIBLE) {
-        const elementPosition = length - MAX_POSITION_VISIBLE;
+      if (this._positionElement > maxPositionVisible) {
+        const elementPosition = length - maxPositionVisible;
 
         setTimeout(() => {
           this._listElement?.scroll({
-            top: ELEMENT_SIZE_PX * elementPosition,
+            top: elementSizePx * elementPosition,
             behavior: 'smooth'
           });
         }, 100);
@@ -248,9 +248,9 @@ export class ListFieldComponent
   private _setLocationVisibleListSuggestions(): void {
     if (this._contentElement) {
       const { top, height } = this._contentElement.getBoundingClientRect();
-      const overflow = BASE_SIZE_PX / 2;
+      const overflow = baseSizePx / 2;
 
-      const positionEnd = top + height + MAX_LIST_SIZE_PX + overflow;
+      const positionEnd = top + height + maxListSizePx + overflow;
 
       this._higher = positionEnd > window.innerHeight;
     }

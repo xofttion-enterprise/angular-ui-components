@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {
-  DAYS_NAME_MIN,
+  daysNameMin,
   getDateWeight,
   getDaysMonth
 } from '@xofttion-enterprise/utils';
@@ -58,7 +58,7 @@ export class DayPickerComponent
 
   public status: DayPickerStatus;
 
-  public titles = DAYS_NAME_MIN;
+  public titles = daysNameMin;
 
   public weeks: Array<WeekModel> = [];
 

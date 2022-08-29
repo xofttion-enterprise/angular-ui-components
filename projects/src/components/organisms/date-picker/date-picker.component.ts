@@ -19,7 +19,7 @@ import {
   changeYear,
   getDateFormat,
   getDateWeight,
-  MONTHS_NAME
+  monthsName
 } from '@xofttion-enterprise/utils';
 import { Subscription } from 'rxjs';
 import { ComponentDOM } from '../../utils/dom';
@@ -177,7 +177,7 @@ export class DatePickerComponent
   }
 
   public get month(): string {
-    return MONTHS_NAME[this.value.getMonth()];
+    return monthsName[this.value.getMonth()];
   }
 
   public onClickDay(): void {

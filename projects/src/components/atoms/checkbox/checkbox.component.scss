@@ -16,18 +16,19 @@
   outline: none;
 
   &__content {
+    display: flex;
     height: 100%;
     box-sizing: border-box;
-    border: var(--border-size) solid var(--color-secondary-200);
     border-radius: var(--size-4);
     background: var(--color-primary-900);
+    border: var(--border-size) solid var(--font-primary-300);
 
     &:hover {
-      border: var(--border-size) solid var(--color-theme-500);
+      border: var(--border-size) solid var(--color-theme-900);
     }
 
     &--checked {
-      background: var(--gradient-theme-700);
+      background: var(--gradient-theme-900);
       border: none;
 
       .xft-checkbox__component {
@@ -42,17 +43,13 @@
   }
 
   &__component {
-    display: flex;
-    height: 100%;
+    width: 0.675rem;
+    height: 0.675rem;
+    border-radius: var(--size-2);
+    margin: auto;
     transform: scale(0);
-    color: var(--color-light-800);
+    transform-origin: 50% 50%;
+    background: var(--color-light-900);
     transition: all 160ms 0ms var(--standard-curve);
-
-    .xft-icon {
-      font-size: var(--size-16);
-      margin: auto;
-      width: var(--size-16);
-      height: var(--size-16);
-    }
   }
 }

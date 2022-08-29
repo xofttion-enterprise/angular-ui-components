@@ -8,131 +8,211 @@
 */
 
 :root {
-  --color-light-800: rgb(255, 255, 255);
+  /** Colors Light */
 
-  --color-light-600: rgb(248, 248, 248);
+  --color-light-900: rgb(255, 255, 255);
 
-  --color-light-400: rgb(241, 242, 243);
+  --color-light-700: rgb(248, 248, 248);
 
-  --color-light-200: rgb(225, 227, 230);
+  --color-light-500: rgb(241, 242, 243);
 
-  --color-dark-800: rgb(55, 71, 79);
+  --color-light-300: rgb(225, 227, 230);
 
-  --color-dark-600: rgb(90, 100, 116);
+  --font-light-900: rgba(255, 255, 255, 1);
 
-  --color-dark-400: rgb(117, 125, 138);
+  --font-light-700: rgba(255, 255, 255, 0.64);
 
-  --color-dark-200: rgb(195, 199, 206);
+  --font-light-500: rgba(255, 255, 255, 0.4);
 
-  /** Palette colors */
+  --font-light-300: rgba(255, 255, 255, 0.24);
 
-  --color-xofttion-900: rgb(59, 71, 113);
+  --font-light-100: rgba(255, 255, 255, 0.08);
 
-  --color-xofttion-700: rgb(85, 108, 192);
+  /** Colors Dark */
 
-  --color-xofttion-500: rgb(105, 137, 254);
+  --color-dark-900: rgb(55, 71, 79);
 
-  --color-xofttion-300: rgb(168, 186, 254);
+  --color-dark-700: rgb(90, 100, 116);
 
-  --color-xofttion-100: rgb(231, 236, 254);
+  --color-dark-500: rgb(117, 125, 138);
+
+  --color-dark-300: rgb(195, 199, 206);
+
+  --font-dark-900: rgba(55, 71, 79, 1);
+
+  --font-dark-700: rgba(55, 71, 79, 0.64);
+
+  --font-dark-500: rgba(55, 71, 79, 0.4);
+
+  --font-dark-300: rgba(55, 71, 79, 0.24);
+
+  --font-dark-100: rgba(55, 71, 79, 0.12);
+
+  /** Palette xofttion */
+
+  --color-xofttion-900: rgb(78, 115, 248);
+
+  --color-xofttion-700: rgb(140, 164, 249);
+
+  --color-xofttion-500: rgb(180, 195, 248);
+
+  --color-xofttion-300: rgb(208, 217, 249);
+
+  --color-xofttion-100: rgb(235, 238, 249);
+
+  --font-xofttion-900: rgba(78, 115, 248, 1);
+
+  --font-xofttion-700: rgba(78, 115, 248, 0.64);
+
+  --font-xofttion-500: rgba(78, 115, 248, 0.4);
+
+  --font-xofttion-300: rgba(78, 115, 248, 0.24);
+
+  --font-xofttion-100: rgba(78, 115, 248, 0.12);
 
   --gradient-xofttion-900: linear-gradient(
     180deg,
-    var(--color-xofttion-500) 0%,
-    var(--color-xofttion-900) 100%
+    rgb(96, 92, 243) 0%,
+    rgb(77, 74, 200) 100%
   );
 
-  --gradient-xofttion-700: linear-gradient(
-    180deg,
-    var(--color-xofttion-500) 0%,
-    var(--color-xofttion-700) 100%
-  );
+  /** Palette success */
 
-  --color-success-900: rgb(24, 85, 75);
+  --color-success-900: rgb(7, 162, 135);
 
-  --color-success-700: rgb(15, 137, 116);
+  --color-success-700: rgb(94, 194, 176);
 
-  --color-success-500: rgb(8, 178, 149);
+  --color-success-500: rgb(140, 210, 198);
 
-  --color-success-300: rgb(111, 210, 193);
+  --color-success-300: rgb(200, 231, 226);
 
-  --color-success-100: rgb(215, 242, 238);
+  --color-success-100: rgb(230, 242, 240);
+
+  --font-success-900: rgba(7, 162, 135, 1);
+
+  --font-success-700: rgba(7, 162, 135, 0.64);
+
+  --font-success-500: rgba(7, 162, 135, 0.4);
+
+  --font-success-300: rgba(7, 162, 135, 0.24);
+
+  --font-success-100: rgba(7, 162, 135, 0.08);
 
   --gradient-success-900: linear-gradient(
     180deg,
-    var(--color-success-500) 0%,
-    var(--color-success-900) 100%
+    rgb(8, 179, 149) 0%,
+    rgb(12, 151, 127) 100%
   );
 
-  --gradient-success-700: linear-gradient(
-    180deg,
-    var(--color-success-500) 0%,
-    var(--color-success-700) 100%
-  );
+  /** Palette info */
 
-  --color-info-900: rgb(22, 77, 113);
+  --color-info-900: rgb(78, 115, 248);
 
-  --color-info-700: rgb(10, 120, 193);
+  --color-info-700: rgb(140, 164, 249);
 
-  --color-info-500: rgb(1, 154, 255);
+  --color-info-500: rgb(180, 195, 248);
 
-  --color-info-300: rgb(107, 196, 255);
+  --color-info-300: rgb(208, 217, 249);
 
-  --color-info-100: rgb(214, 238, 255);
+  --color-info-100: rgb(235, 238, 249);
+
+  --font-info-900: rgba(78, 115, 248, 1);
+
+  --font-info-700: rgba(78, 115, 248, 0.64);
+
+  --font-info-500: rgba(78, 115, 248, 0.4);
+
+  --font-info-300: rgba(78, 115, 248, 0.24);
+
+  --font-info-100: rgba(78, 115, 248, 0.08);
 
   --gradient-info-900: linear-gradient(
     180deg,
-    var(--color-info-500) 0%,
-    var(--color-info-900) 100%
+    rgb(105, 137, 254) 0%,
+    rgb(60, 100, 244) 100%
   );
 
-  --gradient-info-700: linear-gradient(
+  /** Palette happy */
+
+  --color-happy-900: rgb(255, 75, 110);
+
+  --color-happy-700: rgb(253, 138, 161);
+
+  --color-happy-500: rgb(251, 179, 193);
+
+  --color-happy-300: rgb(250, 207, 215);
+
+  --color-happy-100: rgb(249, 235, 238);
+
+  --font-happy-900: rgba(255, 75, 110, 1);
+
+  --font-happy-700: rgba(255, 75, 110, 0.64);
+
+  --font-happy-500: rgba(255, 75, 110, 0.4);
+
+  --font-happy-300: rgba(255, 75, 110, 0.24);
+
+  --font-happy-100: rgba(255, 75, 110, 0.08);
+
+  --gradient-happy-900: linear-gradient(
     180deg,
-    var(--color-info-500) 0%,
-    var(--color-info-700) 100%
+    rgb(255, 75, 110) 0%,
+    rgb(236, 35, 74) 100%
   );
 
-  --color-warning-900: rgb(112, 81, 48);
+  /** Palette warning */
 
-  --color-warning-700: rgb(190, 128, 62);
+  --color-warning-900: rgb(252, 165, 73);
 
-  --color-warning-500: rgb(252, 165, 73);
+  --color-warning-700: rgb(251, 196, 137);
 
-  --color-warning-300: rgb(253, 202, 149);
+  --color-warning-500: rgb(250, 215, 178);
 
-  --color-warning-100: rgb(254, 240, 225);
+  --color-warning-300: rgb(249, 229, 207);
+
+  --color-warning-100: rgb(249, 242, 235);
+
+  --font-warning-900: rgba(252, 165, 73, 1);
+
+  --font-warning-700: rgba(252, 165, 73, 0.64);
+
+  --font-warning-500: rgba(252, 165, 73, 0.4);
+
+  --font-warning-300: rgba(252, 165, 73, 0.24);
+
+  --font-warning-100: rgba(252, 165, 73, 0.08);
 
   --gradient-warning-900: linear-gradient(
     180deg,
-    var(--color-warning-500) 0%,
-    var(--color-warning-900) 100%
+    rgb(252, 165, 73) 0%,
+    rgb(243, 149, 49) 100%
   );
 
-  --gradient-warning-700: linear-gradient(
-    180deg,
-    var(--color-warning-500) 0%,
-    var(--color-warning-700) 100%
-  );
+  /** Palette danger */
 
-  --color-danger-900: rgb(113, 53, 53);
+  --color-danger-900: rgb(244, 60, 60);
 
-  --color-danger-700: rgb(193, 73, 73);
+  --color-danger-700: rgb(246, 128, 128);
 
-  --color-danger-500: rgb(255, 89, 89);
+  --color-danger-500: rgb(247, 173, 173);
 
-  --color-danger-300: rgb(255, 158, 158);
+  --color-danger-300: rgb(248, 203, 203);
 
-  --color-danger-100: rgb(255, 228, 228);
+  --color-danger-100: rgb(249, 234, 234);
+
+  --font-danger-900: rgba(244, 60, 60, 1);
+
+  --font-danger-700: rgba(244, 60, 60, 0.64);
+
+  --font-danger-500: rgba(244, 60, 60, 0.4);
+
+  --font-danger-300: rgba(244, 60, 60, 0.24);
+
+  --font-danger-100: rgba(244, 60, 60, 0.08);
 
   --gradient-danger-900: linear-gradient(
     180deg,
-    var(--color-danger-500) 0%,
-    var(--color-danger-900) 100%
-  );
-
-  --gradient-danger-700: linear-gradient(
-    180deg,
-    var(--color-danger-500) 0%,
-    var(--color-danger-700) 100%
+    rgb(255, 89, 89) 0%,
+    rgb(239, 44, 44) 100%
   );
 }

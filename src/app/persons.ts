@@ -5,6 +5,7 @@ class Person implements ListFieldElement {
   subtitle?: string;
   title: string;
   photo?: string;
+  value = 'Daniel';
 
   constructor(title: string, subtitle: string, photo?: string) {
     this.title = title;
@@ -20,7 +21,7 @@ class Person implements ListFieldElement {
     return this.title;
   }
 
-  public isCoincidence(value: string): boolean {
+  public hasCoincidence(value: string): boolean {
     return this.title.includes(value);
   }
 }

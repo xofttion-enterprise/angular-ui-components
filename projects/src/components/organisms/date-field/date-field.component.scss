@@ -19,13 +19,13 @@
 
     &--active {
       .xft-list-field__label {
-        color: var(--color-theme-500);
+        color: var(--color-theme-900);
       }
 
       .xft-list-field__body {
-        background: var(--color-primary-800);
-        border: var(--border-size) solid var(--color-theme-500);
-        box-shadow: 0px 0px 0px 3px var(--color-theme-100);
+        background: var(--color-primary-900);
+        border: var(--border-size) solid var(--color-theme-700);
+        box-shadow: 0px 0px 0px 3px var(--font-theme-100);
       }
     }
 
@@ -35,7 +35,7 @@
       }
 
       .xft-list-field__body {
-        background: var(--color-primary-400);
+        background: var(--color-primary-500);
         opacity: 0.75;
       }
     }
@@ -48,10 +48,13 @@
     padding: 0rem 0.625rem;
     box-sizing: border-box;
     margin-bottom: var(--size-4);
-    color: var(--color-secondary-400);
+    color: var(--font-primary-700);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     span {
-      color: var(--color-danger-500);
+      color: var(--font-danger-900);
     }
   }
 
@@ -61,8 +64,8 @@
     padding: var(--size-6) var(--size-8);
     box-sizing: border-box;
     border-radius: var(--size-4);
-    border: var(--border-size) solid var(--color-primary-200);
-    background: var(--color-primary-600);
+    border: var(--border-size) solid var(--font-primary-100);
+    background: var(--color-primary-700);
   }
 
   &__control {
@@ -75,14 +78,14 @@
     cursor: default;
     border: none;
     outline: none;
-    color: var(--color-secondary-800);
+    color: var(--font-primary-900);
     background: transparent;
     font-size: var(--body-1-size);
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-1-letter-spacing);
 
     &::placeholder {
-      color: var(--color-secondary-200);
+      color: var(--color-secondary-300);
     }
 
     &:disabled {
@@ -91,7 +94,7 @@
   }
 
   &__action {
-    color: var(--color-secondary-800);
+    color: var(--font-primary-700);
     width: var(--size-24);
     height: var(--size-24);
     padding: 0rem;
@@ -99,5 +102,3 @@
     background: transparent;
   }
 }
-
-

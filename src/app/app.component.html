@@ -1,67 +1,82 @@
-<div class="app__content">
-  <div class="xft-card">
-    <div class="xft-card__content">
-      <xft-date-field>Fecha de ingreso</xft-date-field>
+<xft-sidenav>
+  <div class="xft-sidenav__profile">
+    <xft-ballot initials="DC" subtitle="Ingeniero de Sistemas">
+      Daniel Andrés Castillo Pedroza
+    </xft-ballot>
+  </div>
 
-      <xft-autocomplete-field [suggestions]="persons">
-        Seleccionar ingeniero para el puesto
-      </xft-autocomplete-field>
+  <ul class="xft-sidenav__menu">
+    <li class="xft-sidenav__menu__element">
+      <xft-icon value="trash"></xft-icon>
+      <label>Registrar asiento contable</label>
+    </li>
+    <li class="xft-sidenav__menu__element">
+      <xft-icon value="menu"></xft-icon>
+      <label>Reportes contable</label>
+    </li>
+  </ul>
+</xft-sidenav>
 
-      <xft-text-field elementId="name-input" [inputControl]="inputControl">
-        Nombre completo<span>*</span>
-      </xft-text-field>
+<div class="xft-app__body">
+  <div class="xft-app__header">
+    <xft-toolbar [breadcrumbs]="['Inicio', 'Asientos contable', 'Registro']">
+      <xft-icon value="xofttion"></xft-icon>edger Application v1.0.0 [2022.08.29]
+    </xft-toolbar>
+  </div>
 
-      <xft-text-field elementId="job-input" [inputControl]="jobControl">
-        Cargo actual<span>*</span>
-      </xft-text-field>
+  <div class="xft-app__content">
+    <div class="app__content">
+      <div class="xft-form">
+        <div class="xft-form__content">
+          <div class="app__content__panel1">
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Sucursal<span>*</span>
+            </xft-select-field>
 
-      <xft-text-field elementId="city-input" [inputControl]="cityControl">
-        Ciudad de residencia<span>*</span>
-      </xft-text-field>
+            <xft-select-field class="col-sm col-lg-40" [suggestions]="persons">
+              Resolucion de facturación<span>*</span>
+            </xft-select-field>
 
-      <xft-money-field elementId="salary-input" symbol="$" locale="es-CO">
-        Salario <span>(COP)</span>
-      </xft-money-field>
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Almacen<span>*</span>
+            </xft-select-field>
 
-      <xft-select-field [suggestions]="persons">
-        Seleccionar ingeniero para el puesto
-      </xft-select-field>
+            <xft-date-field class="col-sm col-lg-30">
+              Fecha de expedición<span>*</span>
+            </xft-date-field>
 
-      <xft-checkbox-label class="col-sm" [enabled]="true">
-        Cliente requiere capacitación
-      </xft-checkbox-label>
+            <xft-autocomplete-field
+              class="col-sm col-lg-40"
+              [suggestions]="persons"
+            >
+              Cliente<span>*</span>
+            </xft-autocomplete-field>
 
-      <xft-radiobutton-label
-        class="col-sm"
-        value="elite"
-        [formControl]="radioControl"
-      >
-        Cliente es élite
-      </xft-radiobutton-label>
+            <xft-text-field
+              elementId="name-input"
+              class="col-sm col-lg-30"
+              [inputControl]="inputControl"
+            >
+              Identificación
+            </xft-text-field>
 
-      <xft-radiobutton-label
-        class="col-sm"
-        value="preferencial"
-        [formControl]="radioControl"
-      >
-        Cliente es preferencial
-      </xft-radiobutton-label>
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Catálogo de precio<span>*</span>
+            </xft-select-field>
 
-      <xft-switch-label class="col-sm" [enabled]="true">
-        Cliente es V.I.P.
-      </xft-switch-label>
+            <xft-select-field
+              class="col-sm col-lg-40"
+              [suggestions]="persons"
+              xofttionTheme="warning"
+            >
+              Estado de factura<span>*</span>
+            </xft-select-field>
 
-      <xft-switch-label class="col-sm" [enabled]="true">
-        Acepto <a>terminos y condiciones</a>
-      </xft-switch-label>
-
-      <div class="app__buttons">
-        <button xft-button="outline" [disabled]="false" prefixIcon="trash-2">
-          Eliminar
-        </button>
-        <button xft-button="raised" [disabled]="false">
-          Registrar
-        </button>
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Plazo de pago (días)<span>*</span>
+            </xft-select-field>
+          </div>
+        </div>
       </div>
     </div>
   </div>

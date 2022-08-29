@@ -10,7 +10,7 @@ import { persons } from './persons';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('Daniel Andrés Castillo Pedroza', [
+  public inputControl = new FormControl('1065642202', [
     Validators.required
   ]);
 

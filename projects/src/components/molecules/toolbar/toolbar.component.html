@@ -1,0 +1,17 @@
+<div class="xft-toolbar__content">
+  <div class="xft-toolbar__action" *ngIf="icon" (click)="onClickAction($event)">
+    <xft-icon [value]="icon"></xft-icon>
+  </div>
+
+  <div class="xft-toolbar__description">
+    <label class="xft-toolbar__title">
+      <ng-content></ng-content>
+    </label>
+    <label class="xft-toolbar__subtitle body2-semibold" *ngIf="subtitle">
+      {{ subtitle }}
+    </label>
+    <div class="xft-toolbar__breadcrumb" *ngIf="breadcrumbs.length">
+      <xft-breadcrumb [labels]="breadcrumbs"></xft-breadcrumb>
+    </div>
+  </div>
+</div>

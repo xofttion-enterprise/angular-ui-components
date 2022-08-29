@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 24/Mar/2022
+ * Updated: 27/Ago/2022
 */
 
 .xft-date-picker {
@@ -24,10 +24,14 @@
   }
 
   &__title {
-    color: var(--color-secondary-800);
+    color: var(--font-primary-900);
     text-align: center;
     cursor: default;
     font-weight: var(--font-weight-bold);
+
+    &:hover {
+      color: var(--font-theme-900);
+    }
 
     &--description {
       height: var(--size-32);
@@ -40,14 +44,14 @@
       height: var(--size-32);
       line-height: var(--size-32);
       font-size: var(--size-24);
-      color: var(--color-secondary-600);
+      color: var(--font-primary-700);
     }
 
     &--month {
       height: var(--size-28);
       line-height: var(--size-28);
       font-size: var(--size-20);
-      color: var(--color-secondary-600);
+      color: var(--font-primary-700);
     }
   }
 
@@ -70,8 +74,8 @@
 
   &__actions {
     padding: var(--size-8) var(--size-16) var(--size-12) var(--size-16);
-    box-sizing: border-box;
     overflow: hidden;
+    box-sizing: border-box;
   }
 
   &__button {
@@ -88,14 +92,6 @@
     &--ok {
       margin-top: var(--size-8);
       width: 100%;
-    }
-  }
-}
-
-.dark {
-  .xft-date-picker {
-    &__header {
-      background: var(--color-theme-700);
     }
   }
 }

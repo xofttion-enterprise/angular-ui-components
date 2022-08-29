@@ -8,7 +8,7 @@
 */
 
 .xft-card {
-  background: var(--color-primary-800);
+  background: var(--color-primary-900);
   border-radius: var(--size-8);
   overflow: hidden;
   box-shadow: var(--z-bottom-light-4);
@@ -16,11 +16,5 @@
   &__content {
     padding: var(--size-16);
     box-sizing: border-box;
-  }
-}
-
-.dark {
-  .xft-card {
-    box-shadow: var(--z-bottom-dark-4);
   }
 }

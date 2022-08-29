@@ -62,6 +62,13 @@ h5, .h5-default {
   line-height: var(--heading-5-line-height);
 }
 
+h6, .h6-default {
+  font-size: var(--heading-6-size);
+  letter-spacing: var(--heading-6-letter-spacing);
+  min-height: var(--heading-6-line-height);
+  line-height: var(--heading-6-line-height);
+}
+
 .title1-default {
   font-size: var(--title-1-size);
   letter-spacing: var(--title-1-letter-spacing);
@@ -208,6 +215,26 @@ h5, .h5-default {
 
 .h5-bold {
   @extend .h5-default;
+  font-weight: var(--font-weight-bold);
+}
+
+.h6-regular {
+  @extend .h6-default;
+  font-weight: var(--font-weight-regular);
+}
+
+.h6-medium {
+  @extend .h6-default;
+  font-weight: var(--font-weight-medium);
+}
+
+.h6-semibold {
+  @extend .h6-default;
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.h6-bold {
+  @extend .h6-default;
   font-weight: var(--font-weight-bold);
 }
 

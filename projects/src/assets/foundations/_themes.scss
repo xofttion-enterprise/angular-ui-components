@@ -7,56 +7,155 @@
  * Updated: 12/Ago/2022
 */
 
+@mixin theme($name) {
+  --color-theme-900: var(--color-#{$name}-900);
+
+  --color-theme-700: var(--color-#{$name}-700);
+
+  --color-theme-500: var(--color-#{$name}-500);
+
+  --color-theme-300: var(--color-#{$name}-300);
+
+  --color-theme-100: var(--color-#{$name}-100);
+
+  --font-theme-900: var(--color-#{$name}-900);
+
+  --font-theme-700: var(--color-#{$name}-700);
+
+  --font-theme-500: var(--color-#{$name}-500);
+
+  --font-theme-300: var(--color-#{$name}-300);
+
+  --font-theme-100: var(--color-#{$name}-100);
+
+  --gradient-theme-900: var(--gradient-#{$name}-900);
+}
+
 :root {
-  --color-primary-800: var(--color-light-800);
+  --color-primary-900: var(--color-light-900);
 
-  --color-primary-600: var(--color-light-600);
+  --color-primary-700: var(--color-light-700);
 
-  --color-primary-400: var(--color-light-400);
+  --color-primary-500: var(--color-light-500);
 
-  --color-primary-200: var(--color-light-200);
-  
-  --color-secondary-800: var(--color-dark-800);
+  --color-primary-300: var(--color-light-300);
 
-  --color-secondary-600: var(--color-dark-600);
+  --font-primary-900: var(--font-dark-900);
 
-  --color-secondary-400: var(--color-dark-400);
+  --font-primary-700: var(--font-dark-700);
 
-  --color-secondary-200: var(--color-dark-200);
+  --font-primary-500: var(--font-dark-500);
 
-  --color-theme-900: var(--color-xofttion-900);
+  --font-primary-300: var(--font-dark-300);
 
-  --color-theme-700: var(--color-xofttion-700);
+  --font-primary-100: var(--font-dark-100);
 
-  --color-theme-500: var(--color-xofttion-500);
+  --color-secondary-900: var(--color-dark-900);
 
-  --color-theme-300: var(--color-xofttion-300);
+  --color-secondary-700: var(--color-dark-700);
 
-  --color-theme-100: var(--color-xofttion-100);
+  --color-secondary-500: var(--color-dark-500);
 
-  --gradient-theme-900: var(--gradient-xofttion-900);
+  --color-secondary-300: var(--color-dark-300);
 
-  --gradient-theme-700: var(--gradient-xofttion-700);
+  --font-secondary-900: var(--font-light-900);
+
+  --font-secondary-700: var(--font-light-700);
+
+  --font-secondary-500: var(--font-light-500);
+
+  --font-secondary-300: var(--font-light-300);
+
+  --font-secondary-100: var(--font-light-100);
+
+  @include theme(xofttion);
 }
 
 .dark {
-  --color-primary-800: var(--color-dark-800);
+  --color-primary-900: var(--color-dark-900);
 
-  --color-primary-600: var(--color-dark-600);
+  --color-primary-700: var(--color-dark-700);
 
-  --color-primary-400: var(--color-dark-400);
+  --color-primary-500: var(--color-dark-500);
 
-  --color-primary-200: var(--color-dark-200);
-  
-  --color-secondary-800: var(--color-light-800);
+  --color-primary-300: var(--color-dark-300);
 
-  --color-secondary-600: var(--color-light-600);
+  --font-primary-900: var(--font-light-900);
 
-  --color-secondary-400: var(--color-light-400);
+  --font-primary-700: var(--font-light-700);
 
-  --color-secondary-200: var(--color-light-200);
+  --font-primary-500: var(--font-light-500);
+
+  --font-primary-300: var(--font-light-300);
+
+  --font-primary-100: var(--font-light-100);
+
+  --color-secondary-900: var(--color-light-900);
+
+  --color-secondary-700: var(--color-light-700);
+
+  --color-secondary-500: var(--color-light-500);
+
+  --color-secondary-300: var(--color-light-300);
+
+  --font-secondary-900: var(--font-dark-900);
+
+  --font-secondary-700: var(--font-dark-700);
+
+  --font-secondary-500: var(--font-dark-500);
+
+  --font-secondary-300: var(--font-dark-300);
+
+  --font-secondary-100: var(--font-dark-100);
 }
 
 body {
-  background: var(--color-primary-600);
+  background: var(--color-primary-700);
+  color: var(--font-primary-900);
+}
+
+.font-primary-900 {
+  color: var(--font-primary-900);
+}
+
+.font-primary-700 {
+  color: var(--font-primary-700);
+}
+
+.font-primary-500 {
+  color: var(--font-primary-500);
+}
+
+.font-secondary-900 {
+  color: var(--font-secondary-900);
+}
+
+.font-secondary-700 {
+  color: var(--font-secondary-700);
+}
+
+.font-secondary-500 {
+  color: var(--font-secondary-500);
+}
+
+.theme-xofttion {
+  &--success {
+    @include theme(success);
+  }
+
+  &--info {
+    @include theme(info);
+  }
+
+  &--happy {
+    @include theme(happy);
+  }
+
+  &--warning {
+    @include theme(warning);
+  }
+
+  &--danger {
+    @include theme(danger);
+  }
 }

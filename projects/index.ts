@@ -4,6 +4,8 @@ export * from './src/components/components.module';
 // Atoms components
 export * from './src/components/atoms/avatar/avatar.component';
 export * from './src/components/atoms/avatar/avatar.component.module';
+export * from './src/components/atoms/breadcrumb/breadcrumb.component';
+export * from './src/components/atoms/breadcrumb/breadcrumb.component.module';
 export * from './src/components/atoms/button/button.component';
 export * from './src/components/atoms/button/button.component.module';
 export * from './src/components/atoms/checkbox/checkbox.component';
@@ -12,6 +14,8 @@ export * from './src/components/atoms/icon/icon.component';
 export * from './src/components/atoms/icon/icon.component.module';
 export * from './src/components/atoms/input-field/input-field.component';
 export * from './src/components/atoms/input-field/input-field.component.module';
+export * from './src/components/atoms/progress-bar/progress-bar.component';
+export * from './src/components/atoms/progress-bar/progress-bar.component.module';
 export * from './src/components/atoms/radiobutton/radiobutton.component';
 export * from './src/components/atoms/radiobutton/radiobutton.component.module';
 export * from './src/components/atoms/switch/switch.component';
@@ -35,6 +39,8 @@ export * from './src/components/molecules/switch-label/switch-label.component';
 export * from './src/components/molecules/switch-label/switch-label.component.module';
 export * from './src/components/molecules/text-field/text-field.component';
 export * from './src/components/molecules/text-field/text-field.component.module';
+export * from './src/components/molecules/toolbar/toolbar.component';
+export * from './src/components/molecules/toolbar/toolbar.component.module';
 export * from './src/components/molecules/year-picker/year-picker.component';
 export * from './src/components/molecules/year-picker/year-picker.component.module';
 export * from './src/components/molecules/molecules.module';
@@ -51,4 +57,14 @@ export * from './src/components/organisms/modal/modal.component.service';
 export * from './src/components/organisms/modal/modal.component.module';
 export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';
+export * from './src/components/organisms/sidenav/sidenav.component';
+export * from './src/components/organisms/sidenav/sidenav.component.module';
 export * from './src/components/organisms/organisms.module';
+
+// Directives
+export * from './src/directives/theme.directive';
+export * from './src/directives/theme.directive.module';
+
+// Utils
+export * from './src/components/utils/dom';
+export * from './src/components/utils/overlay';

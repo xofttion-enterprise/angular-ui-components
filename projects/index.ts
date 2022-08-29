@@ -14,6 +14,8 @@ export * from './src/components/atoms/icon/icon.component';
 export * from './src/components/atoms/icon/icon.component.module';
 export * from './src/components/atoms/input-field/input-field.component';
 export * from './src/components/atoms/input-field/input-field.component.module';
+export * from './src/components/atoms/progress-bar/progress-bar.component';
+export * from './src/components/atoms/progress-bar/progress-bar.component.module';
 export * from './src/components/atoms/radiobutton/radiobutton.component';
 export * from './src/components/atoms/radiobutton/radiobutton.component.module';
 export * from './src/components/atoms/switch/switch.component';

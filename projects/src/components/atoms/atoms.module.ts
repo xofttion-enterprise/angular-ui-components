@@ -5,6 +5,7 @@ import { ButtonComponentModule } from './button/button.component.module';
 import { CheckboxComponentModule } from './checkbox/checkbox.component.module';
 import { IconComponentModule } from './icon/icon.component.module';
 import { InputFieldComponentModule } from './input-field/input-field.component.module';
+import { ProgressBarComponentModule } from './progress-bar/progress-bar.component.module';
 import { RadiobuttonComponentModule } from './radiobutton/radiobutton.component.module';
 import { SwitchComponentModule } from './switch/switch.component.module';
 
@@ -15,6 +16,7 @@ const components = [
   CheckboxComponentModule,
   IconComponentModule,
   InputFieldComponentModule,
+  ProgressBarComponentModule,
   RadiobuttonComponentModule,
   SwitchComponentModule
 ];

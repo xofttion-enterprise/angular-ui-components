@@ -146,7 +146,7 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
       }
 
       const coincidences = suggestions.filter((element) =>
-        element.isCoincidence(value)
+        element.hasCoincidence(value)
       );
 
       this.coincidences = coincidences.slice(0, 6);

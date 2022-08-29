@@ -75,69 +75,6 @@
             <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
               Plazo de pago (días)<span>*</span>
             </xft-select-field>
-
-            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
-              Garantía (dias)<span>*</span>
-            </xft-select-field>
-
-            <div class="app__content__radiobutton">
-              <xft-radiobutton-label
-                class="col-sm"
-                value="elite"
-                [formControl]="radioControl"
-                xofttionTheme="info"
-              >
-                Imprimir recibo
-              </xft-radiobutton-label>
-
-              <xft-radiobutton-label
-                class="col-sm"
-                value="preferencial"
-                [formControl]="radioControl"
-                xofttionTheme="success"
-              >
-                Imprimir ticket
-              </xft-radiobutton-label>
-
-              <xft-radiobutton-label
-                class="col-sm"
-                value="ninguno"
-                [formControl]="radioControl"
-                xofttionTheme="danger"
-              >
-                No imprimir recibo
-              </xft-radiobutton-label>
-            </div>
-
-            <xft-checkbox-label xofttionTheme="happy">
-              Pagar todo en 1 cuota
-            </xft-checkbox-label>
-            <xft-switch-label xofttionTheme="warning"
-              >Notificar transacción</xft-switch-label
-            >
-          </div>
-
-          <div class="app__content__panel2"></div>
-
-          <div class="app__buttons">
-            <button xft-button="flat" [disabled]="false" prefixIcon="trash-2">
-              Cancelar venta
-            </button>
-            <button
-              xft-button="outline"
-              [disabled]="false"
-              prefixIcon="trash-2"
-              xofttionTheme="danger"
-            >
-              Eliminar
-            </button>
-            <button
-              xft-button="raised"
-              [disabled]="false"
-              xofttionTheme="happy"
-            >
-              Registrar
-            </button>
           </div>
         </div>
       </div>

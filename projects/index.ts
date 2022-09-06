@@ -23,6 +23,8 @@ export * from './src/components/atoms/switch/switch.component.module';
 export * from './src/components/atoms/atoms.module';
 
 // Molecules components
+export * from './src/components/molecules/alert/alert.component';
+export * from './src/components/molecules/alert/alert.component.module';
 export * from './src/components/molecules/ballot/ballot.component';
 export * from './src/components/molecules/ballot/ballot.component.module';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component';

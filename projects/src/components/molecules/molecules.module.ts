@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AlertComponentModule } from './alert/alert.component.module';
 import { BallotComponentModule } from './ballot/ballot.component.module';
 import { CheckboxLabelComponentModule } from './checkbox-label/checkbox-label.component.module';
 import { DayPickerComponentModule } from './day-picker/day-picker.component.module';
@@ -11,6 +12,7 @@ import { ToolbarComponentModule } from './toolbar/toolbar.component.module';
 import { YearPickerComponentModule } from './year-picker/year-picker.component.module';
 
 const components = [
+  AlertComponentModule,
   BallotComponentModule,
   CheckboxLabelComponentModule,
   DayPickerComponentModule,

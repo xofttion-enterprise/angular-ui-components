@@ -41,6 +41,9 @@ export class ListFieldComponent
   @Input()
   public enabled = true;
 
+  @Input()
+  public sheetMode = false;
+
   private _componentDOM: ComponentDOM;
 
   private _inputElement?: HTMLElement;
@@ -108,6 +111,10 @@ export class ListFieldComponent
 
   public onFocus(): void {
     this.status.active = true;
+  }
+
+  public onClickBackdrop(): void {
+    this.hideSuggestions();
   }
 
   protected focusInput(): void {

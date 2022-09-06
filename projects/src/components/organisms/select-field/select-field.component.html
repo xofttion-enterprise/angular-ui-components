@@ -35,24 +35,29 @@
       </button>
     </div>
 
-    <ul
-      class="xft-list-field__ul"
-      [class.xft-list-field__ul--show]="status.show"
-      [class.xft-list-field__ul--hide]="status.hide"
-      [class.xft-list-field__ul--higher]="higher"
+    <div
+      class="xft-list-field__suggestions"
+      [class.xft-list-field__suggestions--show]="status.show"
+      [class.xft-list-field__suggestions--hide]="status.hide"
+      [class.xft-list-field__suggestions--higher]="higher && !sheetMode"
+      [class.xft-list-field__suggestions--sheet]="sheetMode"
     >
-      <xft-ballot
-        *ngFor="let element of suggestions"
-        class="xft-list-field__element"
-        tabindex="-1"
-        [initials]="element?.initials"
-        [photo]="element?.photo"
-        [subtitle]="element?.subtitle"
-        (click)="onSelect(element)"
-        (keydown)="onKeydownElement($event, element)"
-      >
-        {{ element?.title }}
-      </xft-ballot>
-    </ul>
+      <ul class="xft-list-field__ul">
+        <xft-ballot
+          *ngFor="let element of suggestions"
+          class="xft-list-field__element"
+          tabindex="-1"
+          [initials]="element?.initials"
+          [photo]="element?.photo"
+          [subtitle]="element?.subtitle"
+          (click)="onSelect(element)"
+          (keydown)="onKeydownElement($event, element)"
+        >
+          {{ element?.title }}
+        </xft-ballot>
+      </ul>
+
+      <div class="xft-list-field__backdrop" (click)="onClickBackdrop()"></div>
+    </div>
   </div>
 </div>

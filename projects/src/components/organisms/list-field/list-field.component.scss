@@ -103,19 +103,89 @@
     background: transparent;
   }
 
-  &__ul {
+  &__suggestions {
     position: absolute;
     top: var(--size-44);
     left: 0rem;
     width: 100%;
-    z-index: 4;
+    height: 0rem;
+    overflow: hidden;
+    z-index: var(--z-index-4);
+
+    &--hide {
+      .xft-list-field__ul {
+        opacity: 0;
+        transform: scale(0, 0);
+      }
+    }
+
+    &--show {
+      overflow: initial;
+      opacity: 1;
+      height: auto;
+
+      .xft-list-field__ul {
+        height: auto;
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    &--higher {
+      top: initial;
+      bottom: var(--size-44);
+
+      .xft-list-field__ul {
+        transform-origin: 0% 100%;
+      }
+    }
+
+    &--sheet {
+      display: flex;
+      justify-content: center;
+
+      &.xft-list-field__suggestions--show {
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        height: 100%;
+        z-index: var(--z-index-32);
+
+        .xft-list-field__ul {
+          transform: translateY(0%);
+        }
+
+        .xft-list-field__backdrop {
+          bottom: 0rem;
+          opacity: 0.86;
+        }
+      }
+
+      .xft-list-field__ul {
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        max-width: 25rem;
+        max-height: 50%;
+        transform-origin: initial;
+        transform: translateY(100%);
+        border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+      }
+    }
+  }
+
+  &__ul {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 0rem;
     opacity: 0;
     padding: var(--size-8) 0rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    max-height: 16rem;
-    overflow-x: hidden;
     overflow-y: auto;
+    overflow-x: hidden;
+    z-index: var(--z-index-2);
     background: var(--color-primary-900);
     box-shadow: var(--z-bottom-light-4);
     will-change: opacity, transform;
@@ -123,23 +193,6 @@
     border: var(--border-size) solid var(--font-primary-100);
     transition: transform 240ms 0ms var(--standard-curve),
       opacity 240ms 0ms var(--standard-curve);
-
-    &--hide {
-      height: 0rem;
-      opacity: 0;
-      transform: scale(0, 0);
-    }
-
-    &--show {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-
-    &--higher {
-      top: initial;
-      bottom: var(--size-44);
-      transform-origin: 0% 100%;
-    }
   }
 
   &__element {
@@ -163,4 +216,19 @@
       }
     }
   }
-}  
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: initial;
+    opacity: 0;
+    z-index: var(--z-index-1);
+    will-change: opacity;
+    background: var(--color-secondary-900);
+    transition: opacity 120ms 0ms var(--deceleration-curve),
+      bottom 120ms 0ms var(--deceleration-curve);
+  }
+}

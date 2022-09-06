@@ -11,7 +11,7 @@ import { ListFieldComponent } from '../list-field/list-field.component';
 interface StoreCoincidence {
   pattern: string;
   value?: Array<ListFieldElement>;
-  oldValue?: StoreCoincidence;
+  before: StoreCoincidence | null;
 }
 
 @Component({
@@ -38,13 +38,13 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     }
   }
 
-  private _storeCoincidences: StoreCoincidence = {
+  private _store: StoreCoincidence = {
     pattern: '',
     value: [],
-    oldValue: undefined
+    before: null
   };
 
-  private _valueCoindicence = '';
+  private _coindicence = '';
 
   public coincidences: Array<ListFieldElement> = [];
 
@@ -55,7 +55,7 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
   public override onFocus(): void {
     super.onFocus();
 
-    this.suggestion = this._valueCoindicence;
+    this.suggestion = this._coindicence;
 
     this._searchSuggestions(this.suggestion);
 
@@ -87,7 +87,7 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
   }
 
   public onClickAction() {
-    this._valueCoindicence = '';
+    this._coindicence = '';
 
     this.setValue();
 
@@ -120,16 +120,17 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     this.onChange(element);
     this.onTouch(element);
 
-    this._storeCoincidences = {
-      pattern: this._valueCoindicence,
-      value: this.coincidences
+    this._store = {
+      pattern: this._coindicence,
+      value: this.coincidences,
+      before: null
     };
   }
 
   public onInput(event: Event): void {
     const inputTarget = event.target as HTMLInputElement;
 
-    this._valueCoindicence = inputTarget.value;
+    this._coindicence = inputTarget.value;
     this.suggestion = inputTarget.value;
 
     this._searchSuggestions(inputTarget.value);
@@ -137,12 +138,12 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
   private _searchSuggestions(value: string | null): void {
     if (value) {
-      const storeCoincidences = this._searchStoreCoincidences(value);
+      const store = this._searchInStore(value);
 
       let suggestions = this.suggestions;
 
-      if (storeCoincidences?.value) {
-        suggestions = storeCoincidences.value;
+      if (store?.value) {
+        suggestions = store.value;
       }
 
       const coincidences = suggestions.filter((element) =>
@@ -151,43 +152,43 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
       this.coincidences = coincidences.slice(0, 6);
 
-      this._storeCoincidences = {
+      this._store = {
         value: coincidences,
         pattern: value,
-        oldValue: storeCoincidences || undefined
+        before: store || null
       };
     } else {
       this.coincidences = this.suggestions.slice(0, 6);
 
-      this._rebootStoreCoincidences();
+      this._rebootStore();
     }
   }
 
-  private _searchStoreCoincidences(value: string): StoreCoincidence | null {
-    if (this._storeCoincidences.pattern) {
-      let coincidences: StoreCoincidence = this._storeCoincidences;
-      let stopSearch = false;
+  private _searchInStore(value: string): StoreCoincidence | null {
+    if (this._store.pattern) {
+      let coincidences: StoreCoincidence = this._store;
+      let isSearch = false;
 
-      while (!stopSearch) {
-        stopSearch = like(value, coincidences.pattern, true);
+      while (!isSearch) {
+        isSearch = like(value, coincidences.pattern, true);
 
-        if (!stopSearch) {
-          coincidences = coincidences.oldValue as StoreCoincidence;
-          stopSearch = coincidences === undefined;
+        if (!isSearch) {
+          coincidences = coincidences.before as StoreCoincidence;
+          isSearch = coincidences === undefined;
         }
       }
 
-      return coincidences ? coincidences : this._rebootStoreCoincidences();
+      return coincidences ? coincidences : this._rebootStore();
     }
 
     return null;
   }
 
-  private _rebootStoreCoincidences(): StoreCoincidence {
-    return (this._storeCoincidences = {
+  private _rebootStore(): StoreCoincidence {
+    return (this._store = {
       pattern: '',
       value: undefined,
-      oldValue: undefined
+      before: undefined || null
     });
   }
 }

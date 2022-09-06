@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  Input,
   OnInit,
   Renderer2,
   ViewEncapsulation
@@ -14,9 +15,10 @@ import { ComponentDOM } from '../../utils/dom';
   encapsulation: ViewEncapsulation.None
 })
 export class ModalComponent implements OnInit {
-  private _componentDOM: ComponentDOM;
+  @Input()
+  public visible = false;
 
-  private _visible = false;
+  private _componentDOM: ComponentDOM;
 
   private _component?: Element;
 
@@ -29,15 +31,15 @@ export class ModalComponent implements OnInit {
   }
 
   public get show(): boolean {
-    return this._visible;
+    return this.visible;
   }
 
   public open(): void {
-    this._visible = true;
+    this.visible = true;
   }
 
   public close(): void {
-    this._visible = false;
+    this.visible = false;
   }
 
   public append(children: any): void {

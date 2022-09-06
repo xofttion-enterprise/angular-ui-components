@@ -14,21 +14,14 @@
 
   <div class="xft-list-field__component">
     <div class="xft-list-field__body">
-      <input
-        class="xft-list-field__control"
-        type="text"
-        [disabled]="!enabled"
-        [value]="suggestion"
-        (focus)="onFocus()"
-        (blur)="onBlur()"
-        (input)="onInput($event)"
-        (keydown)="onKeydownInput($event)"
-      />
+      <span class="xft-list-field__control" (click)="onOpen()">
+        {{ description }}
+      </span>
 
       <button
         class="xft-list-field__action"
         [hidden]="!isSelected"
-        (click)="onClickAction()"
+        (click)="onClear()"
       >
         <xft-icon value="trash-2"></xft-icon>
       </button>
@@ -38,10 +31,20 @@
       class="xft-list-field__suggestions"
       [class.xft-list-field__suggestions--show]="status.show"
       [class.xft-list-field__suggestions--hide]="status.hide"
-      [class.xft-list-field__suggestions--higher]="higher && !sheetMode"
+      [class.xft-list-field__suggestions--higher]="higher"
       [class.xft-list-field__suggestions--sheet]="sheetMode"
     >
       <ul class="xft-list-field__ul">
+        <input
+          class="xft-list-field__ul__control"
+          type="text"
+          [value]="suggestion"
+          (focus)="onFocus()"
+          (blur)="onBlur()"
+          (input)="onInput($event)"
+          (keydown)="onKeydownInput($event)"
+        />
+
         <xft-ballot
           *ngFor="let element of coincidences"
           class="xft-list-field__element"

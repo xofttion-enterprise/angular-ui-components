@@ -19,6 +19,39 @@ xft-autocomplete-field {
 
     &__control {
       width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__ul {
+      &__control {
+        position: relative;
+        float: left;
+        width: calc(100% - var(--size-32));
+        height: var(--size-32);
+        line-height: var(--size-32);
+        padding: 0rem var(--size-8);
+        box-sizing: border-box;
+        border-radius: var(--size-4);
+        margin: 0rem var(--size-16) var(--size-8);
+        cursor: text;
+        border: none;
+        outline: none;
+        color: var(--font-primary-900);
+        background: var(--color-primary-500);
+        font-size: var(--body-1-size);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: var(--body-1-letter-spacing);
+
+        &::placeholder {
+          color: var(--font-primary-500);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
     }
   }
 }

@@ -1,5 +1,5 @@
 export interface ListFieldElement {
-  description?: string;
+  description: string;
   initials?: string;
   photo?: string;
   subtitle?: string;

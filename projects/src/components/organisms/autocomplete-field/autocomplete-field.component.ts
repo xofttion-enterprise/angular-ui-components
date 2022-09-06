@@ -46,10 +46,18 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
   private _coindicence = '';
 
+  public description = '';
+
   public coincidences: Array<ListFieldElement> = [];
 
   public get isSelected(): boolean {
     return !!this.value;
+  }
+
+  public onOpen(): void {
+    this.onFocus();
+
+    setTimeout(() => this._inputElement?.focus(), 240);
   }
 
   public override onFocus(): void {
@@ -64,10 +72,6 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
   public override onBlur(): void {
     super.onBlur();
-
-    if (this.value) {
-      this.suggestion = this.value.description || '';
-    }
   }
 
   public onKeydownInput(event: KeyboardEvent): void {
@@ -84,17 +88,6 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
         this.navigationInput(event);
         break;
     }
-  }
-
-  public onClickAction() {
-    this._coindicence = '';
-
-    this.setValue();
-
-    this.onChange();
-    this.onTouch();
-
-    this.focusInput();
   }
 
   public onKeydownElement(
@@ -117,6 +110,8 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
     this.setValue(element);
 
+    this.description = element.description;
+
     this.onChange(element);
     this.onTouch(element);
 
@@ -134,6 +129,18 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     this.suggestion = inputTarget.value;
 
     this._searchSuggestions(inputTarget.value);
+  }
+
+  public onClear() {
+    this._coindicence = '';
+    this.description = '';
+
+    this.setValue();
+
+    this.onChange();
+    this.onTouch();
+
+    this.focusInput();
   }
 
   private _searchSuggestions(value: string | null): void {

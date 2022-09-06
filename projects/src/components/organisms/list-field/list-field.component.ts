@@ -44,15 +44,15 @@ export class ListFieldComponent
   @Input()
   public sheetMode = false;
 
+  protected _inputElement!: HTMLElement;
+
   private _componentDOM: ComponentDOM;
 
-  private _inputElement?: HTMLElement;
+  private _contentElement!: HTMLElement;
 
-  private _contentElement?: HTMLElement;
+  private _listElement!: HTMLElement;
 
-  private _listElement?: HTMLElement;
-
-  private _elements?: NodeListOf<HTMLElement>;
+  private _elements!: NodeListOf<HTMLElement>;
 
   private _positionElement = 0;
 
@@ -102,7 +102,7 @@ export class ListFieldComponent
   }
 
   public get higher(): boolean {
-    return this._higher;
+    return this._higher && !this.sheetMode;
   }
 
   public onBlur(): void {
@@ -160,13 +160,13 @@ export class ListFieldComponent
   protected navigationInput(event: KeyboardEvent): void {
     switch (event.code) {
       case 'ArrowUp':
-        if (this.status.show && this._higher) {
+        if (this.status.show && this.higher) {
           this._navigationInputUp();
         }
         break;
 
       case 'ArrowDown':
-        if (this.status.show && !this._higher) {
+        if (this.status.show && !this.higher) {
           this._navigationInputDown();
         }
         break;
@@ -234,7 +234,7 @@ export class ListFieldComponent
       this._positionElement--;
 
       this._elements?.item(this._positionElement).focus();
-    } else if (!this._higher) {
+    } else if (!this.higher) {
       this._inputElement?.focus();
     }
   }
@@ -247,7 +247,7 @@ export class ListFieldComponent
       this._positionElement = newPosition;
 
       this._elements?.item(this._positionElement).focus();
-    } else if (this._higher) {
+    } else if (this.higher) {
       this._inputElement?.focus();
     }
   }

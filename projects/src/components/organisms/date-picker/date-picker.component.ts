@@ -81,7 +81,7 @@ export class DatePickerComponent
 
   private _componentDOM: ComponentDOM;
 
-  private _overlayComponent?: ModalOverlayComponent<DatePickerComponent>;
+  private _overlay?: ModalOverlayComponent<DatePickerComponent>;
 
   public value: Date;
 
@@ -163,9 +163,9 @@ export class DatePickerComponent
   }
 
   public ngOnOverlay(
-    overlayComponent: ModalOverlayComponent<DatePickerComponent>
+    overlay: ModalOverlayComponent<DatePickerComponent>
   ): void {
-    this._overlayComponent = overlayComponent;
+    this._overlay = overlay;
   }
 
   public get title(): string {
@@ -217,9 +217,9 @@ export class DatePickerComponent
   private _emitListener(name: DatePickerListenerName, value?: Date): void {
     this.listener.emit({ name, value });
 
-    this._overlayComponent?.emit({ key: name, value });
+    this._overlay?.emit({ key: name, value });
 
-    this._overlayComponent?.close();
+    this._overlay?.close();
   }
 
   private _show(key: string): void {

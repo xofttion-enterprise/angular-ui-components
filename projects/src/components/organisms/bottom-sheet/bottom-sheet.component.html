@@ -1,0 +1,16 @@
+<div
+  class="xft-bottom-sheet__content"
+  [class.xft-bottom-sheet__content--show]="show"
+>
+  <div
+    class="xft-bottom-sheet__component"
+    [class.xft-bottom-sheet__component--show]="show"
+  >
+    <ng-content></ng-content>
+  </div>
+
+  <div
+    class="xft-bottom-sheet__backdrop"
+    [class.xft-bottom-sheet__backdrop--show]="show"
+  ></div>
+</div>

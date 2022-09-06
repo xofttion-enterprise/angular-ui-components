@@ -48,6 +48,9 @@ export * from './src/components/molecules/molecules.module';
 // Organisms components
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component';
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component.module';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component.service';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component.module';
 export * from './src/components/organisms/date-field/date-field.component';
 export * from './src/components/organisms/date-field/date-field.component.module';
 export * from './src/components/organisms/date-picker/date-picker.component';

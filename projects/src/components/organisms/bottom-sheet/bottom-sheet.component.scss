@@ -1,24 +1,23 @@
 /*!
- * Xofttion Modal Component
+ * Xofttion BottomSheet Component
  * v1.0.0
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 27/Ago/2022
+ * Updated: 06/Sep/2022
 */
 
-.xft-modal {
+.xft-bottom-sheet {
   &__content {
     position: fixed;
-    display: flex;
     top: 0rem;
     left: 0rem;
+    display: flex;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    z-index: var(--z-index-24);
     visibility: hidden;
-    align-items: center;
-    justify-content: center;
+    z-index: var(--z-index-24);
 
     &--show {
       visibility: visible;
@@ -27,18 +26,19 @@
 
   &__component {
     position: absolute;
-    width: auto;
-    max-width: calc(100% - var(--size-16));
+    bottom: 0rem;
+    width: 100%;
+    max-width: 30rem;
     height: 0rem;
+    max-height: 75%;
     opacity: 0;
     z-index: var(--z-index-2);
     overflow: hidden;
-    border-radius: var(--size-8);
+    border-radius: var(--size-8) var(--size-8) 0rem 0rem;
     visibility: hidden;
     background: var(--color-primary-900);
-    box-shadow: var(--z-bottom-light-4);
+    transform: translateY(100%);
     will-change: transform;
-    transform: translateY(10rem) scale(0.6);
     transition: opacity 125ms 0ms var(--deceleration-curve),
       transform 125ms 0ms var(--deceleration-curve),
       visibility 125ms 0ms var(--deceleration-curve);
@@ -47,7 +47,7 @@
       visibility: visible;
       height: auto;
       opacity: 1;
-      transform: translateY(0rem) scale(1);
+      transform: translateY(0%);
     }
   }
 

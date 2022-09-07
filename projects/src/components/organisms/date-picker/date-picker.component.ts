@@ -22,7 +22,7 @@ import {
   monthsName
 } from '@xofttion-enterprise/utils';
 import { Subscription } from 'rxjs';
-import { ComponentDOM } from '../../utils';
+import { ComponentDOM, setThemeDOM } from '../../utils';
 import {
   ModalOverlayComponent,
   OnModalOverlay
@@ -73,15 +73,14 @@ export class DatePickerComponent
   @Input()
   public automatic = false;
 
-  @Input()
-  public material?: string;
-
   @Output()
   public listener: EventEmitter<DatePickerListener>;
 
   private _componentDOM: ComponentDOM;
 
   private _overlay?: ModalOverlayComponent<DatePickerComponent>;
+
+  private _currentTheme?: string;
 
   public value: Date;
 
@@ -212,6 +211,14 @@ export class DatePickerComponent
 
   public onCancel(): void {
     this._emitListener('DateCancel');
+  }
+
+  public setTheme(theme: string): void {
+    this._currentTheme = setThemeDOM(
+      this._componentDOM,
+      theme,
+      this._currentTheme
+    );
   }
 
   private _emitListener(name: DatePickerListenerName, value?: Date): void {

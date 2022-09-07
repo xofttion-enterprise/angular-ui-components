@@ -9,11 +9,11 @@ import {
 import { ComponentDOM, setThemeDOM } from '../components/utils';
 
 @Directive({
-  selector: '[xofttionTheme]'
+  selector: '[xftTheme]'
 })
 export class ThemeDirective implements OnChanges {
   @Input()
-  public xofttionTheme = 'default';
+  public xftTheme = 'default';
 
   private _theme?: string;
 
@@ -24,10 +24,10 @@ export class ThemeDirective implements OnChanges {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes['xofttionTheme']) {
+    if (changes['xftTheme']) {
       this._theme = setThemeDOM(
         this._componentDOM,
-        changes['xofttionTheme'].currentValue,
+        changes['xftTheme'].currentValue,
         this._theme
       );
     }

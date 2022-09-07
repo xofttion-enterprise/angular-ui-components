@@ -30,9 +30,10 @@ export class AppComponent {
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService
   ) {
-    snackbarService.happy(
-      'Lets take a look at 10 fun push examples across the food, gaming, eCommerce, mhealth, and media industries and break down what they do well.',
-      'Store journal in Platform'
+    snackbarService.xofttion(
+      'Recuerda! Es indispensable que diligencie todos los campos al momento de realizar su pedido, esto determinará la eficiencia de su entrega',
+      'Store journal in Platform',
+      'xofttion'
     );
   }
 }

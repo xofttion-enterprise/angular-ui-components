@@ -34,12 +34,16 @@
               class="col-sm col-lg-30"
               [suggestions]="persons"
               [sheetMode]="true"
-              xofttionTheme="happy"
+              xftTheme="happy"
             >
               Sucursal<span>*</span>
             </xft-select-field>
 
-            <xft-select-field class="col-sm col-lg-40" [suggestions]="persons">
+            <xft-select-field
+              class="col-sm col-lg-40"
+              [suggestions]="persons"
+              xftTheme="info"
+            >
               Resolucion de facturación<span>*</span>
             </xft-select-field>
 
@@ -47,7 +51,7 @@
               Almacen<span>*</span>
             </xft-select-field>
 
-            <xft-date-field class="col-sm col-lg-30">
+            <xft-date-field class="col-sm col-lg-30" xftTheme="danger">
               Fecha de expedición<span>*</span>
             </xft-date-field>
 
@@ -74,7 +78,7 @@
             <xft-select-field
               class="col-sm col-lg-40"
               [suggestions]="persons"
-              xofttionTheme="warning"
+              xftTheme="warning"
             >
               Estado de factura<span>*</span>
             </xft-select-field>
@@ -82,7 +86,7 @@
             <xft-select-field
               class="col-sm col-lg-30"
               [suggestions]="persons"
-              xofttionTheme="happy"
+              xftTheme="happy"
             >
               Plazo de pago (días)<span>*</span>
             </xft-select-field>
@@ -90,7 +94,7 @@
         </div>
       </div>
 
-      <xft-alert icon="bell" xofttionTheme="happy">
+      <xft-alert icon="bell" xftTheme="info">
         Let's take a look at 10 fun push examples across the food, gaming,
         eCommerce, mhealth, and media industries and break down what they do
         well

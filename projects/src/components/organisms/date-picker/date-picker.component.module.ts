@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ThemeDirectiveModule } from '../../../directives/theme.directive.module';
 import { ButtonComponentModule } from '../../atoms/button/button.component.module';
 import { DayPickerComponentModule } from '../../molecules/day-picker/day-picker.component.module';
 import { MonthPickerComponentModule } from '../../molecules/month-picker/month-picker.component.module';
@@ -15,8 +14,7 @@ import { DatePickerComponent } from './date-picker.component';
     DayPickerComponentModule,
     MonthPickerComponentModule,
     YearPickerComponentModule,
-    ButtonComponentModule,
-    ThemeDirectiveModule
+    ButtonComponentModule
   ],
   declarations: [DatePickerComponent],
   exports: [DatePickerComponent]

@@ -25,6 +25,15 @@ export class SnackbarComponentService {
     this._component.launch(config);
   }
 
+  public xofttion(message: string, title = '', icon = ''): void {
+    this.launch({
+      title,
+      icon,
+      message,
+      theme: 'default'
+    });
+  }
+
   public success(message: string, title = ''): void {
     this.launch({
       title,

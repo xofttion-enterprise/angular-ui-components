@@ -79,7 +79,7 @@ export class SnackbarComponent implements OnInit, OnDestroy {
 
       const duration = getDurationSnackbar(config.message);
 
-      //this._timeoutId = setTimeout(() => this._hide(), duration);
+      this._timeoutId = setTimeout(() => this._hide(), duration);
     } else {
       this._hideForce();
 

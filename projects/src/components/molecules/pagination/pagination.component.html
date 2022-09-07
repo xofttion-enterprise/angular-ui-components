@@ -1,0 +1,52 @@
+<div class="xft-pagination__content">
+  <div class="xft-pagination__actions">
+    <button
+      class="xft-pagination__action"
+      [disabled]="isFirstPage"
+      (click)="onClickFirst()"
+    >
+      <xft-icon value="arrowhead-left"></xft-icon>
+    </button>
+
+    <button
+      class="xft-pagination__action"
+      [disabled]="isFirstPage"
+      (click)="onClickPrev()"
+    >
+      <xft-icon value="arrow-ios-left"></xft-icon>
+    </button>
+  </div>
+
+  <div class="xft-pagination__pages" [hidden]="isEmpty">
+    <div
+      class="xft-pagination__page"
+      *ngFor="let page of pages"
+      [class.xft-pagination__page--active]="page.status.active"
+      (click)="onClickPage(page)"
+    >
+      {{ page.label }}
+    </div>
+  </div>
+
+  <div class="xft-pagination__description">
+    {{ description }} <span>{{ label }}</span>
+  </div>
+
+  <div class="xft-pagination__actions">
+    <button
+      class="xft-pagination__action"
+      [disabled]="isLastPage"
+      (click)="onClickNext()"
+    >
+      <xft-icon value="arrow-ios-right"></xft-icon>
+    </button>
+
+    <button
+      class="xft-pagination__action"
+      [disabled]="isLastPage"
+      (click)="onClickLast()"
+    >
+      <xft-icon value="arrowhead-right"></xft-icon>
+    </button>
+  </div>
+</div>

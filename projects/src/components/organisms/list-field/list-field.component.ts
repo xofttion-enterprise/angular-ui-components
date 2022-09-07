@@ -185,7 +185,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationInputUp(): void {
+  protected _navigationInputUp(): void {
     this._elements = this._listElement?.querySelectorAll(
       '.xft-list-field__element'
     );
@@ -210,7 +210,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationInputDown(): void {
+  protected _navigationInputDown(): void {
     this._elements = this._listElement?.querySelectorAll(
       '.xft-list-field__element'
     );
@@ -229,7 +229,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationElementUp(): void {
+  protected _navigationElementUp(): void {
     if (this._positionElement > 0) {
       this._positionElement--;
 
@@ -239,7 +239,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationElementDown(): void {
+  protected _navigationElementDown(): void {
     const newPosition = this._positionElement + 1;
     const length = this._elements?.length || 0;
 

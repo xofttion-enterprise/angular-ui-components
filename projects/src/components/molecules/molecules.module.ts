@@ -5,6 +5,7 @@ import { CheckboxLabelComponentModule } from './checkbox-label/checkbox-label.co
 import { DayPickerComponentModule } from './day-picker/day-picker.component.module';
 import { MoneyFieldComponentModule } from './money-field/money-field.component.module';
 import { MonthPickerComponentModule } from './month-picker/month-picker.component.module';
+import { PaginationComponentModule } from './pagination/pagination.component.module';
 import { RadiobuttonLabelComponentModule } from './radiobutton-label/radiobutton-label.component.module';
 import { SwitchLabelComponentModule } from './switch-label/switch-label.component.module';
 import { TextFieldComponentModule } from './text-field/text-field.component.module';
@@ -18,6 +19,7 @@ const components = [
   DayPickerComponentModule,
   MoneyFieldComponentModule,
   MonthPickerComponentModule,
+  PaginationComponentModule,
   RadiobuttonLabelComponentModule,
   SwitchLabelComponentModule,
   TextFieldComponentModule,

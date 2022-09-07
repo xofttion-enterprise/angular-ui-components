@@ -5,6 +5,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
+import { like } from '../../utils';
 import { ListFieldElement } from '../list-field/list-field-element';
 import { ListFieldComponent } from '../list-field/list-field.component';
 
@@ -143,6 +144,14 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     this.focusInput();
   }
 
+  protected override navigationInput(event: KeyboardEvent): void {
+    switch (event.code) {
+      case 'ArrowDown':
+        this._navigationInputDown();
+        break;
+    }
+  }
+
   private _searchSuggestions(value: string | null): void {
     if (value) {
       const store = this._searchInStore(value);
@@ -198,37 +207,4 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
       before: undefined || null
     });
   }
-}
-
-function like(value: string, pattern: string, force = false): boolean {
-  if (pattern) {
-    let filter = pattern.toLowerCase();
-    let test = value.toLowerCase();
-
-    if (force) {
-      test = normalize(test);
-      filter = normalize(filter);
-    }
-
-    return !!test.match(`^.*${filter}.*$`);
-  }
-
-  return !!value;
-}
-
-function normalize(value: string): string {
-  let result = value;
-
-  result = result.replace('á', 'a');
-  result = result.replace('Á', 'A');
-  result = result.replace('é', 'e');
-  result = result.replace('É', 'E');
-  result = result.replace('í', 'i');
-  result = result.replace('Í', 'I');
-  result = result.replace('ó', 'o');
-  result = result.replace('Ó', 'O');
-  result = result.replace('ú', 'u');
-  result = result.replace('Ú', 'U');
-
-  return result;
 }

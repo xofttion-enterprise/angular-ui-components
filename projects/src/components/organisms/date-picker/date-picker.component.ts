@@ -22,7 +22,7 @@ import {
   monthsName
 } from '@xofttion-enterprise/utils';
 import { Subscription } from 'rxjs';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import {
   ModalOverlayComponent,
   OnModalOverlay

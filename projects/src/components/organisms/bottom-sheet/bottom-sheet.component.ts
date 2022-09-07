@@ -6,7 +6,7 @@ import {
   Renderer2,
   ViewEncapsulation
 } from '@angular/core';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 
 @Component({
   selector: 'xft-bottom-sheet',

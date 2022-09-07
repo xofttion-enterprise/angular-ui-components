@@ -8,7 +8,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import { ListFieldElement } from './list-field-element';
 
 const maxPositionVisible = 4;

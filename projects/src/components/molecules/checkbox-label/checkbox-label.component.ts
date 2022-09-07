@@ -8,7 +8,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 
 @Component({
   selector: 'xft-checkbox-label',

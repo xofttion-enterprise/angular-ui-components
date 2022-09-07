@@ -6,9 +6,7 @@ import {
   Renderer2,
   SimpleChanges
 } from '@angular/core';
-import { ComponentDOM } from '../components/utils/dom';
-
-const prefixClass = 'theme-xofttion'
+import { ComponentDOM, setThemeDOM } from '../components/utils';
 
 @Directive({
   selector: '[xofttionTheme]'
@@ -27,14 +25,11 @@ export class ThemeDirective implements OnChanges {
 
   public ngOnChanges(changes: SimpleChanges): void {
     if (changes['xofttionTheme']) {
-      const themeValue = changes['xofttionTheme'].currentValue;
-
-      if (this._theme) {
-        this._componentDOM.removeClass(this._theme);
-      }
-
-      this._theme = `${prefixClass}--${themeValue}`;
-      this._componentDOM.addClass(this._theme);
+      this._theme = setThemeDOM(
+        this._componentDOM,
+        changes['xofttionTheme'].currentValue,
+        this._theme
+      );
     }
   }
 }

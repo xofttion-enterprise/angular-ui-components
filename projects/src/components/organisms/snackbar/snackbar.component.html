@@ -1,0 +1,15 @@
+<div
+  class="xft-snackbar__content"
+  [class.xft-snackbar__content--show]="visible"
+>
+  <div class="xft-snackbar__avatar" *ngIf="config.icon">
+    <xft-icon [value]="config.icon"></xft-icon>
+  </div>
+
+  <div class="xft-snackbar__component">
+    <label class="xft-snackbar__title" *ngIf="config.title">
+      {{ config.title }}
+    </label>
+    <p class="xft-snackbar__message">{{ config.message }}</p>
+  </div>
+</div>

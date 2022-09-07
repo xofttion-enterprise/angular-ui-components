@@ -64,6 +64,9 @@ export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';
 export * from './src/components/organisms/sidenav/sidenav.component';
 export * from './src/components/organisms/sidenav/sidenav.component.module';
+export * from './src/components/organisms/snackbar/snackbar.component';
+export * from './src/components/organisms/snackbar/snackbar.component.service';
+export * from './src/components/organisms/snackbar/snackbar.component.module';
 export * from './src/components/organisms/organisms.module';
 
 // Directives

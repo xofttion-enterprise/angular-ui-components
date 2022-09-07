@@ -6,6 +6,7 @@ import { DatePickerComponentModule } from './date-picker/date-picker.component.m
 import { ModalComponentModule } from './modal/modal.component.module';
 import { SelectFieldComponentModule } from './select-field/select-field.component.module';
 import { SidenavComponentModule } from './sidenav/sidenav.component.module';
+import { SnackbarComponentModule } from './snackbar/snackbar.component.module';
 
 const components = [
   AutocompleteFieldComponentModule,
@@ -14,7 +15,8 @@ const components = [
   DatePickerComponentModule,
   ModalComponentModule,
   SelectFieldComponentModule,
-  SidenavComponentModule
+  SidenavComponentModule,
+  SnackbarComponentModule
 ];
 
 @NgModule({

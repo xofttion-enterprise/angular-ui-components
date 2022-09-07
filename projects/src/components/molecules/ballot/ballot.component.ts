@@ -7,7 +7,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { IsDefined } from '@xofttion-enterprise/utils';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 
 @Component({
   selector: 'xft-ballot',

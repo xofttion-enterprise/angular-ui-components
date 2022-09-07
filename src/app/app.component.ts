@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ModalComponentService } from 'projects';
+import { ModalComponentService, SnackbarComponentService } from 'projects';
 import { persons } from './persons';
 
 @Component({
@@ -10,9 +10,7 @@ import { persons } from './persons';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('1065642202', [
-    Validators.required
-  ]);
+  public inputControl = new FormControl('1065642202', [Validators.required]);
 
   public jobControl = new FormControl('Ingeniero de sistemas', [
     Validators.required
@@ -28,5 +26,13 @@ export class AppComponent {
 
   public maxDate = new Date(2024, 1, 1);
 
-  constructor(private modalService: ModalComponentService) {}
+  constructor(
+    private modalService: ModalComponentService,
+    private snackbarService: SnackbarComponentService
+  ) {
+    snackbarService.happy(
+      'Lets take a look at 10 fun push examples across the food, gaming, eCommerce, mhealth, and media industries and break down what they do well.',
+      'Store journal in Platform'
+    );
+  }
 }

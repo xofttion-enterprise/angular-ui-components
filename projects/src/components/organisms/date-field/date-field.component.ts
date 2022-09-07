@@ -17,7 +17,7 @@ import {
   NG_VALUE_ACCESSOR
 } from '@angular/forms';
 import { getDateFormat } from '@xofttion-enterprise/utils';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import { DatePickerComponent } from '../date-picker/date-picker.component';
 import { DatePickerListener } from '../date-picker/date-utils';
 import {

@@ -7,7 +7,10 @@
   "assets": [
     "./LICENSE",
     "./src/assets/components/_app.scss",
+    "./src/assets/components/_box-field.scss",
     "./src/assets/components/_card.scss",
+    "./src/assets/components/_datatable.scss",
+    "./src/assets/components/_form.scss",
     "./src/assets/components/_components.scss",
 
     "./src/assets/foundations/_animations.scss",
@@ -16,6 +19,7 @@
     "./src/assets/foundations/_normalize.scss",
     "./src/assets/foundations/_responsives.scss",
     "./src/assets/foundations/_sizes.scss",
+    "./src/assets/foundations/_texts.scss",
     "./src/assets/foundations/_themes.scss",
     "./src/assets/foundations/_typographics.scss",
     "./src/assets/foundations/_foundations.scss",

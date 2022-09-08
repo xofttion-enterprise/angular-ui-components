@@ -1,0 +1,309 @@
+/*!
+ * Xofttion Datatable Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 07/Sep/2022
+*/
+
+.xft-datatable {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--size-8);
+  box-sizing: border-box;
+  box-shadow: var(--z-bottom-light-4);
+
+  &__header {
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-height: 3.5rem;
+    box-sizing: border-box;
+    padding: 0rem var(--size-8);
+    border-radius: 0.5rem 0.5rem 0rem 0rem;
+    background-color: var(--background-datatable-content);
+
+    .xft-ballot {
+      width: 100%;
+      height: var(--size-44);
+      margin: var(--size-6) var(--size-8);
+
+      &__title {
+        font-weight: var(--font-weight-700);
+        letter-spacing: var(--letter-spacing-07);
+        color: var(--font-color-primary);
+      }
+
+      &__subtitle {
+        font-weight: var(--font-weight-700);
+        letter-spacing: var(--letter-spacing-06);
+        color: var(--font-color-secondary);
+      }
+    }
+
+    .xft-search-field {
+      width: 100%;
+      height: var(--size-44);
+      margin: var(--size-6) var(--size-8);
+
+      &__content {
+        height: var(--size-44);
+        border: none;
+        background-color: var(--background-datatable-search);
+
+        &--disabled {
+          background-color: var(--background-datatable-search-disabled);
+        }
+      }
+
+      &__nav {
+        .xft-button__action {
+          margin: var(--size-2) var(--size-8);
+        }
+      }
+
+      &__control {
+        input {
+          margin: var(--size-6) 0rem;
+        }
+      }
+
+      &__actions {
+        .xft-button__action {
+          margin: var(--size-2) 0rem var(--size-2) var(--size-8);
+        }
+      }
+    }
+
+    &__actions {
+      display: flex;
+      width: auto;
+      margin: var(--size-8) 0rem;
+      box-sizing: border-box;
+
+      .xft-button__action {
+        box-sizing: content-box;
+        float: left;
+        margin-left: var(--size-4);
+        padding: var(--size-4) var(--size-8);
+
+        &::before {
+          padding-top: calc(100% - var(--size-8));
+          padding-left: calc(100% - var(--size-8));
+          margin-top: calc(-50% + var(--size-4));
+          margin-left: calc(-50% + var(--size-4));
+        }
+
+        & > i {
+          font-size: var(--size-24);
+        }
+      }
+
+      .xft-button-progress {
+        padding: var(--size-4) 0rem;
+        margin-left: var(--size-4);
+
+        .xft-button-progress__action {
+          & > i {
+            font-size: var(--size-24);
+          }
+        }
+      }
+    }
+
+    & > *:first-child {
+      margin-left: 0rem;
+    }
+
+    & > *:last-child {
+      margin-right: 0rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    border-radius: 0rem;
+    overflow-x: hidden;
+  }
+
+  &__table {
+    display: block;
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+
+  &__thead {
+    display: block;
+    color: var(--font-primary-900);
+    background: var(--color-theme-100);
+  }
+
+  &__title {
+    padding: 0rem var(--size-8);
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  &__th {
+    position: relative;
+    display: block;
+    float: left;
+    text-align: left;
+    padding: 0rem var(--size-4);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: var(--size-40);
+    line-height: var(--size-40);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--body-2-size);
+    letter-spacing: var(--body-2-letter-spacing);
+
+    &--control {
+      display: flex;
+      width: var(--size-48);
+      padding: 0rem;
+
+      & > * {
+        margin: auto;
+      }
+
+      & > .xft-avatar {
+        border-radius: var(--size-6);
+        font-size: 0.8325rem;
+        width: var(--size-32);
+        height: var(--size-32);
+        line-height: var(--size-32);
+      }
+    }
+  }
+
+  &__tbody {
+    position: relative;
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  &__row {
+    background: var(--color-primary-700);
+    display: flex;
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    color: var(--font-primary-900);
+    transition: background 160ms 0ms var(--standard-curve);
+
+    &:nth-child(2n + 2):not(.xft-datatable__row--error) {
+      background: var(--color-primary-900);
+    }
+
+    &--error {
+      background: var(--color-danger-100);
+    }
+  }
+
+  &__td {
+    position: relative;
+    display: block;
+    float: left;
+    height: var(--size-40);
+    line-height: var(--size-40);
+    padding: 0rem var(--size-4);
+    cursor: default;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.8325rem;
+    font-weight: var(--font-weight-regular);
+    letter-spacing: var(--body-2-letter-spacing);
+
+    &--control {
+      display: flex;
+      width: var(--size-48);
+      padding: 0rem;
+
+      & > * {
+        margin: auto;
+      }
+
+      & > .xft-avatar {
+        border-radius: var(--size-6);
+        font-size: 0.8325rem;
+        width: var(--size-32);
+        height: var(--size-32);
+        line-height: var(--size-32);
+      }
+    }
+
+    .xft-box-field {
+      width: 100%;
+      padding: var(--size-4) 0rem;
+
+      &__label {
+        display: none;
+      }
+
+      &__body {
+        background: transparent;
+        border: none;
+        padding: 0rem;
+        box-shadow: none;
+
+        .xft-input-field {
+          padding: var(--size-8) 0rem !important;
+
+          &__component,
+          &__value {
+            font-size: 0.8325rem;
+            font-weight: var(--font-weight-regular);
+            letter-spacing: var(--body-2-letter-spacing);
+          }
+        }
+      }
+
+      &__icon {
+        padding: 0rem;
+      }
+    }
+
+    .xft-list-field {
+      .xft-box-field__body {
+        padding: var(--size-8) 0rem;
+      }
+
+      &__control {
+        font-size: 0.8325rem;
+        font-weight: var(--font-weight-regular);
+        letter-spacing: var(--body-2-letter-spacing);
+      }
+
+      &__action {
+        .xft-icon {
+          font-size: var(--size-20);
+        }
+      }
+    }
+
+    & > a {
+      &:hover {
+        color: var(--color-theme-700);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--color-theme-100);
+  }
+}

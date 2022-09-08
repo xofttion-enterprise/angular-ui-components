@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ModalComponentService } from 'projects';
+import { ModalComponentService, SnackbarComponentService } from 'projects';
 import { persons } from './persons';
 
 @Component({
@@ -10,9 +10,7 @@ import { persons } from './persons';
   encapsulation: ViewEncapsulation.None
 })
 export class AppComponent {
-  public inputControl = new FormControl('1065642202', [
-    Validators.required
-  ]);
+  public inputControl = new FormControl('1065642202', [Validators.required]);
 
   public jobControl = new FormControl('Ingeniero de sistemas', [
     Validators.required
@@ -28,5 +26,14 @@ export class AppComponent {
 
   public maxDate = new Date(2024, 1, 1);
 
-  constructor(private modalService: ModalComponentService) {}
+  constructor(
+    private modalService: ModalComponentService,
+    private snackbarService: SnackbarComponentService
+  ) {
+    snackbarService.xofttion(
+      'Recuerda! Es indispensable que diligencie todos los campos al momento de realizar su pedido, esto determinará la eficiencia de su entrega',
+      'Store journal in Platform',
+      'xofttion'
+    );
+  }
 }

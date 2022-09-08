@@ -1,0 +1,47 @@
+/*!
+ * Xofttion Alert Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 06/Sep/2022
+ * Updated: 06/Sep/2022
+*/
+
+.xft-alert {
+  position: relative;
+  float: left;
+  width: 100%;
+  border-left: 3px solid var(--color-theme-700);
+  box-sizing: border-box;
+  border-radius: var(--size-8);
+  background: var(--color-theme-100);
+
+  &__content {
+    display: flex;
+    padding: var(--size-12) var(--size-8);
+    box-sizing: border-box;
+  }
+
+  &__avatar {
+    background: var(--color-theme-700);
+    width: var(--size-32);
+    height: var(--size-32);
+    overflow: hidden;
+    border-radius: var(--size-8);
+
+    .xft-icon {
+      color: var(--color-light-900);
+      margin: var(--size-4);
+    }
+
+    & + .xft-alert__message {
+      width: calc(100% - var(--size-40));
+      margin-left: var(--size-8);
+    }
+  }
+
+  &__message {
+    margin: auto 0rem;
+    color: var(--color-theme-900);
+  }
+}

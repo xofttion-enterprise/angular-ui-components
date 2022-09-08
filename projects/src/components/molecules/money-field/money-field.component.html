@@ -1,21 +1,21 @@
 <div
-  class="xft-money-field__content"
-  [class.xft-money-field__content--active]="status.active"
-  [class.xft-money-field__content--error]="status.error"
-  [class.xft-money-field__content--disabled]="status.disabled"
+  class="xft-box-field__content"
+  [class.xft-box-field__content--active]="status.active"
+  [class.xft-box-field__content--error]="status.error"
+  [class.xft-box-field__content--disabled]="status.disabled"
 >
   <label
-    class="xft-money-field__label smalltext-semibold"
+    class="xft-box-field__label smalltext-semibold"
     [for]="elementId"
     *ngIf="label"
   >
     <ng-content></ng-content>
   </label>
 
-  <div class="xft-money-field__component">
-    <div class="xft-money-field__body">
+  <div class="xft-box-field__component">
+    <div class="xft-box-field__body">
       <xft-input-field
-        class="xft-money-field__control"
+        class="xft-box-field__control"
         [elementId]="elementId"
         type="number"
         [placeholder]="placeholder"
@@ -29,7 +29,7 @@
   </div>
 
   <div
-    class="xft-money-field__helper xft-money-field__helper--error overline-regular"
+    class="xft-box-field__helper xft-box-field__helper--error overline-regular"
     *ngIf="status.error"
   >
     <span>{{ status.msgError }}</span>

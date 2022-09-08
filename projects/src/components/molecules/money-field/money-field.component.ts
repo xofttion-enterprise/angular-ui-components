@@ -11,7 +11,7 @@ import {
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { InputFieldStatus } from '../../types/input';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 
 @Component({
   selector: 'xft-money-field',

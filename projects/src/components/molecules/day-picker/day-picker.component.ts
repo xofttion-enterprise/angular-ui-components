@@ -15,7 +15,7 @@ import {
   getDateWeight,
   getDaysMonth
 } from '@xofttion-enterprise/utils';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import {
   DateFactory,
   DayModel,

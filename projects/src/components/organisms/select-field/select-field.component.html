@@ -1,18 +1,18 @@
 <div
-  class="xft-list-field__content"
-  [class.xft-list-field__content--active]="status.active"
-  [class.xft-list-field__content--disabled]="status.disabled"
+  class="xft-box-field__content"
+  [class.xft-box-field__content--active]="status.active"
+  [class.xft-box-field__content--disabled]="status.disabled"
 >
   <label
-    class="xft-list-field__label smalltext-semibold"
+    class="xft-box-field__label smalltext-semibold"
     [for]="elementId"
     *ngIf="label"
   >
     <ng-content></ng-content>
   </label>
 
-  <div class="xft-list-field__component">
-    <div class="xft-list-field__body">
+  <div class="xft-box-field__component">
+    <div class="xft-box-field__body">
       <input
         class="xft-list-field__control"
         type="text"
@@ -35,24 +35,29 @@
       </button>
     </div>
 
-    <ul
-      class="xft-list-field__ul"
-      [class.xft-list-field__ul--show]="status.show"
-      [class.xft-list-field__ul--hide]="status.hide"
-      [class.xft-list-field__ul--higher]="higher"
+    <div
+      class="xft-list-field__suggestions"
+      [class.xft-list-field__suggestions--show]="status.show"
+      [class.xft-list-field__suggestions--hide]="status.hide"
+      [class.xft-list-field__suggestions--higher]="higher"
+      [class.xft-list-field__suggestions--sheet]="sheetMode"
     >
-      <xft-ballot
-        *ngFor="let element of suggestions"
-        class="xft-list-field__element"
-        tabindex="-1"
-        [initials]="element?.initials"
-        [photo]="element?.photo"
-        [subtitle]="element?.subtitle"
-        (click)="onSelect(element)"
-        (keydown)="onKeydownElement($event, element)"
-      >
-        {{ element?.title }}
-      </xft-ballot>
-    </ul>
+      <ul class="xft-list-field__ul">
+        <xft-ballot
+          *ngFor="let element of suggestions"
+          class="xft-list-field__element"
+          tabindex="-1"
+          [initials]="element?.initials"
+          [photo]="element?.photo"
+          [subtitle]="element?.subtitle"
+          (click)="onSelect(element)"
+          (keydown)="onKeydownElement($event, element)"
+        >
+          {{ element?.title }}
+        </xft-ballot>
+      </ul>
+
+      <div class="xft-list-field__backdrop" (click)="onClickBackdrop()"></div>
+    </div>
   </div>
 </div>

@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 01/May/2022
+ * Updated: 08/Sep/2022
 */
 
 xft-autocomplete-field {
@@ -19,6 +19,44 @@ xft-autocomplete-field {
 
     &__control {
       width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__ul {
+      &__control {
+        position: relative;
+        float: left;
+        width: calc(100% - var(--size-24));
+        height: var(--size-32);
+        line-height: var(--size-32);
+        padding: 0rem var(--size-8);
+        box-sizing: border-box;
+        border-radius: var(--size-4);
+        margin: 0rem var(--size-12) var(--size-8);
+        cursor: text;
+        border: none;
+        outline: none;
+        color: var(--font-primary-900);
+        background: var(--color-primary-500);
+        font-size: var(--body-1-size);
+        font-weight: var(--font-weight-medium);
+        letter-spacing: var(--body-1-letter-spacing);
+
+        &::placeholder {
+          color: var(--font-primary-500);
+        }
+
+        &::selection {
+          background: var(--color-theme-900);
+          color: var(--font-light-900);
+        }
+
+        &:disabled {
+          opacity: 0.5;
+        }
+      }
     }
   }
 }

@@ -1,8 +1,7 @@
 <div class="xft-modal__content" [class.xft-modal__content--show]="show">
-  <div
-    class="xft-modal__component"
-    [class.xft-modal__component--show]="show"
-  ></div>
+  <div class="xft-modal__component" [class.xft-modal__component--show]="show">
+    <ng-content></ng-content>
+  </div>
 
   <div
     class="xft-modal__backdrop"

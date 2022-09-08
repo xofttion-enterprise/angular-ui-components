@@ -18,7 +18,7 @@ import {
   ValidationErrors
 } from '@angular/forms';
 import { InputType, InputFieldStatus } from '../../types/input';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 
 const MSG_ERROR_DEFAULT = 'Campo no cumple validación';
 

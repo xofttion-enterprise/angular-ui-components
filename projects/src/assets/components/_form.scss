@@ -16,4 +16,17 @@
     padding: var(--size-12);
     box-sizing: border-box;
   }
+
+  .xft-datatable {
+    box-shadow: none;
+    border-radius: 0rem;
+
+    &:first-child {
+      border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+    }
+
+    &:last-child {
+      border-radius: 0rem 0rem var(--size-8) var(--size-8);
+    }
+  }
 }

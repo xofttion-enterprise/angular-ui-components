@@ -37,5 +37,6 @@ const p4 = new Person(
   'Real Madrid C.F.',
   'assets/cr7.jpg'
 );
+const p5 = new Person('Katherin Bolaño Narvaez', 'Clinica Alta Complejidad');
 
-export const persons = [p1, p3, p2, p4];
+export const persons = [p1, p3, p2, p4, p5];

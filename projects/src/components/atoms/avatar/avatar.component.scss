@@ -12,17 +12,22 @@
   float: left;
   width: var(--size-48);
   height: var(--size-48);
+  line-height: var(--size-48);
   overflow: hidden;
   border-radius: var(--size-12);
-  background: var(--gradient-theme-900);
   color: var(--color-light-900);
+  font-size: var(--body-1-size);
+  background: var(--gradient-theme-900);
 
   &__content {
     display: flex;
     height: 100%;
 
     span {
+      font-size: inherit;
       margin: auto;
+      height: inherit;
+      line-height: inherit;
     }
   }
 }

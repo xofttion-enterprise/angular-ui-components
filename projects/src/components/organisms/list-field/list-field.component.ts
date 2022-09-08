@@ -8,7 +8,7 @@ import {
   SimpleChanges
 } from '@angular/core';
 import { ControlValueAccessor } from '@angular/forms';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import { ListFieldElement } from './list-field-element';
 
 const maxPositionVisible = 4;
@@ -41,15 +41,18 @@ export class ListFieldComponent
   @Input()
   public enabled = true;
 
+  @Input()
+  public sheetMode = false;
+
+  protected _inputElement!: HTMLElement;
+
   private _componentDOM: ComponentDOM;
 
-  private _inputElement?: HTMLElement;
+  private _contentElement!: HTMLElement;
 
-  private _contentElement?: HTMLElement;
+  private _listElement!: HTMLElement;
 
-  private _listElement?: HTMLElement;
-
-  private _elements?: NodeListOf<HTMLElement>;
+  private _elements!: NodeListOf<HTMLElement>;
 
   private _positionElement = 0;
 
@@ -99,7 +102,7 @@ export class ListFieldComponent
   }
 
   public get higher(): boolean {
-    return this._higher;
+    return this._higher && !this.sheetMode;
   }
 
   public onBlur(): void {
@@ -108,6 +111,10 @@ export class ListFieldComponent
 
   public onFocus(): void {
     this.status.active = true;
+  }
+
+  public onClickBackdrop(): void {
+    this.hideSuggestions();
   }
 
   protected focusInput(): void {
@@ -153,13 +160,13 @@ export class ListFieldComponent
   protected navigationInput(event: KeyboardEvent): void {
     switch (event.code) {
       case 'ArrowUp':
-        if (this.status.show && this._higher) {
+        if (this.status.show && this.higher) {
           this._navigationInputUp();
         }
         break;
 
       case 'ArrowDown':
-        if (this.status.show && !this._higher) {
+        if (this.status.show && !this.higher) {
           this._navigationInputDown();
         }
         break;
@@ -178,7 +185,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationInputUp(): void {
+  protected _navigationInputUp(): void {
     this._elements = this._listElement?.querySelectorAll(
       '.xft-list-field__element'
     );
@@ -203,7 +210,7 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationInputDown(): void {
+  protected _navigationInputDown(): void {
     this._elements = this._listElement?.querySelectorAll(
       '.xft-list-field__element'
     );
@@ -222,17 +229,17 @@ export class ListFieldComponent
     }
   }
 
-  private _navigationElementUp(): void {
+  protected _navigationElementUp(): void {
     if (this._positionElement > 0) {
       this._positionElement--;
 
       this._elements?.item(this._positionElement).focus();
-    } else if (!this._higher) {
+    } else if (!this.higher) {
       this._inputElement?.focus();
     }
   }
 
-  private _navigationElementDown(): void {
+  protected _navigationElementDown(): void {
     const newPosition = this._positionElement + 1;
     const length = this._elements?.length || 0;
 
@@ -240,7 +247,7 @@ export class ListFieldComponent
       this._positionElement = newPosition;
 
       this._elements?.item(this._positionElement).focus();
-    } else if (this._higher) {
+    } else if (this.higher) {
       this._inputElement?.focus();
     }
   }

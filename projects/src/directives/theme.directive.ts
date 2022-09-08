@@ -6,16 +6,14 @@ import {
   Renderer2,
   SimpleChanges
 } from '@angular/core';
-import { ComponentDOM } from '../components/utils/dom';
-
-const prefixClass = 'theme-xofttion'
+import { ComponentDOM, setThemeDOM } from '../components/utils';
 
 @Directive({
-  selector: '[xofttionTheme]'
+  selector: '[xftTheme]'
 })
 export class ThemeDirective implements OnChanges {
   @Input()
-  public xofttionTheme = 'default';
+  public xftTheme = 'default';
 
   private _theme?: string;
 
@@ -26,15 +24,12 @@ export class ThemeDirective implements OnChanges {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes['xofttionTheme']) {
-      const themeValue = changes['xofttionTheme'].currentValue;
-
-      if (this._theme) {
-        this._componentDOM.removeClass(this._theme);
-      }
-
-      this._theme = `${prefixClass}--${themeValue}`;
-      this._componentDOM.addClass(this._theme);
+    if (changes['xftTheme']) {
+      this._theme = setThemeDOM(
+        this._componentDOM,
+        changes['xftTheme'].currentValue,
+        this._theme
+      );
     }
   }
 }

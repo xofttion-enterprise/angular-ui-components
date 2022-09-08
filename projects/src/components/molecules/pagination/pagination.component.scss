@@ -1,0 +1,104 @@
+/*!
+ * Xofttion Pagination Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 07/Sep/2022
+*/
+
+.xft-pagination {
+  position: relative;
+  display: flex;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+
+  &__content {
+    position: relative;
+    display: flex;
+    float: left;
+    width: auto;
+    height: var(--size-40);
+    margin: auto;
+    padding: 0rem var(--size-12);
+    box-sizing: border-box;
+  }
+
+  &__pages {
+    width: auto;
+    margin: 0rem var(--size-8);
+  }
+
+  &__page {
+    background: var(--color-primary-900);
+    color: var(--font-primary-700);
+    border: 1px solid var(--font-primary-300);
+    float: left;
+    cursor: default;
+    margin: var(--size-8) 0rem;
+    text-align: center;
+    width: var(--size-24);
+    height: var(--size-24);
+    line-height: var(--size-24);
+    border-radius: var(--size-4);
+
+    & + .xft-pagination__page {
+      margin-left: var(--size-4);
+    }
+
+    &--active {
+      border: 1px solid var(--color-theme-900);
+      background: var(--gradient-theme-900);
+      color: var(--font-light-900);
+    }
+  }
+
+  &__description {
+    color: var(--font-primary-900);
+    margin: 0rem var(--size-8);
+    width: auto;
+    height: var(--size-40);
+    line-height: var(--size-40);
+    font-size: var(--body-1-size);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--body-1-letter-spacing);
+  }
+
+  &__actions {
+    width: auto;
+  }
+
+  &__action {
+    background: none;
+    outline: none;
+    color: var(--font-primary-700);
+    height: var(--size-36);
+    width: var(--size-36);
+    padding: var(--size-6);
+    margin: var(--size-2) 0rem;
+
+    &:hover {
+      color: var(--color-theme-900);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media only screen and (max-width: 30rem) {
+  .xft-pagination {
+    &__description {
+      span {
+        display: none;
+      }
+    }
+
+    &__pages {
+      display: none;
+    }
+  }
+}

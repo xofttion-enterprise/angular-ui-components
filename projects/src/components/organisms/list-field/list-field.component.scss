@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 27/Ago/2022
+ * Updated: 08/Sep/2022
 */
 
 .xft-list-field {
@@ -13,59 +13,10 @@
   width: 100%;
   box-sizing: border-box;
 
-  &__content {
-    box-sizing: border-box;
-    transition: height 160ms 0ms var(--standard-curve);
-
-    &--active {
-      .xft-list-field__label {
-        color: var(--color-theme-900);
-      }
-
-      .xft-list-field__body {
-        background: var(--color-primary-900);
-        border: var(--border-size) solid var(--font-theme-700);
-        box-shadow: 0px 0px 0px 3px var(--font-theme-100);
-      }
+  .xft-box-field {
+    &__body {
+      padding: var(--size-6) var(--size-8);
     }
-
-    &--disabled {
-      .xft-list-field__label {
-        opacity: 0.5;
-      }
-
-      .xft-list-field__body {
-        background: var(--color-primary-500);
-        opacity: 0.75;
-      }
-    }
-  }
-
-  &__label {
-    position: relative;
-    float: left;
-    width: 100%;
-    padding: 0rem 0.625rem;
-    box-sizing: border-box;
-    margin-bottom: var(--size-4);
-    color: var(--font-primary-700);
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-
-    span {
-      color: var(--font-danger-900);
-    }
-  }
-
-  &__body {
-    display: flex;
-    overflow: hidden;
-    padding: var(--size-6) var(--size-8);
-    box-sizing: border-box;
-    border-radius: var(--size-4);
-    border: var(--border-size) solid var(--font-primary-100);
-    background: var(--color-primary-700);
   }
 
   &__control {
@@ -88,6 +39,11 @@
       color: var(--font-primary-500);
     }
 
+    &::selection {
+      background: var(--color-theme-900);
+      color: var(--font-light-900);
+    }
+
     &:disabled {
       opacity: 0.5;
     }
@@ -103,19 +59,90 @@
     background: transparent;
   }
 
-  &__ul {
+  &__suggestions {
     position: absolute;
     top: var(--size-44);
     left: 0rem;
     width: 100%;
-    z-index: 4;
+    height: 0rem;
+    overflow: hidden;
+    z-index: var(--z-index-4);
+
+    &--hide {
+      .xft-list-field__ul {
+        opacity: 0;
+        transform: scale(0, 0);
+      }
+    }
+
+    &--show {
+      overflow: initial;
+      opacity: 1;
+      height: auto;
+
+      .xft-list-field__ul {
+        height: auto;
+        opacity: 1;
+        transform: scale(1, 1);
+      }
+    }
+
+    &--higher {
+      top: initial;
+      bottom: var(--size-44);
+
+      .xft-list-field__ul {
+        transform-origin: 0% 100%;
+      }
+    }
+
+    &--sheet {
+      display: flex;
+      justify-content: center;
+
+      &.xft-list-field__suggestions--show {
+        position: fixed;
+        top: 0rem;
+        left: 0rem;
+        height: 100%;
+        z-index: var(--z-index-32);
+
+        .xft-list-field__ul {
+          transform: translateY(0%);
+        }
+
+        .xft-list-field__backdrop {
+          bottom: 0rem;
+          opacity: 0.86;
+        }
+      }
+
+      .xft-list-field__ul {
+        position: absolute;
+        bottom: 0rem;
+        width: 100%;
+        max-width: 25rem;
+        min-height: 50%;
+        max-height: 75%;
+        transform-origin: initial;
+        transform: translateY(100%);
+        border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+      }
+    }
+  }
+
+  &__ul {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 0rem;
     opacity: 0;
     padding: var(--size-8) 0rem;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    max-height: 16rem;
-    overflow-x: hidden;
     overflow-y: auto;
+    overflow-x: hidden;
+    z-index: var(--z-index-2);
     background: var(--color-primary-900);
     box-shadow: var(--z-bottom-light-4);
     will-change: opacity, transform;
@@ -123,23 +150,6 @@
     border: var(--border-size) solid var(--font-primary-100);
     transition: transform 240ms 0ms var(--standard-curve),
       opacity 240ms 0ms var(--standard-curve);
-
-    &--hide {
-      height: 0rem;
-      opacity: 0;
-      transform: scale(0, 0);
-    }
-
-    &--show {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-
-    &--higher {
-      top: initial;
-      bottom: var(--size-44);
-      transform-origin: 0% 100%;
-    }
   }
 
   &__element {
@@ -163,4 +173,19 @@
       }
     }
   }
-}  
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    bottom: initial;
+    opacity: 0;
+    z-index: var(--z-index-1);
+    will-change: opacity;
+    background: var(--color-secondary-900);
+    transition: opacity 120ms 0ms var(--deceleration-curve),
+      bottom 120ms 0ms var(--deceleration-curve);
+  }
+}

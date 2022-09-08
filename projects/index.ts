@@ -23,6 +23,8 @@ export * from './src/components/atoms/switch/switch.component.module';
 export * from './src/components/atoms/atoms.module';
 
 // Molecules components
+export * from './src/components/molecules/alert/alert.component';
+export * from './src/components/molecules/alert/alert.component.module';
 export * from './src/components/molecules/ballot/ballot.component';
 export * from './src/components/molecules/ballot/ballot.component.module';
 export * from './src/components/molecules/checkbox-label/checkbox-label.component';
@@ -33,6 +35,8 @@ export * from './src/components/molecules/money-field/money-field.component';
 export * from './src/components/molecules/money-field/money-field.component.module';
 export * from './src/components/molecules/month-picker/month-picker.component';
 export * from './src/components/molecules/month-picker/month-picker.component.module';
+export * from './src/components/molecules/pagination/pagination.component';
+export * from './src/components/molecules/pagination/pagination.component.module';
 export * from './src/components/molecules/radiobutton-label/radiobutton-label.component';
 export * from './src/components/molecules/radiobutton-label/radiobutton-label.component.module';
 export * from './src/components/molecules/switch-label/switch-label.component';
@@ -48,6 +52,9 @@ export * from './src/components/molecules/molecules.module';
 // Organisms components
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component';
 export * from './src/components/organisms/autocomplete-field/autocomplete-field.component.module';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component.service';
+export * from './src/components/organisms/bottom-sheet/bottom-sheet.component.module';
 export * from './src/components/organisms/date-field/date-field.component';
 export * from './src/components/organisms/date-field/date-field.component.module';
 export * from './src/components/organisms/date-picker/date-picker.component';
@@ -59,6 +66,9 @@ export * from './src/components/organisms/select-field/select-field.component';
 export * from './src/components/organisms/select-field/select-field.component.module';
 export * from './src/components/organisms/sidenav/sidenav.component';
 export * from './src/components/organisms/sidenav/sidenav.component.module';
+export * from './src/components/organisms/snackbar/snackbar.component';
+export * from './src/components/organisms/snackbar/snackbar.component.service';
+export * from './src/components/organisms/snackbar/snackbar.component.module';
 export * from './src/components/organisms/organisms.module';
 
 // Directives

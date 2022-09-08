@@ -17,7 +17,7 @@ import {
   NG_VALUE_ACCESSOR
 } from '@angular/forms';
 import { getDateFormat } from '@xofttion-enterprise/utils';
-import { ComponentDOM } from '../../utils/dom';
+import { ComponentDOM } from '../../utils';
 import { DatePickerComponent } from '../date-picker/date-picker.component';
 import { DatePickerListener } from '../date-picker/date-utils';
 import {
@@ -64,6 +64,9 @@ export class DateFieldComponent
   @Input()
   public maxDate?: Date;
 
+  @Input()
+  public xftTheme = 'default';
+
   private _componentDOM: ComponentDOM;
 
   private _modal?: ModalOverlayComponent<DatePickerComponent>;
@@ -100,6 +103,7 @@ export class DateFieldComponent
     this._componentDOM.addClass('xft-date-field');
 
     this._modal = this._modalService.build(DatePickerComponent);
+    this._modal?.child.setTheme(this.xftTheme);
 
     this._setValue(this._dateControl.value);
 
@@ -116,6 +120,7 @@ export class DateFieldComponent
 
   public ngOnChanges(changes: SimpleChanges): void {
     this._changeStatusEnabled(changes);
+    this._changeStatusTheme(changes);
   }
 
   public get value(): Date | undefined {
@@ -157,6 +162,12 @@ export class DateFieldComponent
   private _changeStatusEnabled(changes: SimpleChanges): void {
     if (changes['enabled']) {
       this.setDisabledState(!changes['enabled'].currentValue);
+    }
+  }
+
+  private _changeStatusTheme(changes: SimpleChanges): void {
+    if (changes['xftTheme']) {
+      this._modal?.child.setTheme(changes['xftTheme'].currentValue);
     }
   }
 

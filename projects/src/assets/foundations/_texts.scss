@@ -1,0 +1,26 @@
+/**
+ * Xofttion Text Foundations
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 08/Sep/2022
+ * Updated: 08/Sep/2022
+*/
+
+@mixin align($orientation) {
+  .align-#{$orientation} {
+    text-align: #{$orientation} !important;
+
+    .xft-input-field {
+      &__component,
+      &__value {
+        text-align: #{$orientation} !important;
+      }
+    }
+  }
+}
+
+@include align(center);
+@include align(justify);
+@include align(left);
+@include align(right);

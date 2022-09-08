@@ -18,11 +18,11 @@
 
   --font-weight-medium: 500;
 
-  --font-weight-semi-bold: 600;
+  --font-weight-semibold: 600;
 
   --font-weight-bold: 700;
 
-  --font-weight-extra-bold: 800;
+  --font-weight-extrabold: 800;
 
   --font-weight-black: 900;
 }
@@ -130,7 +130,7 @@ h6, .h6-default {
 
 .h1-semibold {
   @extend .h1-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h1-bold {
@@ -150,7 +150,7 @@ h6, .h6-default {
 
 .h2-semibold {
   @extend .h2-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h2-bold {
@@ -170,7 +170,7 @@ h6, .h6-default {
 
 .h3-semibold {
   @extend .h3-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h3-bold {
@@ -190,7 +190,7 @@ h6, .h6-default {
 
 .h4-semibold {
   @extend .h4-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h4-bold {
@@ -210,7 +210,7 @@ h6, .h6-default {
 
 .h5-semibold {
   @extend .h5-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h5-bold {
@@ -230,7 +230,7 @@ h6, .h6-default {
 
 .h6-semibold {
   @extend .h6-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .h6-bold {
@@ -250,7 +250,7 @@ h6, .h6-default {
 
 .title1-semibold {
   @extend .title1-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .title1-bold {
@@ -270,7 +270,7 @@ h6, .h6-default {
 
 .title2-semibold {
   @extend .title2-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .title2-bold {
@@ -290,7 +290,7 @@ h6, .h6-default {
 
 .body1-semibold {
   @extend .body1-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .body1-bold {
@@ -310,7 +310,7 @@ h6, .h6-default {
 
 .body2-semibold {
   @extend .body2-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .body2-bold {
@@ -330,7 +330,7 @@ h6, .h6-default {
 
 .smalltext-semibold {
   @extend .smalltext-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .smalltext-bold {
@@ -350,7 +350,7 @@ h6, .h6-default {
 
 .caption-semibold {
   @extend .caption-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .caption-bold {
@@ -370,7 +370,7 @@ h6, .h6-default {
 
 .overline-semibold {
   @extend .overline-default;
-  font-weight: var(--font-weight-semi-bold);
+  font-weight: var(--font-weight-semibold);
 }
 
 .overline-bold {

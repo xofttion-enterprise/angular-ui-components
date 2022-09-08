@@ -1,0 +1,96 @@
+/*!
+ * Xofttion BoxField Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 08/Sep/2022
+ * Updated: 08/Sep/2022
+*/
+
+.xft-box-field {
+  position: relative;
+  float: left;
+  width: 100%;
+  box-sizing: border-box;
+
+  &__content {
+    box-sizing: border-box;
+    transition: height 160ms 0ms var(--standard-curve);
+
+    &--active {
+      .xft-box-field__label {
+        color: var(--color-theme-900);
+      }
+
+      .xft-box-field__body {
+        background: var(--color-primary-900);
+        border: var(--border-size) solid var(--font-theme-700);
+        box-shadow: 0px 0px 0px 3px var(--font-theme-100);
+      }
+    }
+
+    &--error {
+      .xft-box-field__label {
+        color: var(--font-danger-900);
+      }
+
+      .xft-box-field__body {
+        border: var(--border-size) solid var(--font-danger-700);
+      }
+
+      &.xft-box-field__content--active {
+        .xft-box-field__body {
+          box-shadow: 0px 0px 0px 3px var(--font-danger-100);
+        }
+      }
+    }
+
+    &--disabled {
+      .xft-box-field__label {
+        opacity: 0.5;
+      }
+
+      .xft-box-field__body {
+        background: var(--color-primary-500);
+        opacity: 0.75;
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-bottom: var(--size-4);
+    color: var(--font-primary-700);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    span {
+      color: var(--font-danger-900);
+    }
+  }
+
+  &__body {
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: var(--size-4);
+    border: var(--border-size) solid var(--font-primary-100);
+    background: var(--color-primary-700);
+  }
+
+  &__helper {
+    padding: 0rem 0.625rem;
+    box-sizing: border-box;
+    margin-top: var(--size-4);
+    color: var(--font-primary-500);
+
+    &--error {
+      color: var(--font-danger-900);
+    }
+  }
+}

@@ -1,19 +1,19 @@
 <div
-  class="xft-date-field__content"
-  [class.xft-date-field--active]="status.active"
-  [class.xft-date-field--disabled]="status.disabled"
+  class="xft-box-field__content"
+  [class.xft-box-field--active]="status.active"
+  [class.xft-box-field--disabled]="status.disabled"
   [class.xft-date-field--selected]="!!value"
 >
   <label
-    class="xft-date-field__label smalltext-semibold"
+    class="xft-box-field__label smalltext-semibold"
     [for]="elementId"
     *ngIf="label"
   >
     <ng-content></ng-content>
   </label>
 
-  <div class="xft-date-field__component">
-    <div class="xft-date-field__body">
+  <div class="xft-box-field__component">
+    <div class="xft-box-field__body">
       <input
         class="xft-date-field__control"
         type="text"
@@ -26,7 +26,7 @@
         (keydown)="onKeydownInput($event)"
       />
 
-      <button class="xft-list-field__action" (click)="onClickAction()">
+      <button class="xft-date-field__action" (click)="onClickAction()">
         <xft-icon [value]="iconAction"></xft-icon>
       </button>
     </div>

@@ -23,8 +23,7 @@
     max-height: 3.5rem;
     box-sizing: border-box;
     padding: 0rem var(--size-8);
-    border-radius: 0.5rem 0.5rem 0rem 0rem;
-    background-color: var(--background-datatable-content);
+    border-radius: var(--size-8) var(--size-8) 0rem 0rem;
 
     .xft-ballot {
       width: 100%;
@@ -32,94 +31,14 @@
       margin: var(--size-6) var(--size-8);
 
       &__title {
-        font-weight: var(--font-weight-700);
-        letter-spacing: var(--letter-spacing-07);
-        color: var(--font-color-primary);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-primary-900);
       }
 
       &__subtitle {
-        font-weight: var(--font-weight-700);
-        letter-spacing: var(--letter-spacing-06);
-        color: var(--font-color-secondary);
+        font-weight: var(--font-weight-bold);
+        color: var(--color-primary-700);
       }
-    }
-
-    .xft-search-field {
-      width: 100%;
-      height: var(--size-44);
-      margin: var(--size-6) var(--size-8);
-
-      &__content {
-        height: var(--size-44);
-        border: none;
-        background-color: var(--background-datatable-search);
-
-        &--disabled {
-          background-color: var(--background-datatable-search-disabled);
-        }
-      }
-
-      &__nav {
-        .xft-button__action {
-          margin: var(--size-2) var(--size-8);
-        }
-      }
-
-      &__control {
-        input {
-          margin: var(--size-6) 0rem;
-        }
-      }
-
-      &__actions {
-        .xft-button__action {
-          margin: var(--size-2) 0rem var(--size-2) var(--size-8);
-        }
-      }
-    }
-
-    &__actions {
-      display: flex;
-      width: auto;
-      margin: var(--size-8) 0rem;
-      box-sizing: border-box;
-
-      .xft-button__action {
-        box-sizing: content-box;
-        float: left;
-        margin-left: var(--size-4);
-        padding: var(--size-4) var(--size-8);
-
-        &::before {
-          padding-top: calc(100% - var(--size-8));
-          padding-left: calc(100% - var(--size-8));
-          margin-top: calc(-50% + var(--size-4));
-          margin-left: calc(-50% + var(--size-4));
-        }
-
-        & > i {
-          font-size: var(--size-24);
-        }
-      }
-
-      .xft-button-progress {
-        padding: var(--size-4) 0rem;
-        margin-left: var(--size-4);
-
-        .xft-button-progress__action {
-          & > i {
-            font-size: var(--size-24);
-          }
-        }
-      }
-    }
-
-    & > *:first-child {
-      margin-left: 0rem;
-    }
-
-    & > *:last-child {
-      margin-right: 0rem;
     }
   }
 
@@ -162,6 +81,7 @@
     text-overflow: ellipsis;
     height: var(--size-40);
     line-height: var(--size-40);
+    color: var(--color-primary-900);
     font-weight: var(--font-weight-bold);
     font-size: var(--body-2-size);
     letter-spacing: var(--body-2-letter-spacing);
@@ -221,8 +141,9 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     font-size: 0.8325rem;
-    font-weight: var(--font-weight-regular);
+    font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-2-letter-spacing);
+    color: var(--color-primary-900);
 
     &--control {
       display: flex;
@@ -262,7 +183,7 @@
           &__component,
           &__value {
             font-size: 0.8325rem;
-            font-weight: var(--font-weight-regular);
+            font-weight: var(--font-weight-medium);
             letter-spacing: var(--body-2-letter-spacing);
           }
         }
@@ -280,7 +201,7 @@
 
       &__control {
         font-size: 0.8325rem;
-        font-weight: var(--font-weight-regular);
+        font-weight: var(--font-weight-medium);
         letter-spacing: var(--body-2-letter-spacing);
       }
 

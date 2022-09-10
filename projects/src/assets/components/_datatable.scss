@@ -81,7 +81,7 @@
     text-overflow: ellipsis;
     height: var(--size-40);
     line-height: var(--size-40);
-    color: var(--color-primary-900);
+    color: var(--font-primary-900);
     font-weight: var(--font-weight-bold);
     font-size: var(--body-2-size);
     letter-spacing: var(--body-2-letter-spacing);
@@ -143,7 +143,7 @@
     font-size: 0.8325rem;
     font-weight: var(--font-weight-medium);
     letter-spacing: var(--body-2-letter-spacing);
-    color: var(--color-primary-900);
+    color: var(--font-primary-900);
 
     &--control {
       display: flex;

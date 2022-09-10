@@ -1,0 +1,79 @@
+/*!
+ * Xofttion ButtonAction Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 10/Sep/2022
+*/
+
+.xft-button-action {
+  position: relative;
+  width: var(--size-32);
+  height: var(--size-32);
+  border: none;
+  outline: none;
+  padding: var(--size-4);
+  box-sizing: border-box;
+  user-select: none;
+  background: transparent;
+  cursor: default;
+  color: var(--font-primary-900);
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    opacity: 0.32;
+    visibility: hidden;
+    border-radius: 50%;
+    background: var(--font-primary-500);
+    padding-top: calc(120% - var(--size-8));
+    padding-left: calc(120% - var(--size-8));
+    margin-top: calc(-60% + var(--size-4));
+    margin-left: calc(-60% + var(--size-4));
+    transform: scale(0);
+  }
+
+  &:not(:active)::before {
+    animation: ripple-squarecenter 1000ms var(--standard-curve);
+  }
+
+  &:focus::before {
+    visibility: visible;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: var(--size-40);
+    height: var(--size-40);
+    opacity: 0.24;
+    margin-top: calc(var(--size-20) * -1);
+    margin-left: calc(var(--size-20) * -1);
+    border-radius: 50%;
+    background: var(--font-primary-300);
+    transform: scale(0);
+    transition: transform 160ms 0ms var(--sharp-curve);
+  }
+
+  &:not(:disabled):hover {
+    &::after {
+      transform: scale(1);
+    }
+
+    .xft-button__action__tooltip {
+      opacity: 1;
+      transition-delay: 480ms;
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}

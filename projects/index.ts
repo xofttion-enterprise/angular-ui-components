@@ -8,6 +8,8 @@ export * from './src/components/atoms/breadcrumb/breadcrumb.component';
 export * from './src/components/atoms/breadcrumb/breadcrumb.component.module';
 export * from './src/components/atoms/button/button.component';
 export * from './src/components/atoms/button/button.component.module';
+export * from './src/components/atoms/button-action/button-action.component';
+export * from './src/components/atoms/button-action/button-action.component.module';
 export * from './src/components/atoms/checkbox/checkbox.component';
 export * from './src/components/atoms/checkbox/checkbox.component.module';
 export * from './src/components/atoms/icon/icon.component';
@@ -78,3 +80,4 @@ export * from './src/directives/theme.directive.module';
 // Utils
 export * from './src/components/utils/dom';
 export * from './src/components/utils/overlay';
+export * from './src/components/utils/validators';

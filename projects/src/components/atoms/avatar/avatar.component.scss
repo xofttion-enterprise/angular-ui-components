@@ -17,11 +17,19 @@
   border-radius: var(--size-12);
   color: var(--color-light-900);
   font-size: var(--body-1-size);
-  background: var(--gradient-theme-900);
 
   &__content {
     display: flex;
     height: 100%;
+    background: var(--gradient-theme-900);
+
+    &--skeleton {
+      background: var(--color-theme-300);
+
+      & > * {
+        display: none;
+      }
+    }
 
     span {
       font-size: inherit;

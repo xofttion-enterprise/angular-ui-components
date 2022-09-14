@@ -28,6 +28,9 @@ export class BallotComponent implements OnInit {
   @Input()
   public bordered = false;
 
+  @Input()
+  public skeleton = false;
+
   private _componentDOM: ComponentDOM;
 
   constructor(private _ref: ElementRef, private _renderer: Renderer2) {

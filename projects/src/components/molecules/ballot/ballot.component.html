@@ -1,8 +1,13 @@
 <div
   class="xft-ballot__content"
   [class.xft-ballot__content--bordered]="bordered"
+  [class.xft-ballot__content--skeleton]="skeleton"
 >
-  <xft-avatar class="xft-ballot__avatar" *ngIf="hasAvatar">
+  <xft-avatar
+    class="xft-ballot__avatar"
+    *ngIf="hasAvatar"
+    [skeleton]="skeleton"
+  >
     <span *ngIf="initials"> {{ initials }} </span>
 
     <img *ngIf="photo" [src]="photo" />
@@ -10,11 +15,15 @@
 
   <div class="xft-ballot__component">
     <label class="xft-ballot__title title2-medium">
-      <ng-content></ng-content>
+      <xft-skeleton-text [active]="skeleton" [truncate]="true">
+        <ng-content></ng-content>
+      </xft-skeleton-text>
     </label>
 
     <label class="xft-ballot__subtitle body2-regular" *ngIf="subtitle">
-      {{ subtitle }}
+      <xft-skeleton-text [active]="skeleton">
+        {{ subtitle }}
+      </xft-skeleton-text>
     </label>
   </div>
 </div>

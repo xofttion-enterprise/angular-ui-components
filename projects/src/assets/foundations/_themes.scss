@@ -28,6 +28,12 @@
 
   --font-theme-100: var(--color-#{$name}-100);
 
+  --skeleton-theme-500: var(--skeleton-#{$name}-500);
+
+  --skeleton-theme-300: var(--skeleton-#{$name}-300);
+
+  --skeleton-theme-100: var(--skeleton-#{$name}-100);
+
   --gradient-theme-900: var(--gradient-#{$name}-900);
 }
 

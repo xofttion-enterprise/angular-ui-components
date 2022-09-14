@@ -1,0 +1,88 @@
+/*!
+ * Xofttion SkeletonText Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 17/Jun/2022
+ * Updated: 14/Sep/2022
+*/
+
+.xft-skeleton-text {
+  position: relative;
+  float: left;
+  width: 100%;
+  overflow: hidden;
+  max-height: inherit;
+  min-height: inherit;
+  height: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+
+  &__content {
+    max-height: inherit;
+    min-height: inherit;
+    height: inherit;
+    line-height: inherit;
+    overflow: hidden;
+    color: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+
+    &--active {
+      background: var(--color-theme-300);
+      border-radius: var(--size-4);
+
+      &::after {
+        animation: skeleton-animation 1600ms infinite;
+      }
+
+      .xft-skeleton-text__value {
+        visibility: hidden;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 0rem;
+      right: 0rem;
+      bottom: 0rem;
+      left: 0rem;
+      transform: translateX(-100%);
+      background-image: linear-gradient(
+        90deg,
+        var(--skeleton-theme-100) 0%,
+        var(--skeleton-theme-300) 20%,
+        var(--skeleton-theme-500) 60%,
+        var(--skeleton-theme-100)
+      );
+    }
+  }
+
+  &__value {
+    position: relative;
+    display: block;
+    float: left;
+    width: 100%;
+    height: inherit;
+    max-height: inherit;
+    min-height: inherit;
+    line-height: inherit;
+    overflow: hidden;
+    color: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+
+    &--truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+@keyframes skeleton-animation {
+  100% {
+    transform: translateX(100%);
+  }
+}

@@ -6,7 +6,7 @@ import {
   Renderer2,
   SimpleChanges
 } from '@angular/core';
-import { ComponentDOM, setThemeDOM } from '../components/utils';
+import { ComponentDOM, setThemeDOM } from '../../components/utils';
 
 @Directive({
   selector: '[xftTheme]'

@@ -1,6 +1,6 @@
-<xft-sidenav [visible]="false">
+<xft-sidenav [visible]="true" xftTheme="danger">
   <div class="xft-sidenav__profile">
-    <xft-ballot initials="DC" subtitle="Ingeniero de Sistemas">
+    <xft-ballot initials="DC" subtitle="Ingeniero de Sistemas" [skeleton]="true">
       <a>Daniel Andrés Castillo Pedroza</a>
     </xft-ballot>
   </div>
@@ -35,8 +35,10 @@
       <label>Registrar asiento contable</label>
     </li>
     <li class="xft-sidenav__menu__element">
-      <xft-icon value="menu"></xft-icon>
-      <label>Reportes contable</label>
+      <xft-icon value="menu" [skeleton]="true"></xft-icon>
+      <label>
+        <xft-skeleton-text [active]="true">Daniel Castillo</xft-skeleton-text>
+      </label>
     </li>
   </ul>
 </xft-sidenav>
@@ -53,6 +55,10 @@
     <div class="app__content">
       <div class="xft-form">
         <div class="xft-form__content">
+          <xft-skeleton-text xftTheme="xofttion" [active]="true">
+            Daniel Castillo
+          </xft-skeleton-text>
+
           <div class="app__content__panel1">
             <xft-select-field
               class="col-sm col-lg-30"

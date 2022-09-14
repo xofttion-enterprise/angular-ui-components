@@ -8,6 +8,7 @@ import { IconComponentModule } from './icon/icon.component.module';
 import { InputFieldComponentModule } from './input-field/input-field.component.module';
 import { ProgressBarComponentModule } from './progress-bar/progress-bar.component.module';
 import { RadiobuttonComponentModule } from './radiobutton/radiobutton.component.module';
+import { SkeletonTextComponentModule } from './skeleton-text/skeleton-text.component.module';
 import { SwitchComponentModule } from './switch/switch.component.module';
 
 const components = [
@@ -20,6 +21,7 @@ const components = [
   InputFieldComponentModule,
   ProgressBarComponentModule,
   RadiobuttonComponentModule,
+  SkeletonTextComponentModule,
   SwitchComponentModule
 ];
 

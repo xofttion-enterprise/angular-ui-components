@@ -22,6 +22,13 @@
       border-radius: var(--size-8);
       border: var(--border-size) solid var(--font-primary-500);
     }
+
+    &--skeleton {
+      .xft-ballot__subtitle {
+        width: 60%;
+        max-height: var(--body-2-line-height);
+      }
+    }
   }
 
   &__avatar {
@@ -54,5 +61,6 @@
     float: left;
     width: 100%;
     color: var(--font-primary-700);
+    margin-top: var(--size-4);
   }
 }

@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  Input,
   OnInit,
   Renderer2,
   ViewEncapsulation
@@ -14,6 +15,9 @@ import { ComponentDOM } from '../../utils';
   encapsulation: ViewEncapsulation.None
 })
 export class AvatarComponent implements OnInit {
+  @Input()
+  public skeleton = false;
+
   private _componentDOM: ComponentDOM;
 
   constructor(private _ref: ElementRef, private _renderer: Renderer2) {

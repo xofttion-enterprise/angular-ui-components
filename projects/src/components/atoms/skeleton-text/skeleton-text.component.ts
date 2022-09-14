@@ -2,24 +2,23 @@ import {
   Component,
   ElementRef,
   Input,
-  OnInit,
   Renderer2,
   ViewEncapsulation
 } from '@angular/core';
 import { ComponentDOM } from '../../utils';
 
 @Component({
-  selector: 'xft-icon',
-  templateUrl: './icon.component.html',
-  styleUrls: ['./icon.component.scss'],
+  selector: 'xft-skeleton-text',
+  templateUrl: './skeleton-text.component.html',
+  styleUrls: ['./skeleton-text.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class IconComponent implements OnInit {
+export class SkeletonTextComponent {
   @Input()
-  public value = 'alert-circle';
+  public active = false;
 
   @Input()
-  public skeleton = false;
+  public truncate = false;
 
   private _componentDOM: ComponentDOM;
 
@@ -28,10 +27,6 @@ export class IconComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this._componentDOM.addClass('xft-icon');
-  }
-
-  public get classIcon(): string {
-    return `xft-icon-${this.value}`;
+    this._componentDOM.addClass('xft-skeleton-text');
   }
 }

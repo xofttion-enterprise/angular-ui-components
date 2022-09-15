@@ -1,6 +1,6 @@
 {
   "name": "@xofttion-enterprise/angular-components",
-  "version": "13.1.5",
+  "version": "13.1.6",
   "peerDependencies": {
     "@angular/cdk": "^13.3.2",
     "@angular/common": "^13.2.0",

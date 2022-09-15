@@ -7,6 +7,8 @@ import { MoneyFieldComponentModule } from './money-field/money-field.component.m
 import { MonthPickerComponentModule } from './month-picker/month-picker.component.module';
 import { PaginationComponentModule } from './pagination/pagination.component.module';
 import { RadiobuttonLabelComponentModule } from './radiobutton-label/radiobutton-label.component.module';
+import { SidenavMenuComponentModule } from './sidenav-menu/sidenav-menu.component.module';
+import { SidenavProfileComponentModule } from './sidenav-profile/sidenav-profile.component.module';
 import { SwitchLabelComponentModule } from './switch-label/switch-label.component.module';
 import { TextFieldComponentModule } from './text-field/text-field.component.module';
 import { ToolbarComponentModule } from './toolbar/toolbar.component.module';
@@ -21,6 +23,8 @@ const components = [
   MonthPickerComponentModule,
   PaginationComponentModule,
   RadiobuttonLabelComponentModule,
+  SidenavMenuComponentModule,
+  SidenavProfileComponentModule,
   SwitchLabelComponentModule,
   TextFieldComponentModule,
   ToolbarComponentModule,

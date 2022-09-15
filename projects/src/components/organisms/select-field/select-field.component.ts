@@ -86,9 +86,6 @@ export class SelectFieldComponent extends ListFieldComponent {
   public onSelect(element: ListFieldElement): void {
     this.hideSuggestions();
 
-    this.setValue(element);
-
-    this.onTouch(element);
-    this.onChange(element);
+    this.setDefineValue(element);
   }
 }

@@ -1,0 +1,12 @@
+<div
+  class="xft-sidenav-element__content"
+  [class.xft-sidenav-element__content--disabled]="disabled"
+  [class.xft-sidenav-element__content--skeleton]="skeleton"
+>
+  <xft-icon [value]="icon" [skeleton]="skeleton" *ngIf="icon"></xft-icon>
+  <label class="body1-semibold">
+    <xft-skeleton-text [active]="skeleton">
+      <ng-content></ng-content>
+    </xft-skeleton-text>
+  </label>
+</div>

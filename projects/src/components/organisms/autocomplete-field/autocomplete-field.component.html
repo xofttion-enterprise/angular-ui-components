@@ -57,6 +57,18 @@
         >
           {{ element?.title }}
         </xft-ballot>
+
+        <div *ngIf="!coincidences.length" class="xft-list-field__empty">
+          <div class="xft-list-field__empty__avatar">
+            <img src="assets/xofttion/imgs/empty-result.png" />
+          </div>
+          <div class="xft-list-field__empty__description">
+            <label class="body2-bold truncate"> Selección no disponible </label>
+            <label class="caption-regular">
+              Lo sentimos, no se encontraron resultados con el filtro establecido
+            </label>
+          </div>
+        </div>
       </ul>
 
       <div class="xft-list-field__backdrop" (click)="onClickBackdrop()"></div>

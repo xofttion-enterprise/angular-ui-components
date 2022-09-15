@@ -1,6 +1,10 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { ModalComponentService, SnackbarComponentService } from 'projects';
+import {
+  ModalComponentService,
+  SidenavMenuElement,
+  SnackbarComponentService
+} from 'projects';
 import { persons } from './persons';
 
 @Component({
@@ -26,6 +30,24 @@ export class AppComponent {
 
   public maxDate = new Date(2024, 1, 1);
 
+  public selectControl = new FormControl(null);
+
+  public menu: SidenavMenuElement[] = [
+    {
+      icon: 'activity',
+      label: 'Reportes contable'
+    },
+    {
+      icon: 'archive',
+      label: 'Catalogo de cuentas',
+      disabled: true
+    },
+    {
+      icon: 'trash',
+      label: 'Registrar asiento contable'
+    }
+  ];
+
   constructor(
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService
@@ -35,5 +57,13 @@ export class AppComponent {
       'Store journal in Platform',
       'xofttion'
     );
+  }
+
+  public onSidenav(element: SidenavMenuElement): void {
+    console.log(element);
+  }
+
+  public onAction(): void {
+    this.selectControl.setValue('Daniel Andrés Castillo Pedroza');
   }
 }

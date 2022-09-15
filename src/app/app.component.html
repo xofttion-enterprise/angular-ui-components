@@ -1,46 +1,13 @@
-<xft-sidenav [visible]="true" xftTheme="danger">
-  <div class="xft-sidenav__profile">
-    <xft-ballot initials="DC" subtitle="Ingeniero de Sistemas" [skeleton]="true">
-      <a>Daniel Andrés Castillo Pedroza</a>
-    </xft-ballot>
-  </div>
+<xft-sidenav [visible]="true" xftTheme="xofttion">
+  <xft-sidenav-profile initials="" subtitle="" [skeleton]="true">
+  </xft-sidenav-profile>
 
-  <ul class="xft-sidenav__menu">
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="trash"></xft-icon>
-      <label>Registrar asiento contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="menu"></xft-icon>
-      <label>Reportes contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="trash"></xft-icon>
-      <label>Registrar asiento contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="menu"></xft-icon>
-      <label>Reportes contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="trash"></xft-icon>
-      <label>Registrar asiento contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="menu"></xft-icon>
-      <label>Reportes contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="trash"></xft-icon>
-      <label>Registrar asiento contable</label>
-    </li>
-    <li class="xft-sidenav__menu__element">
-      <xft-icon value="menu" [skeleton]="true"></xft-icon>
-      <label>
-        <xft-skeleton-text [active]="true">Daniel Castillo</xft-skeleton-text>
-      </label>
-    </li>
-  </ul>
+  <xft-sidenav-menu
+    [skeleton]="true"
+    [elements]="menu"
+    (select)="onSidenav($event)"
+  >
+  </xft-sidenav-menu>
 </xft-sidenav>
 
 <div class="xft-app__body">
@@ -55,10 +22,6 @@
     <div class="app__content">
       <div class="xft-form">
         <div class="xft-form__content">
-          <xft-skeleton-text xftTheme="xofttion" [active]="true">
-            Daniel Castillo
-          </xft-skeleton-text>
-
           <div class="app__content__panel1">
             <xft-select-field
               class="col-sm col-lg-30"
@@ -88,7 +51,7 @@
             <xft-autocomplete-field
               class="col-sm col-lg-40"
               [suggestions]="persons"
-              [sheetMode]="false"
+              [sheetMode]="true"
             >
               Cliente<span>*</span>
             </xft-autocomplete-field>
@@ -107,8 +70,10 @@
 
             <xft-select-field
               class="col-sm col-lg-40"
-              [suggestions]="persons"
+              [suggestions]="[]"
+              [sheetMode]="true"
               xftTheme="warning"
+              [formControl]="selectControl"
             >
               Estado de factura<span>*</span>
             </xft-select-field>
@@ -126,7 +91,7 @@
             </xft-text-field>
           </div>
 
-          <button xft-button-action="trash-2"></button>
+          <button xft-button-action="trash-2" (click)="onAction()"></button>
         </div>
 
         <div class="xft-datatable">

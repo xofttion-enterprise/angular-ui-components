@@ -24,3 +24,9 @@
 @include align(justify);
 @include align(left);
 @include align(right);
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

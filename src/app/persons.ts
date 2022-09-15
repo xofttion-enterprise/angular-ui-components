@@ -1,11 +1,10 @@
-import { ListFieldElement } from 'projects/src/components/organisms/list-field/list-field-element';
+import { ListFieldElement } from 'projects';
 
 class Person implements ListFieldElement {
   initials = '10%';
   subtitle?: string;
   title: string;
   photo?: string;
-  value = 'Daniel';
 
   constructor(title: string, subtitle: string, photo?: string) {
     this.title = title;
@@ -17,12 +16,20 @@ class Person implements ListFieldElement {
     }
   }
 
+  public get value(): any {
+    return this.title;
+  }
+
   public get description(): string {
     return this.title;
   }
 
   public hasCoincidence(value: string): boolean {
     return this.title.includes(value);
+  }
+
+  compareTo(value: unknown): boolean {
+    return this.title === value;
   }
 }
 

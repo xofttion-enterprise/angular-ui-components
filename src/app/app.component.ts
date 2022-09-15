@@ -30,6 +30,8 @@ export class AppComponent {
 
   public maxDate = new Date(2024, 1, 1);
 
+  public selectControl = new FormControl(null);
+
   public menu: SidenavMenuElement[] = [
     {
       icon: 'activity',
@@ -59,5 +61,9 @@ export class AppComponent {
 
   public onSidenav(element: SidenavMenuElement): void {
     console.log(element);
+  }
+
+  public onAction(): void {
+    this.selectControl.setValue('Daniel Andrés Castillo Pedroza');
   }
 }

@@ -6,5 +6,7 @@ export interface ListFieldElement {
   title: string;
   value: any;
 
+  compareTo(value: unknown): boolean;
+
   hasCoincidence(pattern: string): boolean;
 }

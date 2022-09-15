@@ -109,12 +109,9 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
   public onSelect(element: ListFieldElement): void {
     this.hideSuggestions();
 
-    this.setValue(element);
-
     this.description = element.description;
 
-    this.onChange(element);
-    this.onTouch(element);
+    this.setDefineValue(element);
 
     this._store = {
       pattern: this._coindicence,

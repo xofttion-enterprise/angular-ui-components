@@ -72,6 +72,7 @@
               class="col-sm col-lg-40"
               [suggestions]="persons"
               xftTheme="warning"
+              [formControl]="selectControl"
             >
               Estado de factura<span>*</span>
             </xft-select-field>
@@ -89,7 +90,7 @@
             </xft-text-field>
           </div>
 
-          <button xft-button-action="trash-2"></button>
+          <button xft-button-action="trash-2" (click)="onAction()"></button>
         </div>
 
         <div class="xft-datatable">

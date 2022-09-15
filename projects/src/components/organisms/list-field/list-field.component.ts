@@ -14,7 +14,7 @@ import { ListFieldElement } from './list-field-element';
 const maxPositionVisible = 4;
 const listSizeRem = 16;
 const elementSizeRem = 4;
-const baseSizePx = 18;
+const baseSizePx = 16;
 const elementSizePx = baseSizePx * elementSizeRem;
 const maxListSizePx = baseSizePx * listSizeRem;
 
@@ -64,9 +64,9 @@ export class ListFieldComponent
 
   public status: ListFieldStatus;
 
-  public onChange = (_?: ListFieldElement): void => undefined;
+  public onChange = (_?: unknown): void => undefined;
 
-  public onTouch = (_?: ListFieldElement): void => undefined;
+  public onTouch = (_?: unknown): void => undefined;
 
   constructor(protected _ref: ElementRef, protected _renderer: Renderer2) {
     this._componentDOM = ComponentDOM.build(this._ref, this._renderer);
@@ -152,9 +152,16 @@ export class ListFieldComponent
     }
   }
 
-  protected setValue(value?: ListFieldElement): void {
-    this._value = value;
-    this.suggestion = value?.description || '';
+  protected setDefineValue(element: ListFieldElement): void {
+    this.setValue(element);
+
+    this.onChange(element.value);
+    this.onTouch(element.value);
+  }
+
+  protected setValue(element?: ListFieldElement): void {
+    this._value = element;
+    this.suggestion = element?.description || '';
   }
 
   protected navigationInput(event: KeyboardEvent): void {
@@ -271,15 +278,25 @@ export class ListFieldComponent
     }
   }
 
-  public writeValue(value?: ListFieldElement): void {
-    this.setValue(value);
+  public writeValue(value?: unknown): void {
+    let valueElement = undefined;
+
+    if (value) {
+      const result = this.suggestions.filter((el) => el.compareTo(value));
+
+      if (result) {
+        valueElement = result[0];
+      }
+    }
+
+    this.setValue(valueElement);
   }
 
-  public registerOnChange(onChange: (value?: ListFieldElement) => void): void {
+  public registerOnChange(onChange: (value?: unknown) => void): void {
     this.onChange = onChange;
   }
 
-  public registerOnTouched(onTouch: (value?: ListFieldElement) => void): void {
+  public registerOnTouched(onTouch: (value?: unknown) => void): void {
     this.onTouch = onTouch;
   }
 

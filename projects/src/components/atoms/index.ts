@@ -16,6 +16,8 @@ export * from './progress-bar/progress-bar.component';
 export * from './progress-bar/progress-bar.component.module';
 export * from './radiobutton/radiobutton.component';
 export * from './radiobutton/radiobutton.component.module';
+export * from './sidenav-element/sidenav-element.component';
+export * from './sidenav-element/sidenav-element.component.module';
 export * from './skeleton-text/skeleton-text.component';
 export * from './skeleton-text/skeleton-text.component.module';
 export * from './switch/switch.component';

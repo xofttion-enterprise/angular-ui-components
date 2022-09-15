@@ -1,0 +1,47 @@
+/*!
+ * Xofttion SidenavElement Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 15/Sep/2022
+ * Updated: 15/Sep/2022
+*/
+
+.xft-sidenav-element {
+  position: relative;
+  float: left;
+  width: 100%;
+  color: var(--font-primary-900);
+
+  &__content {
+    display: flex;
+    height: var(--size-40);
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    border-radius: var(--size-8);
+
+    &:hover:not(.xft-sidenav-element__content--skeleton) {
+      color: var(--color-light-900);
+      background: var(--gradient-theme-900);
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+  }
+
+  .xft-icon {
+    margin: auto var(--size-8) auto 0rem;
+    color: inherit;
+  }
+
+  label {
+    color: inherit;
+    width: 100%;
+    margin: auto 0rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}

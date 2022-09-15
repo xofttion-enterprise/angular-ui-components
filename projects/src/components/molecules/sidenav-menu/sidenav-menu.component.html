@@ -1,0 +1,21 @@
+<div class="xft-sidenav-menu__content">
+  <div class="xft-sidenav-menu__list" [hidden]="skeleton">
+    <xft-sidenav-element
+      *ngFor="let element of elements"
+      [icon]="element.icon"
+      [disabled]="element.disabled"
+      (click)="onClick(element)"
+    >
+      {{ element.label }}
+    </xft-sidenav-element>
+  </div>
+
+  <div class="xft-sidenav-menu__skeleton" *ngIf="skeleton">
+    <xft-sidenav-element icon="activity" [skeleton]="true">
+    </xft-sidenav-element>
+    <xft-sidenav-element icon="activity" [skeleton]="true">
+    </xft-sidenav-element>
+    <xft-sidenav-element icon="activity" [skeleton]="true">
+    </xft-sidenav-element>
+  </div>
+</div>

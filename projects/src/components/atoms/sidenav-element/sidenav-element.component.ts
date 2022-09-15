@@ -9,17 +9,20 @@ import {
 import { ComponentDOM } from '../../utils';
 
 @Component({
-  selector: 'xft-skeleton-text',
-  templateUrl: './skeleton-text.component.html',
-  styleUrls: ['./skeleton-text.component.scss'],
+  selector: 'xft-sidenav-element',
+  templateUrl: './sidenav-element.component.html',
+  styleUrls: ['./sidenav-element.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class SkeletonTextComponent implements OnInit {
+export class SidenavElementComponent implements OnInit {
   @Input()
-  public active = false;
+  public icon?: string;
 
   @Input()
-  public truncate = false;
+  public disabled?: boolean;
+
+  @Input()
+  public skeleton = false;
 
   private _componentDOM: ComponentDOM;
 
@@ -28,6 +31,6 @@ export class SkeletonTextComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this._componentDOM.addClass('xft-skeleton-text');
+    this._componentDOM.addClass('xft-sidenav-element');
   }
 }

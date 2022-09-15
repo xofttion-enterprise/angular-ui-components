@@ -27,13 +27,16 @@
       .xft-ballot__subtitle {
         width: 60%;
         max-height: var(--body-2-line-height);
+        margin-top: var(--size-4);
       }
     }
   }
 
   &__avatar {
+    line-height: var(--size-40);
     width: var(--size-40);
     height: var(--size-40);
+    margin: auto 0rem;
 
     & + .xft-ballot__component {
       width: calc(100% - var(--size-56));
@@ -61,6 +64,5 @@
     float: left;
     width: 100%;
     color: var(--font-primary-700);
-    margin-top: var(--size-4);
   }
 }

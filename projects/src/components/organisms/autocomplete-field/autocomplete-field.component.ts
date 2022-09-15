@@ -9,10 +9,12 @@ import { like } from '../../utils';
 import { ListFieldElement } from '../list-field/list-field-element';
 import { ListFieldComponent } from '../list-field/list-field.component';
 
+type StoreCoincidenceNulleable = StoreCoincidence | null;
+
 interface StoreCoincidence {
   pattern: string;
   value?: Array<ListFieldElement>;
-  before: StoreCoincidence | null;
+  before: StoreCoincidenceNulleable;
 }
 
 @Component({
@@ -179,15 +181,14 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
   private _searchInStore(value: string): StoreCoincidence | null {
     if (this._store.pattern) {
-      let coincidences: StoreCoincidence = this._store;
+      let coincidences: StoreCoincidenceNulleable = this._store;
       let isSearch = false;
 
-      while (!isSearch) {
+      while (!isSearch && coincidences) {
         isSearch = like(value, coincidences.pattern, true);
 
         if (!isSearch) {
-          coincidences = coincidences.before as StoreCoincidence;
-          isSearch = coincidences === undefined;
+          coincidences = coincidences.before;
         }
       }
 

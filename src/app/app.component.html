@@ -51,7 +51,7 @@
             <xft-autocomplete-field
               class="col-sm col-lg-40"
               [suggestions]="persons"
-              [sheetMode]="false"
+              [sheetMode]="true"
             >
               Cliente<span>*</span>
             </xft-autocomplete-field>
@@ -70,7 +70,8 @@
 
             <xft-select-field
               class="col-sm col-lg-40"
-              [suggestions]="persons"
+              [suggestions]="[]"
+              [sheetMode]="true"
               xftTheme="warning"
               [formControl]="selectControl"
             >

@@ -4,51 +4,5 @@
   "lib": {
     "entryFile": "index.ts"
   },
-  "assets": [
-    "./LICENSE",
-    "./src/assets/components/_app.scss",
-    "./src/assets/components/_box-field.scss",
-    "./src/assets/components/_card.scss",
-    "./src/assets/components/_datatable.scss",
-    "./src/assets/components/_form.scss",
-    "./src/assets/components/_components.scss",
-
-    "./src/assets/foundations/_animations.scss",
-    "./src/assets/foundations/_colors.scss",
-    "./src/assets/foundations/_elevations.scss",
-    "./src/assets/foundations/_normalize.scss",
-    "./src/assets/foundations/_responsives.scss",
-    "./src/assets/foundations/_sizes.scss",
-    "./src/assets/foundations/_texts.scss",
-    "./src/assets/foundations/_themes.scss",
-    "./src/assets/foundations/_typographics.scss",
-    "./src/assets/foundations/_foundations.scss",
-
-    "src/assets/fonts/icons/xofttion-icons.eot",
-    "src/assets/fonts/icons/xofttion-icons.svg",
-    "src/assets/fonts/icons/xofttion-icons.ttf",
-    "src/assets/fonts/icons/xofttion-icons.woff",
-    "src/assets/fonts/_icons.scss",
-
-    "src/assets/fonts/poppins/bold.woff2",
-    "src/assets/fonts/poppins/light.woff2",
-    "src/assets/fonts/poppins/medium.woff2",
-    "src/assets/fonts/poppins/regular.woff2",
-    "src/assets/fonts/poppins/semibold.woff2",
-    "src/assets/fonts/_poppins.scss",
-
-    "src/assets/fonts/space-grotesk/bold.woff",
-    "src/assets/fonts/space-grotesk/light.woff",
-    "src/assets/fonts/space-grotesk/medium.woff",
-    "src/assets/fonts/space-grotesk/regular.woff",
-    "src/assets/fonts/space-grotesk/semibold.woff",
-    "src/assets/fonts/_space-grotesk.scss",
-
-    "src/assets/fonts/dm-sans/bold.woff",
-    "src/assets/fonts/dm-sans/medium.woff",
-    "src/assets/fonts/dm-sans/regular.woff",
-    "src/assets/fonts/_dm-sans.scss",
-
-    "./src/assets/styles.scss"
-  ]
+  "assets": ["./LICENSE", "./assets"]
 }

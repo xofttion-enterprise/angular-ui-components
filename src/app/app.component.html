@@ -1,63 +1,354 @@
-<xft-sidenav [visible]="true" xftTheme="xofttion">
-  <xft-sidenav-profile initials="" subtitle="" [skeleton]="true">
-  </xft-sidenav-profile>
+<div class="app" xftTheme="info">
+  <xft-sidenav [visible]="true">
+    <xft-sidenav-profile initials="" subtitle="" [skeleton]="true">
+    </xft-sidenav-profile>
 
-  <xft-sidenav-menu
-    [skeleton]="true"
-    [elements]="menu"
-    (select)="onSidenav($event)"
-  >
-  </xft-sidenav-menu>
-</xft-sidenav>
+    <xft-sidenav-menu
+      [skeleton]="true"
+      [elements]="menu"
+      (select)="onSidenav($event)"
+    >
+    </xft-sidenav-menu>
+  </xft-sidenav>
 
-<div class="xft-app__body">
-  <div class="xft-app__header">
-    <xft-toolbar [breadcrumbs]="['Inicio', 'Asientos contable', 'Registro']">
-      <xft-icon value="xofttion"></xft-icon>edger Application v1.0.0
-      [2022.08.29]
-    </xft-toolbar>
-  </div>
+  <div class="xft-app__body">
+    <div class="xft-app__header">
+      <xft-toolbar [breadcrumbs]="['Inicio', 'Asientos contable', 'Registro']">
+        <xft-icon value="xofttion"></xft-icon>edger Application v1.0.0
+        [2022.08.29]
+      </xft-toolbar>
+    </div>
 
-  <div class="xft-app__content">
-    <xft-page>
-      <div class="xft-form col-sm col-lg-40">
-        <div class="xft-form__header">
-          <xft-toolbar subtitle="Registrar un nuevo documento">
-            Formulario para gestión de documento
-          </xft-toolbar>
+    <div class="xft-app__content">
+      <xft-page>
+        <div class="xft-datatable xft-datatable--overflow-hidden">
+          <div class="xft-datatable__header">
+            <xft-toolbar subtitle="Registrados: 5 documento(s)">
+              Catálago de documentos contable
+            </xft-toolbar>
+
+            <div class="xft-datatable__header__actions">
+              <button xft-button-action="trash"></button>
+              <button xft-button-action="refresh"></button>
+            </div>
+          </div>
+
+          <div class="xft-datatable__content">
+            <table class="xft-datatable__table">
+              <thead class="xft-datatable__thead">
+                <tr class="xft-datatable__title">
+                  <th class="xft-datatable__th xft-datatable__th--control"></th>
+                  <th class="xft-datatable__th col-sm-17-5 align-center">
+                    Number ID
+                  </th>
+                  <th class="xft-datatable__th col-sm-35">Full name</th>
+                  <th class="xft-datatable__th col-sm-20">Company</th>
+                  <th class="xft-datatable__th col-sm-10 align-center">Age</th>
+                  <th class="xft-datatable__th col-sm-17-5 align-right">
+                    Value
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="xft-datatable__tbody">
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <img
+                        class="xft-avatar__img"
+                        src="../assets/cr7.jpg"
+                        alt="Profile"
+                      />
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    73127818
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    <a>Cristiano Ronaldo Aveiro</a>
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                    <xft-select-field
+                      [sheetMode]="true"
+                      [suggestions]="persons"
+                    >
+                    </xft-select-field>
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">37</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                    <xft-money-field></xft-money-field>
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                    <xft-autocomplete-field
+                      [suggestions]="persons"
+                      [sheetMode]="true"
+                    >
+                    </xft-autocomplete-field>
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                    <xft-money-field></xft-money-field>
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="xft-datatable__footer">
+            <xft-pagination
+              [suggestions]="persons"
+              [count]="3"
+            ></xft-pagination>
+          </div>
         </div>
-
-        <div class="xft-form__content">
-          <p class="body2-medium font-primary-700 align-justify">
-            Un documento contable es un soporte que tiene como propósito
-            registrar las operaciones comerciales de una empresa. Para
-            elaborarlos se debe tener un sumo cuidado, ya que estos influyen en
-            el resultado de los diferentes informes a generar si son mal
-            diligenciados.
-          </p>
-        </div>
-
-        <div class="xft-form__fields">
-          <xft-text-field class="col-sm" [inputControl]="nameControl">
-            Nombre<span>*</span>
-          </xft-text-field>
-
-          <xft-text-field class="col-sm col-lg-50">
-            Prefijo<span>*</span>
-          </xft-text-field>
-
-          <xft-text-field class="col-sm col-lg-50">
-            Longitud<span>*</span>
-          </xft-text-field>
-        </div>
-
-        <div class="xft-form__footer">
-          <button xft-button="flat" class="col-sm-30">Registrar</button>
-          <button xft-button="flat" xftTheme="danger" class="col-sm-30">
-            Cancelar
-          </button>
-        </div>
-      </div>
-    </xft-page>
+      </xft-page>
+    </div>
   </div>
 </div>

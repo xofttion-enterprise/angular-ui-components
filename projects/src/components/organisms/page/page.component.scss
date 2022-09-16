@@ -41,5 +41,19 @@
         box-shadow: var(--z-top-lighter-2);
       }
     }
+
+    .xft-datatable {
+      &--overflow-hidden {
+        table {
+          max-height: calc(100vh - 12rem);
+        }
+
+        thead {
+          position: sticky;
+          top: 0rem;
+          z-index: var(--z-index-2);
+        }
+      }
+    }
   }
 }

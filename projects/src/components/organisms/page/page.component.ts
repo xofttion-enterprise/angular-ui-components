@@ -1,5 +1,7 @@
 import {
+  AfterViewChecked,
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   OnInit,
@@ -15,7 +17,7 @@ import { ComponentDOM } from '../../utils';
   styleUrls: ['./page.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class PageComponent implements OnInit, AfterViewInit {
+export class PageComponent implements OnInit, AfterViewInit, AfterViewChecked {
   private _componentDOM: ComponentDOM;
 
   private _scroller!: ScrollerManager;
@@ -24,7 +26,11 @@ export class PageComponent implements OnInit, AfterViewInit {
 
   private _isScrollTopEnd = false;
 
-  constructor(private _ref: ElementRef, private _renderer: Renderer2) {
+  constructor(
+    private _ref: ElementRef,
+    private _renderer: Renderer2,
+    private _cdRef: ChangeDetectorRef
+  ) {
     this._componentDOM = ComponentDOM.build(this._ref, this._renderer);
   }
 
@@ -41,6 +47,10 @@ export class PageComponent implements OnInit, AfterViewInit {
   public ngAfterViewInit(): void {
     this._isScrollTopStart = this._scroller?.isScrollTopMin;
     this._isScrollTopEnd = this._scroller?.isScrollTopMax;
+  }
+
+  public ngAfterViewChecked(): void {
+    this._cdRef.detectChanges();
   }
 
   public get isScrollTopStart(): boolean {

@@ -20,24 +20,23 @@
     position: relative;
     display: flex;
     width: 100%;
-    max-height: 3.5rem;
     box-sizing: border-box;
-    padding: 0rem var(--size-8);
+    padding: var(--size-4) var(--size-8);
     border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+    background: var(--color-theme-300);
 
-    .xft-ballot {
-      width: 100%;
-      height: var(--size-44);
-      margin: var(--size-6) var(--size-8);
-
-      &__title {
-        font-weight: var(--font-weight-bold);
-        color: var(--color-primary-900);
+    .xft-toolbar {
+      &__content {
+        padding: var(--size-4);
       }
+    }
 
-      &__subtitle {
-        font-weight: var(--font-weight-bold);
-        color: var(--color-primary-700);
+    &__actions {
+      display: flex;
+      width: auto;
+
+      .xft-button-action {
+        margin: auto var(--size-4);
       }
     }
   }

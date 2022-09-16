@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import {
   ModalComponentService,
+  required,
   SidenavMenuElement,
   SnackbarComponentService
 } from 'projects';
@@ -24,7 +25,7 @@ export class AppComponent {
     Validators.required
   ]);
 
-  public radioControl = new FormControl(null);
+  public nameControl = new FormControl(null, [required]);
 
   public persons = persons;
 
@@ -51,13 +52,7 @@ export class AppComponent {
   constructor(
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService
-  ) {
-    snackbarService.xofttion(
-      'Recuerda! Es indispensable que diligencie todos los campos al momento de realizar su pedido, esto determinará la eficiencia de su entrega',
-      'Store journal in Platform',
-      'xofttion'
-    );
-  }
+  ) {}
 
   public onSidenav(element: SidenavMenuElement): void {
     console.log(element);

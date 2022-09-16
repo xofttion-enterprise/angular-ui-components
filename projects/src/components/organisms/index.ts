@@ -11,6 +11,8 @@ export * from './list-field/list-field-element';
 export * from './modal/modal.component';
 export * from './modal/modal.component.service';
 export * from './modal/modal.component.module';
+export * from './page/page.component';
+export * from './page/page.component.module';
 export * from './select-field/select-field.component';
 export * from './select-field/select-field.component.module';
 export * from './sidenav/sidenav.component';

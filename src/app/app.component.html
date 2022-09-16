@@ -19,8 +19,8 @@
   </div>
 
   <div class="xft-app__content">
-    <div class="app__content">
-      <div class="xft-form col-sm col-lg-50">
+    <xft-page>
+      <div class="xft-form col-sm col-lg-40">
         <div class="xft-form__header">
           <xft-toolbar subtitle="Registrar un nuevo documento">
             Formulario para gestión de documento
@@ -38,10 +38,14 @@
         </div>
 
         <div class="xft-form__fields">
-          <xft-text-field class="col-sm"> Nombre<span>*</span> </xft-text-field>
+          <xft-text-field class="col-sm" [inputControl]="nameControl">
+            Nombre<span>*</span>
+          </xft-text-field>
+
           <xft-text-field class="col-sm col-lg-50">
             Prefijo<span>*</span>
           </xft-text-field>
+
           <xft-text-field class="col-sm col-lg-50">
             Longitud<span>*</span>
           </xft-text-field>
@@ -54,6 +58,6 @@
           </button>
         </div>
       </div>
-    </div>
+    </xft-page>
   </div>
 </div>

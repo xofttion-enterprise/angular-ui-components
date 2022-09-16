@@ -1,0 +1,8 @@
+<div
+  class="xft-page__content"
+  [class.xft-page__content--start]="isScrollTopStart"
+  [class.xft-page__content--end]="isScrollTopEnd"
+  (scroll)="onScroll()"
+>
+  <ng-content></ng-content>
+</div>

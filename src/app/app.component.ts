@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import {
   ModalComponentService,
+  required,
   SidenavMenuElement,
   SnackbarComponentService
 } from 'projects';
@@ -24,7 +25,7 @@ export class AppComponent {
     Validators.required
   ]);
 
-  public radioControl = new FormControl(null);
+  public nameControl = new FormControl(null, [required]);
 
   public persons = persons;
 

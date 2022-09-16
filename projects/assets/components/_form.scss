@@ -12,9 +12,42 @@
   border-radius: var(--size-8);
   box-shadow: var(--z-bottom-light-4);
 
-  &__content {
-    padding: var(--size-12);
+  &__header {
+    padding: var(--size-4) 0rem;
     box-sizing: border-box;
+    border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+    background: var(--color-theme-100);
+  }
+
+  &__content {
+    padding: var(--size-12) var(--size-16);
+    box-sizing: border-box;
+  }
+
+  &__fields {
+    padding: var(--size-12) var(--size-8) 0rem var(--size-8);
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:last-child {
+      padding-bottom: var(--size-12);
+    }
+
+    & > * {
+      padding: 0rem var(--size-8);
+      box-sizing: border-box;
+      margin-bottom: var(--size-16);
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    padding: var(--size-12) var(--size-16);
+    box-sizing: border-box;
+    border-radius: 0rem 0rem var(--size-8) var(--size-8);
   }
 
   .xft-datatable {
@@ -27,6 +60,21 @@
 
     &:last-child {
       border-radius: 0rem 0rem var(--size-8) var(--size-8);
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .xft-form {
+    &__footer {
+      flex-direction: column-reverse;
+      justify-content: initial;
+
+      & > * {
+        & + * {
+          margin-bottom: var(--size-12);
+        }
+      }
     }
   }
 }

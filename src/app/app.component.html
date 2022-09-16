@@ -20,169 +20,40 @@
 
   <div class="xft-app__content">
     <div class="app__content">
-      <div class="xft-form">
-        <div class="xft-form__content">
-          <div class="app__content__panel1">
-            <xft-select-field
-              class="col-sm col-lg-30"
-              [suggestions]="persons"
-              [sheetMode]="true"
-              xftTheme="happy"
-            >
-              Sucursal<span>*</span>
-            </xft-select-field>
-
-            <xft-select-field
-              class="col-sm col-lg-40"
-              [suggestions]="persons"
-              xftTheme="info"
-            >
-              Resolucion de facturación<span>*</span>
-            </xft-select-field>
-
-            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
-              Almacen<span>*</span>
-            </xft-select-field>
-
-            <xft-date-field class="col-sm col-lg-30" xftTheme="success">
-              Fecha de expedición<span>*</span>
-            </xft-date-field>
-
-            <xft-autocomplete-field
-              class="col-sm col-lg-40"
-              [suggestions]="persons"
-              [sheetMode]="true"
-            >
-              Cliente<span>*</span>
-            </xft-autocomplete-field>
-
-            <xft-text-field
-              elementId="name-input"
-              class="col-sm col-lg-30"
-              [inputControl]="inputControl"
-            >
-              Identificación
-            </xft-text-field>
-
-            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
-              Catálogo de precio<span>*</span>
-            </xft-select-field>
-
-            <xft-select-field
-              class="col-sm col-lg-40"
-              [suggestions]="[]"
-              [sheetMode]="true"
-              xftTheme="warning"
-              [formControl]="selectControl"
-            >
-              Estado de factura<span>*</span>
-            </xft-select-field>
-
-            <xft-select-field
-              class="col-sm col-lg-30"
-              [suggestions]="persons"
-              xftTheme="happy"
-            >
-              Plazo de pago (días)<span>*</span>
-            </xft-select-field>
-
-            <xft-text-field class="col-sm col-lg-30">
-              Número de la orden<span>*</span>
-            </xft-text-field>
-          </div>
-
-          <button xft-button-action="trash-2" (click)="onAction()"></button>
+      <div class="xft-form col-sm col-lg-50">
+        <div class="xft-form__header">
+          <xft-toolbar subtitle="Registrar un nuevo documento">
+            Formulario para gestión de documento
+          </xft-toolbar>
         </div>
 
-        <div class="xft-datatable">
-          <div class="xft-datatable__content">
-            <table class="xft-datatable__table">
-              <thead class="xft-datatable__thead">
-                <tr class="xft-datatable__title">
-                  <th class="xft-datatable__th xft-datatable__th--control"></th>
-                  <th class="xft-datatable__th col-sm-17-5 align-center">
-                    Number ID
-                  </th>
-                  <th class="xft-datatable__th col-sm-35">Full name</th>
-                  <th class="xft-datatable__th col-sm-20">Company</th>
-                  <th class="xft-datatable__th col-sm-10 align-center">Age</th>
-                  <th class="xft-datatable__th col-sm-17-5 align-right">
-                    Value
-                  </th>
-                </tr>
-              </thead>
+        <div class="xft-form__content">
+          <p class="body2-medium font-primary-700 align-justify">
+            Un documento contable es un soporte que tiene como propósito
+            registrar las operaciones comerciales de una empresa. Para
+            elaborarlos se debe tener un sumo cuidado, ya que estos influyen en
+            el resultado de los diferentes informes a generar si son mal
+            diligenciados.
+          </p>
+        </div>
 
-              <tbody class="xft-datatable__tbody">
-                <tr class="xft-datatable__row">
-                  <td class="xft-datatable__td xft-datatable__td--control">
-                    <xft-avatar>
-                      <img
-                        class="xft-avatar__img"
-                        src="../assets/cr7.jpg"
-                        alt="Profile"
-                      />
-                    </xft-avatar>
-                  </td>
-                  <td class="xft-datatable__td col-sm-17-5 align-center">
-                    73127818
-                  </td>
-                  <td class="xft-datatable__td col-sm-35">
-                    <a>Cristiano Ronaldo Aveiro</a>
-                  </td>
-                  <td class="xft-datatable__td col-sm-20">
-                    <xft-select-field
-                      [sheetMode]="true"
-                      [suggestions]="persons"
-                    >
-                    </xft-select-field>
-                  </td>
-                  <td class="xft-datatable__td col-sm-10 align-center">37</td>
-                  <td class="xft-datatable__td col-sm-17-5 align-right">
-                    <xft-money-field></xft-money-field>
-                  </td>
-                </tr>
-                <tr class="xft-datatable__row">
-                  <td class="xft-datatable__td xft-datatable__td--control">
-                    <xft-avatar>
-                      <span>DC</span>
-                    </xft-avatar>
-                  </td>
-                  <td class="xft-datatable__td col-sm-17-5 align-center">
-                    1065642202
-                  </td>
-                  <td class="xft-datatable__td col-sm-35">
-                    Daniel Castillo Pedroza
-                  </td>
-                  <td class="xft-datatable__td col-sm-20">
-                    <xft-autocomplete-field
-                      [suggestions]="persons"
-                      [sheetMode]="true"
-                    >
-                    </xft-autocomplete-field>
-                  </td>
-                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
-                  <td class="xft-datatable__td col-sm-17-5 align-right">
-                    <xft-money-field></xft-money-field>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+        <div class="xft-form__fields">
+          <xft-text-field class="col-sm"> Nombre<span>*</span> </xft-text-field>
+          <xft-text-field class="col-sm col-lg-50">
+            Prefijo<span>*</span>
+          </xft-text-field>
+          <xft-text-field class="col-sm col-lg-50">
+            Longitud<span>*</span>
+          </xft-text-field>
+        </div>
 
-          <div class="xft-datatable__footer">
-            <xft-pagination
-              [suggestions]="persons"
-              [count]="3"
-            ></xft-pagination>
-          </div>
+        <div class="xft-form__footer">
+          <button xft-button="flat" class="col-sm-30">Registrar</button>
+          <button xft-button="flat" xftTheme="danger" class="col-sm-30">
+            Cancelar
+          </button>
         </div>
       </div>
-
-      <xft-alert icon="bell" xftTheme="info">
-        Let's take a look at 10 fun push examples across the food, gaming,
-        eCommerce, mhealth, and media industries and break down what they do
-        well
-      </xft-alert>
     </div>
   </div>
 </div>

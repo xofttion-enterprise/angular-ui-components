@@ -1,0 +1,154 @@
+
+
+        <div class="xft-datatable">
+          <div class="xft-datatable__content">
+            <table class="xft-datatable__table">
+              <thead class="xft-datatable__thead">
+                <tr class="xft-datatable__title">
+                  <th class="xft-datatable__th xft-datatable__th--control"></th>
+                  <th class="xft-datatable__th col-sm-17-5 align-center">
+                    Number ID
+                  </th>
+                  <th class="xft-datatable__th col-sm-35">Full name</th>
+                  <th class="xft-datatable__th col-sm-20">Company</th>
+                  <th class="xft-datatable__th col-sm-10 align-center">Age</th>
+                  <th class="xft-datatable__th col-sm-17-5 align-right">
+                    Value
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody class="xft-datatable__tbody">
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <img
+                        class="xft-avatar__img"
+                        src="../assets/cr7.jpg"
+                        alt="Profile"
+                      />
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    73127818
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    <a>Cristiano Ronaldo Aveiro</a>
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                    <xft-select-field
+                      [sheetMode]="true"
+                      [suggestions]="persons"
+                    >
+                    </xft-select-field>
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">37</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                    <xft-money-field></xft-money-field>
+                  </td>
+                </tr>
+                <tr class="xft-datatable__row">
+                  <td class="xft-datatable__td xft-datatable__td--control">
+                    <xft-avatar>
+                      <span>DC</span>
+                    </xft-avatar>
+                  </td>
+                  <td class="xft-datatable__td col-sm-17-5 align-center">
+                    1065642202
+                  </td>
+                  <td class="xft-datatable__td col-sm-35">
+                    Daniel Castillo Pedroza
+                  </td>
+                  <td class="xft-datatable__td col-sm-20">
+                    <xft-autocomplete-field
+                      [suggestions]="persons"
+                      [sheetMode]="true"
+                    >
+                    </xft-autocomplete-field>
+                  </td>
+                  <td class="xft-datatable__td col-sm-10 align-center">31</td>
+                  <td class="xft-datatable__td col-sm-17-5 align-right">
+                    <xft-money-field></xft-money-field>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="xft-datatable__footer">
+            <xft-pagination
+              [suggestions]="persons"
+              [count]="3"
+            ></xft-pagination>
+          </div>
+        </div>
+
+        
+          <div class="app__content__panel1">
+            <xft-select-field
+              class="col-sm col-lg-30"
+              [suggestions]="persons"
+              [sheetMode]="true"
+              xftTheme="happy"
+            >
+              Sucursal<span>*</span>
+            </xft-select-field>
+
+            <xft-select-field
+              class="col-sm col-lg-40"
+              [suggestions]="persons"
+              xftTheme="info"
+            >
+              Resolucion de facturación<span>*</span>
+            </xft-select-field>
+
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Almacen<span>*</span>
+            </xft-select-field>
+
+            <xft-date-field class="col-sm col-lg-30" xftTheme="success">
+              Fecha de expedición<span>*</span>
+            </xft-date-field>
+
+            <xft-autocomplete-field
+              class="col-sm col-lg-40"
+              [suggestions]="persons"
+              [sheetMode]="true"
+            >
+              Cliente<span>*</span>
+            </xft-autocomplete-field>
+
+            <xft-text-field
+              elementId="name-input"
+              class="col-sm col-lg-30"
+              [inputControl]="inputControl"
+            >
+              Identificación
+            </xft-text-field>
+
+            <xft-select-field class="col-sm col-lg-30" [suggestions]="persons">
+              Catálogo de precio<span>*</span>
+            </xft-select-field>
+
+            <xft-select-field
+              class="col-sm col-lg-40"
+              [suggestions]="[]"
+              [sheetMode]="true"
+              xftTheme="warning"
+              [formControl]="selectControl"
+            >
+              Estado de factura<span>*</span>
+            </xft-select-field>
+
+            <xft-select-field
+              class="col-sm col-lg-30"
+              [suggestions]="persons"
+              xftTheme="happy"
+            >
+              Plazo de pago (días)<span>*</span>
+            </xft-select-field>
+
+            <xft-text-field class="col-sm col-lg-30">
+              Número de la orden<span>*</span>
+            </xft-text-field>
+          </div>

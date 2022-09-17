@@ -33,6 +33,8 @@ export class AppComponent {
 
   public selectControl = new FormControl(null);
 
+  public condenseNav = true;
+
   public menu: SidenavMenuElement[] = [
     {
       icon: 'activity',
@@ -60,5 +62,9 @@ export class AppComponent {
 
   public onAction(): void {
     this.selectControl.setValue('Daniel Andrés Castillo Pedroza');
+  }
+
+  public onCondense(): void {
+    this.condenseNav = !this.condenseNav;
   }
 }

@@ -34,7 +34,7 @@
     }
 
     .xft-sidenav-element {
-      &__content:hover {
+      &__content:hover:not(.xft-sidenav-element__content--skeleton) {
         label {
           display: block;
         }
@@ -99,7 +99,7 @@
   .xft-sidenav {
     width: 17.5rem;
 
-    & + .xft-app__body {
+    &:not(.xft-sidenav--condense) + .xft-app__body {
       left: 17.5rem;
       width: calc(100% - 17.5rem);
 
@@ -109,7 +109,7 @@
       }
     }
 
-    &--hide {
+    &--hide:not(.xft-sidenav--condense) {
       width: 4rem;
 
       .xft-sidenav__component {
@@ -125,6 +125,10 @@
           width: calc(100% - 4rem);
         }
       }
+    }
+
+    &--condense {
+      width: 0%;
     }
   }
 }
@@ -149,6 +153,10 @@
     }
 
     &--hide {
+      width: 0%;
+    }
+
+    &--condense {
       width: 0%;
     }
 

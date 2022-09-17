@@ -1,5 +1,5 @@
 <div class="app" xftTheme="info">
-  <xft-sidenav [visible]="true">
+  <xft-sidenav [visible]="true" [condense]="condenseNav">
     <xft-sidenav-profile initials="" subtitle="" [skeleton]="true">
     </xft-sidenav-profile>
 
@@ -28,7 +28,7 @@
             </xft-toolbar>
 
             <div class="xft-datatable__header__actions">
-              <button xft-button-action="trash"></button>
+              <button xft-button-action="trash" (click)="onCondense()"></button>
               <button xft-button-action="refresh"></button>
             </div>
           </div>

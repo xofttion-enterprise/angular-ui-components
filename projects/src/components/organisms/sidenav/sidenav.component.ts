@@ -22,6 +22,9 @@ export class SidenavComponent implements OnInit, OnChanges {
   @Input()
   public visible = true;
 
+  @Input()
+  public condense = false;
+
   @Output()
   public visibleChange: EventEmitter<boolean>;
 
@@ -42,6 +45,13 @@ export class SidenavComponent implements OnInit, OnChanges {
   public ngOnChanges(changes: SimpleChanges): void {
     if (changes['visible']) {
       this._statusVisible(changes['visible'].currentValue);
+    }
+
+    if (changes['condense']) {
+      this._componentDOM.toggleClass(
+        'xft-sidenav--condense',
+        changes['condense'].currentValue
+      );
     }
   }
 

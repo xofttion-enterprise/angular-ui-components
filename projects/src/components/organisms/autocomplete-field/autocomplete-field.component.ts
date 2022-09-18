@@ -1,7 +1,11 @@
 import {
   Component,
+  EventEmitter,
   forwardRef,
   HostListener,
+  Input,
+  Output,
+  SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
@@ -41,6 +45,15 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     }
   }
 
+  @Input()
+  public requestAllow = false;
+
+  @Input()
+  public requesting = false;
+
+  @Output()
+  public request = new EventEmitter<string>();
+
   private _store: StoreCoincidence = {
     pattern: '',
     value: [],
@@ -55,6 +68,15 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
   public get isSelected(): boolean {
     return !!this.value;
+  }
+
+  public override ngOnChanges(changes: SimpleChanges): void {
+    super.ngOnChanges(changes);
+
+    if (changes['suggestions']) {
+      this._rebootStore();
+      this._searchSuggestions(this.suggestion);
+    }
   }
 
   public onOpen(): void {
@@ -131,7 +153,7 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     this._searchSuggestions(inputTarget.value);
   }
 
-  public onClear() {
+  public onClear(): void {
     this._coindicence = '';
     this.description = '';
 
@@ -141,6 +163,10 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
     this.onTouch();
 
     this.focusInput();
+  }
+
+  public onRequest(): void {
+    this.request.emit(this.suggestion);
   }
 
   protected override navigationInput(event: KeyboardEvent): void {
@@ -169,8 +195,8 @@ export class AutocompleteFieldComponent extends ListFieldComponent {
 
       this._store = {
         value: coincidences,
-        pattern: value,
-        before: store || null
+        before: store,
+        pattern: value
       };
     } else {
       this.coincidences = this.suggestions.slice(0, 6);

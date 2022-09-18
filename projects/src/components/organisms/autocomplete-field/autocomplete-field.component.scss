@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 08/Sep/2022
+ * Updated: 18/Sep/2022
 */
 
 xft-autocomplete-field {
@@ -25,21 +25,41 @@ xft-autocomplete-field {
     }
 
     &__ul {
+      &__search {
+        width: calc(100% - var(--size-24));
+        margin: var(--size-4) var(--size-12) var(--size-12);
+        border-radius: var(--size-4);
+        overflow: hidden;
+        background: var(--color-primary-500);
+
+        .xft-button-action {
+          position: absolute;
+          right: var(--size-8);
+          top: var(--size-4);
+          z-index: var(--z-index-2);
+
+          &::after {
+            width: var(--size-32);
+            height: var(--size-32);
+            margin-top: calc(var(--size-16) * -1);
+            margin-left: calc(var(--size-16) * -1);
+          }
+        }
+      }
+
       &__control {
         position: relative;
         float: left;
-        width: calc(100% - var(--size-24));
-        height: var(--size-32);
-        line-height: var(--size-32);
+        width: 100%;
+        height: var(--size-40);
+        line-height: var(--size-40);
         padding: 0rem var(--size-8);
         box-sizing: border-box;
-        border-radius: var(--size-4);
-        margin: 0rem var(--size-12) var(--size-8);
         cursor: text;
         border: none;
         outline: none;
+        background: transparent;
         color: var(--font-primary-900);
-        background: var(--color-primary-500);
         font-size: var(--body-1-size);
         font-weight: var(--font-weight-medium);
         letter-spacing: var(--body-1-letter-spacing);

@@ -36,6 +36,9 @@ export class ListFieldComponent
   public label = true;
 
   @Input()
+  public placeholder = '';
+
+  @Input()
   public suggestions: Array<ListFieldElement> = [];
 
   @Input()

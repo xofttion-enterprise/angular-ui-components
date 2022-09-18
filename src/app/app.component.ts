@@ -6,7 +6,7 @@ import {
   SidenavMenuElement,
   SnackbarComponentService
 } from 'projects';
-import { persons } from './persons';
+import { persons, personsAdd } from './persons';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +32,12 @@ export class AppComponent {
   public maxDate = new Date(2024, 1, 1);
 
   public selectControl = new FormControl(null);
+
+  public visibleNav = true;
+
+  public condenseNav = true;
+
+  public requestData = false;
 
   public menu: SidenavMenuElement[] = [
     {
@@ -60,5 +66,22 @@ export class AppComponent {
 
   public onAction(): void {
     this.selectControl.setValue('Daniel Andrés Castillo Pedroza');
+  }
+
+  public onVisible(): void {
+    this.visibleNav = !this.visibleNav;
+  }
+
+  public onCondense(): void {
+    this.condenseNav = !this.condenseNav;
+  }
+
+  public onRequest(value: string): void {
+    this.requestData = true;
+
+    setTimeout(() => {
+      this.persons = this.persons.concat(personsAdd);
+      this.requestData = false;
+    }, 3000);
   }
 }

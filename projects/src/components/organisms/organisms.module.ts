@@ -5,6 +5,7 @@ import { DateFieldComponentModule } from './date-field/date-field.component.modu
 import { DatePickerComponentModule } from './date-picker/date-picker.component.module';
 import { ModalComponentModule } from './modal/modal.component.module';
 import { PageComponentModule } from './page/page.component.module';
+import { SectionComponentModule } from './section/section.component.module';
 import { SelectFieldComponentModule } from './select-field/select-field.component.module';
 import { SidenavComponentModule } from './sidenav/sidenav.component.module';
 import { SnackbarComponentModule } from './snackbar/snackbar.component.module';
@@ -16,6 +17,7 @@ const components = [
   DatePickerComponentModule,
   ModalComponentModule,
   PageComponentModule,
+  SectionComponentModule,
   SelectFieldComponentModule,
   SidenavComponentModule,
   SnackbarComponentModule

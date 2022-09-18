@@ -1,7 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AvatarComponentModule } from '../../atoms/avatar/avatar.component.module';
-import { SkeletonTextComponentModule } from '../../atoms/skeleton-text/skeleton-text.component.module';
+import {
+  AvatarComponentModule,
+  SkeletonTextComponentModule
+} from '../../atoms';
 import { BallotComponent } from './ballot.component';
 
 @NgModule({

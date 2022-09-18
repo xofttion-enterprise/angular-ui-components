@@ -47,3 +47,8 @@ const p4 = new Person(
 const p5 = new Person('Katherin Bolaño Narvaez', 'Clinica Alta Complejidad');
 
 export const persons = [p1, p3, p2, p4, p5];
+
+const p6 = new Person('Fabian Urrego Bohorquez', 'ADL Digital Labs');
+const p7 = new Person('Karim Benzema', 'Real Madrid C.F.');
+
+export const personsAdd = [p6, p7];

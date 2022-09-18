@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { ButtonComponentModule } from '../../atoms/button/button.component.module';
-import { DayPickerComponentModule } from '../../molecules/day-picker/day-picker.component.module';
-import { MonthPickerComponentModule } from '../../molecules/month-picker/month-picker.component.module';
-import { YearPickerComponentModule } from '../../molecules/year-picker/year-picker.component.module';
+import { ButtonComponentModule } from '../../atoms';
+import {
+  DayPickerComponentModule,
+  MonthPickerComponentModule,
+  YearPickerComponentModule
+} from '../../molecules';
 import { DatePickerComponent } from './date-picker.component';
 
 @NgModule({

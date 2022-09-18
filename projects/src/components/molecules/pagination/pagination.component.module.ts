@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { IconComponentModule } from '../../atoms/icon/icon.component.module';
+import { IconComponentModule } from '../../atoms';
 import { PaginationComponent } from './pagination.component';
 import { PaginationComponentPipe } from './pagination.component.pipe';
 

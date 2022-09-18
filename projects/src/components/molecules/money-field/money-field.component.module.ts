@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { InputFieldComponentModule } from '../../atoms/input-field/input-field.component.module';
+import { InputFieldComponentModule } from '../../atoms';
 import { MoneyFieldComponent } from './money-field.component';
 
 @NgModule({

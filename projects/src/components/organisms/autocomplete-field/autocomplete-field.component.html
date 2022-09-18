@@ -14,9 +14,15 @@
 
   <div class="xft-box-field__component">
     <div class="xft-box-field__body">
-      <span class="xft-list-field__control" (click)="onOpen()">
-        {{ description }}
-      </span>
+      <label class="xft-list-field__control" (click)="onOpen()">
+        <span class="xft-list-field__control__description" *ngIf="description">
+          {{ description }}
+        </span>
+
+        <span class="xft-list-field__control__placeholder" *ngIf="!description">
+          {{ placeholder }}
+        </span>
+      </label>
 
       <button
         class="xft-list-field__action"
@@ -35,15 +41,29 @@
       [class.xft-list-field__suggestions--sheet]="sheetMode"
     >
       <ul class="xft-list-field__ul">
-        <input
-          class="xft-list-field__ul__control"
-          type="text"
-          [value]="suggestion"
-          (focus)="onFocus()"
-          (blur)="onBlur()"
-          (input)="onInput($event)"
-          (keydown)="onKeydownInput($event)"
-        />
+        <div class="xft-list-field__ul__search">
+          <button
+            xft-button-action="search"
+            *ngIf="requestAllow"
+            (click)="onRequest()"
+            [disabled]="requesting"
+          ></button>
+
+          <input
+            class="xft-list-field__ul__control"
+            type="text"
+            [placeholder]="placeholder"
+            [disabled]="requesting"
+            [value]="suggestion"
+            (focus)="onFocus()"
+            (blur)="onBlur()"
+            (input)="onInput($event)"
+            (keydown)="onKeydownInput($event)"
+          />
+
+          <xft-progress-bar [indeterminate]="true" [hidden]="!requesting">
+          </xft-progress-bar>
+        </div>
 
         <xft-ballot
           *ngFor="let element of coincidences"
@@ -65,7 +85,8 @@
           <div class="xft-list-field__empty__description">
             <label class="body2-bold truncate"> Selección no disponible </label>
             <label class="caption-regular">
-              Lo sentimos, no se encontraron resultados con el filtro establecido
+              Lo sentimos, no se encontraron resultados con el filtro
+              establecido
             </label>
           </div>
         </div>

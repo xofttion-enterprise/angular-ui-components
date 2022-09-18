@@ -47,6 +47,12 @@
     &:disabled {
       opacity: 0.5;
     }
+
+    &__placeholder {
+      position: relative;
+      float: left;
+      color: var(--font-primary-500);
+    }
   }
 
   &__action {

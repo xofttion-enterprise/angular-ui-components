@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { IconComponentModule } from '../../atoms';
+import { BallotComponentModule } from '../../molecules';
 import { SelectFieldComponent } from './select-field.component';
-import { BallotComponentModule } from '../../molecules/ballot/ballot.component.module';
-import { IconComponentModule } from '../../atoms/icon/icon.component.module';
 
 @NgModule({
   imports: [

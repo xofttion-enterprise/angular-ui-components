@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { IconComponentModule } from '../../atoms/icon/icon.component.module';
+import { IconComponentModule } from '../../atoms';
 import { YearPickerComponent } from './year-picker.component';
 
 @NgModule({

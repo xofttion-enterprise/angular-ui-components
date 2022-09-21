@@ -31,6 +31,7 @@
               <div class="xft-datatable__header__actions">
                 <button
                   xft-button-action="trash"
+                  tooltip="Eliminar"
                   (click)="onCondense()"
                 ></button>
                 <button
@@ -90,6 +91,12 @@
                     <td class="xft-datatable__td col-sm-17-5 align-right">
                       <xft-money-field></xft-money-field>
                     </td>
+                    <td class="xft-datatable__row__actions">
+                      <button
+                        xft-button-action="refresh"
+                        tooltip="Eliminar"
+                      ></button>
+                    </td>
                   </tr>
                   <tr class="xft-datatable__row">
                     <td class="xft-datatable__td xft-datatable__td--control">
@@ -119,6 +126,16 @@
                     <td class="xft-datatable__td col-sm-17-5 align-right">
                       <xft-money-field></xft-money-field>
                     </td>
+                    <td class="xft-datatable__row__actions">
+                      <button
+                        xft-button-action="refresh"
+                        tooltip="Refrescar"
+                      ></button>
+                      <button
+                        xft-button-action="trash"
+                        tooltip="Eliminar"
+                      ></button>
+                    </td>
                   </tr>
                   <tr class="xft-datatable__row">
                     <td class="xft-datatable__td xft-datatable__td--control">
@@ -135,6 +152,10 @@
                     <td class="xft-datatable__td col-sm-20"></td>
                     <td class="xft-datatable__td col-sm-10 align-center">31</td>
                     <td class="xft-datatable__td col-sm-17-5 align-right"></td>
+                    <td class="xft-datatable__row__actions">
+                      <button xft-button-action="trash"></button>
+                      <button xft-button-action="refresh"></button>
+                    </td>
                   </tr>
                   <tr class="xft-datatable__row">
                     <td class="xft-datatable__td xft-datatable__td--control">

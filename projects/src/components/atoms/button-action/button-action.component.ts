@@ -18,6 +18,9 @@ export class ButtonActionComponent implements OnInit {
   @Input('xft-button-action')
   public icon!: string;
 
+  @Input()
+  public tooltip?: string;
+
   private _componentDOM: ComponentDOM;
 
   constructor(private _ref: ElementRef, private _renderer: Renderer2) {

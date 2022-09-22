@@ -2,6 +2,8 @@ export * from './alert/alert.component';
 export * from './alert/alert.component.module';
 export * from './ballot/ballot.component';
 export * from './ballot/ballot.component.module';
+export * from './button-progress/button-progress.component';
+export * from './button-progress/button-progress.component.module';
 export * from './checkbox-label/checkbox-label.component';
 export * from './checkbox-label/checkbox-label.component.module';
 export * from './day-picker/day-picker.component';

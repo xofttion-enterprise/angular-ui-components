@@ -1,0 +1,12 @@
+<div class="xft-button-progress__component" tabindex="-1">
+  <button
+    [xft-button-action]="button"
+    [tooltip]="tooltip"
+    [hidden]="progress"
+    [disabled]="disabled"
+    (click)="onClick($event)"
+  ></button>
+
+  <xft-progress-circular [visible]="true" [hidden]="!progress">
+  </xft-progress-circular>
+</div>

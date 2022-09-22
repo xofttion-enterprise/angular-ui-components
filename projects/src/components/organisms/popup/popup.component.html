@@ -1,0 +1,32 @@
+<div class="xft-popup__content" [class.xft-popup__content--visible]="visible">
+  <div class="xft-popup__component" [class.xft-popup__component--visible]="visible">
+    <div class="xft-popup__header">
+      <div class="xft-popup__header__title h6-bold">
+        {{ config?.title }}
+      </div>
+      <div class="xft-popup__header__subtitle smalltext-bold" *ngIf="config?.subtitle">
+        {{ config?.subtitle }}
+      </div>
+    </div>
+
+    <div class="xft-popup__body">
+      <p class="xft-popup__body__message body1-medium" [innerHtml]="config?.message"></p>
+    </div>
+
+    <div class="xft-popup__footer">
+      <div class="xft-popup__footer__actions">
+        <button xft-button="raised" (click)="onApproved()">
+          <span>{{ config?.approved?.label }}</span>
+        </button>
+        <button xft-button="outline" (click)="onReject()">
+          <span>{{ config?.reject?.label }}</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="xft-popup__backdrop"
+    [class.xft-popup__backdrop--visible]="visible"
+  ></div>
+</div>

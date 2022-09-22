@@ -70,7 +70,7 @@ export class SnackbarComponent implements OnInit, OnDestroy {
     if (!this._visible) {
       this.config.theme = setThemeDOM(
         this._componentDOM,
-        config.theme || 'default',
+        config.theme || 'xofttion',
         this.config.theme
       );
 

@@ -66,7 +66,7 @@
       transform: scale(1);
     }
 
-    .xft-button__action__tooltip {
+    .xft-button-action__tooltip {
       opacity: 1;
       transition-delay: 480ms;
     }
@@ -75,6 +75,22 @@
   &:disabled {
     opacity: 0.5;
     pointer-events: none;
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: calc(100% + var(--size-8));
+    left: 50%;
+    width: auto;
+    float: initial;
+    opacity: 0;
+    padding: var(--size-8);
+    border-radius: var(--size-4);
+    pointer-events: none;
+    transform: translateX(-50%);
+    background: var(--color-dark-900);
+    color: var(--color-light-900);
+    transition: opacity 200ms 0ms var(--deceleration-curve);
   }
 }
 

@@ -1,3 +1,6 @@
 <div class="xft-button-action__content">
   <xft-icon class="xft-button-action__icon" [value]="icon"></xft-icon>
 </div>
+<div class="xft-button-action__tooltip caption-bold" *ngIf="tooltip">
+  {{ tooltip }}
+</div>

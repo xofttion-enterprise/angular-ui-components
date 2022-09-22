@@ -37,6 +37,8 @@ export class AppComponent {
 
   public condenseNav = true;
 
+  public progress = false;
+
   public requestData = false;
 
   public menu: SidenavMenuElement[] = [
@@ -74,6 +76,10 @@ export class AppComponent {
 
   public onCondense(): void {
     this.condenseNav = !this.condenseNav;
+  }
+
+  public onProgress(): void {
+    this.progress = !this.progress;
   }
 
   public onRequest(value: string): void {

@@ -14,6 +14,8 @@ export * from './input-field/input-field.component';
 export * from './input-field/input-field.component.module';
 export * from './progress-bar/progress-bar.component';
 export * from './progress-bar/progress-bar.component.module';
+export * from './progress-circular/progress-circular.component';
+export * from './progress-circular/progress-circular.component.module';
 export * from './radiobutton/radiobutton.component';
 export * from './radiobutton/radiobutton.component.module';
 export * from './sidenav-element/sidenav-element.component';

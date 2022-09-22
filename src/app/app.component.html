@@ -1,4 +1,4 @@
-<div class="app" xftTheme="info">
+<div class="app" xftTheme="success">
   <xft-sidenav [(visible)]="visibleNav" [condense]="condenseNav">
     <xft-sidenav-profile initials="" subtitle="" [skeleton]="true">
     </xft-sidenav-profile>
@@ -29,6 +29,12 @@
               </xft-toolbar>
 
               <div class="xft-datatable__header__actions">
+                <xft-button-progress
+                  button="attach"
+                  [progress]="progress"
+                  tooltip="Adjuntar"
+                  (action)="onVisible()"
+                ></xft-button-progress>
                 <button
                   xft-button-action="trash"
                   tooltip="Eliminar"
@@ -36,7 +42,7 @@
                 ></button>
                 <button
                   xft-button-action="refresh"
-                  (click)="onVisible()"
+                  (click)="onProgress()"
                 ></button>
               </div>
             </div>
@@ -60,6 +66,7 @@
                       Value
                     </th>
                   </tr>
+                  <xft-progress-bar [indeterminate]="true"></xft-progress-bar>
                 </thead>
 
                 <tbody class="xft-datatable__tbody">
@@ -96,6 +103,11 @@
                         xft-button-action="refresh"
                         tooltip="Eliminar"
                       ></button>
+                      <xft-button-progress
+                        button="attach"
+                        [progress]="progress"
+                        tooltip="Adjuntar"
+                      ></xft-button-progress>
                     </td>
                   </tr>
                   <tr class="xft-datatable__row">

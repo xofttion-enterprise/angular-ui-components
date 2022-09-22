@@ -1,0 +1,24 @@
+/*!
+ * Xofttion ButtonProgress Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 22/Sep/2022
+*/
+
+.xft-button-progress {
+  position: relative;
+  float: left;
+
+  &__component {
+    height: var(--size-32);
+    width: var(--size-32);
+
+    & > .xft-progress-circular {
+      width: var(--size-32);
+      height: var(--size-32);
+      padding: 0rem;
+    }
+  }
+}

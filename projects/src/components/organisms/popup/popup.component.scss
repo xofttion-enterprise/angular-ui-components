@@ -1,0 +1,129 @@
+/*!
+ * Xofttion PopupConfirmation Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 22/Sep/2022
+*/
+
+.xft-popup {
+  &__content {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+    z-index: var(--z-index-24);
+    visibility: hidden;
+
+    &--visible {
+      visibility: visible;
+    }
+  }
+
+  &__component {
+    position: absolute;
+    width: calc(100% - var(--size-32));
+    max-width: 20rem;
+    height: 0rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--z-index-2);
+    border-radius: var(--size-8);
+    background-color: var(--color-primary-900);
+    box-shadow: var(--shadow-4);
+    will-change: transform;
+    transform: translateY(150px) scale(0.6);
+    transition: opacity 125ms 0ms var(--deceleration-curve),
+      transform 125ms 0ms var(--deceleration-curve),
+      visibility 125ms 0ms var(--deceleration-curve);
+
+    &--visible {
+      visibility: visible;
+      height: auto;
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  &__header {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: var(--size-16) var(--size-20) var(--size-8) var(--size-20);
+    box-sizing: border-box;
+
+    &__title {
+      text-align: center;
+      width: 100%;
+      color: var(--color-theme-900);
+    }
+
+    &__subtitle {
+      text-align: center;
+      margin-top: var(--size-4);
+      width: 100%;
+      color: var(--font-primary-700);
+    }
+  }
+
+  &__body {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: 0rem var(--size-16) var(--size-12) var(--size-16);
+    box-sizing: border-box;
+
+    &__message {
+      color: var(--font-primary-900);
+      margin: 0rem;
+      text-align: center;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    float: left;
+    width: 100%;
+    padding: var(--size-8) var(--size-16) var(--size-16) var(--size-16);
+    box-sizing: border-box;
+
+    &__actions {
+      position: relative;
+      display: flex;
+      flex-direction: column-reverse;
+      float: left;
+      width: 100%;
+      margin: auto;
+      max-width: 18rem;
+
+      button + button {
+        margin-bottom: var(--size-8);
+      }
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    display: block;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: initial;
+    opacity: 0;
+    z-index: 1;
+    will-change: opacity;
+    background: var(--color-secondary-900);
+    transition: opacity 120ms 0ms var(--deceleration-curve),
+      bottom 120ms 0ms var(--deceleration-curve);
+
+    &--visible {
+      bottom: 0rem;
+      opacity: 0.86;
+    }
+  }
+}

@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import {
   ModalComponentService,
+  PopupComponentService,
   required,
   SidenavMenuElement,
   SnackbarComponentService
@@ -59,7 +60,8 @@ export class AppComponent {
 
   constructor(
     private modalService: ModalComponentService,
-    private snackbarService: SnackbarComponentService
+    private snackbarService: SnackbarComponentService,
+    private popupService: PopupComponentService
   ) {}
 
   public onSidenav(element: SidenavMenuElement): void {
@@ -67,7 +69,19 @@ export class AppComponent {
   }
 
   public onAction(): void {
-    this.selectControl.setValue('Daniel Andrés Castillo Pedroza');
+    this.popupService.launch({
+      title: 'Xedger Application',
+      subtitle: 'Confirmación',
+      theme: 'happy',
+      message:
+        'Si quedaras varado en una isla… ¿Cuáles serían las 3 cosas que te ayudarían a sobrevivir física y mentalmente?',
+      approved: {
+        label: 'Aceptar'
+      },
+      reject: {
+        label: 'Rechazar'
+      }
+    });
   }
 
   public onVisible(): void {

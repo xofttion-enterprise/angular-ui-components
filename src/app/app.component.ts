@@ -62,7 +62,9 @@ export class AppComponent {
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService,
     private popupService: PopupComponentService
-  ) {}
+  ) {
+    console.log(new Date().isLeapYear());
+  }
 
   public onSidenav(element: SidenavMenuElement): void {
     console.log(element);

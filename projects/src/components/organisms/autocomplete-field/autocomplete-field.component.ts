@@ -9,7 +9,7 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
-import { like } from '../../utils';
+import { like } from '@xofttion-enterprise/utils';
 import { ListFieldElement } from '../list-field/list-field-element';
 import { ListFieldComponent } from '../list-field/list-field.component';
 

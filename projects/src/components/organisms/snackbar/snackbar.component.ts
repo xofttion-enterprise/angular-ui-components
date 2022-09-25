@@ -6,25 +6,12 @@ import {
   Renderer2,
   ViewEncapsulation
 } from '@angular/core';
-import { ComponentDOM, setThemeDOM } from '../../utils';
-
-export const SNACKBAR_DURATION_ANIMATION = 240;
-export const SNACKBAR_DURATION_MIN = 2000;
-export const SNACKBAR_DURATION_MAX = 7000;
-
-const SNACKBAR_DURATION_CHAR = 50;
-
-export function getDurationSnackbar(message: string): number {
-  let duration = message.length * SNACKBAR_DURATION_CHAR;
-
-  if (duration < SNACKBAR_DURATION_MIN) {
-    duration = SNACKBAR_DURATION_MIN;
-  } else if (duration > SNACKBAR_DURATION_MAX) {
-    duration = SNACKBAR_DURATION_MAX;
-  }
-
-  return duration + SNACKBAR_DURATION_ANIMATION * 2;
-}
+import {
+  ComponentDOM,
+  getDurationMessenger,
+  MESSENGER_DURATION_ANIMATION,
+  setThemeDOM
+} from '../../utils';
 
 export interface SnackbarConfig {
   title?: string;
@@ -46,10 +33,12 @@ export class SnackbarComponent implements OnInit, OnDestroy {
 
   private _visible = false;
 
-  public config: SnackbarConfig = { message: '' };
+  public config: SnackbarConfig;
 
   constructor(private _ref: ElementRef, private _renderer: Renderer2) {
     this._componentDOM = ComponentDOM.build(this._ref, this._renderer);
+
+    this.config = { message: '' };
   }
 
   public ngOnInit(): void {
@@ -77,13 +66,13 @@ export class SnackbarComponent implements OnInit, OnDestroy {
       this.config = config;
       this._visible = true;
 
-      const duration = getDurationSnackbar(config.message);
+      const duration = getDurationMessenger(config.message);
 
       this._timeoutId = setTimeout(() => this._hide(), duration);
     } else {
       this._hideForce();
 
-      setTimeout(() => this.launch(config), SNACKBAR_DURATION_ANIMATION);
+      setTimeout(() => this.launch(config), MESSENGER_DURATION_ANIMATION);
     }
   }
 

@@ -1,0 +1,31 @@
+<div class="xft-notification__content">
+  <div class="xft-notification__component">
+    <div class="xft-notification__avatar" *ngIf="config.avatar">
+      <div class="xft-avatar">
+        <img
+          class="xft-avatar__img"
+          src="{{ config.avatar }}"
+          alt="{{ config.title }}"
+        />
+      </div>
+    </div>
+    <div class="xft-notification__body">
+      <div class="xft-notification__title title2-semibold">
+        {{ config.title }}
+      </div>
+      <div class="xft-notification__message body2-medium">
+        {{ config.message }}
+      </div>
+    </div>
+  </div>
+  <div class="xft-notification__actions" *ngIf="config.actions?.length">
+    <button
+      xft-button="flat"
+      *ngFor="let action of config?.actions"
+      [disabled]="action.disabled"
+      (click)="onClickAction(action)"
+    >
+      <span>{{ action.label }}</span>
+    </button>
+  </div>
+</div>

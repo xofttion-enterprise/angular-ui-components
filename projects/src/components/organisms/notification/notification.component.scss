@@ -1,0 +1,88 @@
+/*!
+ * Xofttion Notification Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 25/Sep/2022
+*/
+
+.xft-notification {
+  position: absolute;
+  top: var(--size-16);
+  right: 0rem;
+  width: calc(100% - var(--size-40));
+  max-width: 20rem;
+  z-index: 16;
+  transform: translateX(calc(100% + var(--size-16)));
+  transition: transform 320ms 0ms var(--standard-curve);
+
+  &--show {
+    transform: translateX(0%);
+  }
+
+  &__content {
+    position: relative;
+    float: left;
+    width: calc(100% - var(--size-16));
+    margin-right: var(--size-16);
+    padding: var(--size-12) var(--size-16);
+    box-sizing: border-box;
+    border-radius: var(--size-8);
+    box-shadow: var(--z-bottom-light-4);
+    overflow: hidden;
+    background: var(--color-primary-900);
+    border-left: 3px solid var(--color-theme-900);
+  }
+
+  &__component {
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &:last-child {
+      margin-bottom: var(--size-8);
+    }
+  }
+
+  &__avatar {
+    position: relative;
+    float: left;
+    width: var(--size-48);
+
+    & + .xft-notification__body {
+      width: calc(100% - var(--size-64));
+      margin-left: var(--size-16);
+    }
+
+    .xft-avatar {
+      width: var(--size-48);
+      height: var(--size-48);
+    }
+  }
+
+  &__title {
+    height: var(--size-24);
+    line-height: var(--size-24);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: var(--size-4);
+    color: var(--color-theme-900);
+  }
+
+  &__message {
+    color: var(--font-primary-900);
+  }
+
+  &__actions {
+    box-sizing: border-box;
+    margin-top: var(--size-8);
+
+    button {
+      & + button {
+        margin-left: var(--size-8);
+      }
+    }
+  }
+}

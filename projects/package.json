@@ -6,7 +6,7 @@
     "@angular/common": "^13.2.0",
     "@angular/core": "^13.2.0",
     "@angular/forms": "^13.2.0",
-    "@xofttion-enterprise/utils": "^1.2.0"
+    "@xofttion-enterprise/utils": "^1.2.4"
   },
   "dependencies": {
     "tslib": "^2.3.0"

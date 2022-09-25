@@ -1,23 +1,25 @@
+import { MONTHS_NAME } from '@xofttion-enterprise/utils';
+
 export interface MonthModel {
   value: number;
   label: string;
 }
 
-export function MonthToModel(label: string, value: number): MonthModel {
-  return { value, label };
+export function monthFactory(value: number): MonthModel {
+  return { value, label: MONTHS_NAME[value] };
 }
 
-export const MonthsList: Array<MonthModel> = [
-  MonthToModel('Enero', 0),
-  MonthToModel('Febrero', 1),
-  MonthToModel('Marzo', 2),
-  MonthToModel('Abril', 3),
-  MonthToModel('Mayo', 4),
-  MonthToModel('Junio', 5),
-  MonthToModel('Julio', 6),
-  MonthToModel('Agosto', 7),
-  MonthToModel('Septiembre', 8),
-  MonthToModel('Octubre', 9),
-  MonthToModel('Noviembre', 10),
-  MonthToModel('Diciembre', 11)
+export const MONTHS: Array<MonthModel> = [
+  monthFactory(0),
+  monthFactory(1),
+  monthFactory(2),
+  monthFactory(3),
+  monthFactory(4),
+  monthFactory(5),
+  monthFactory(6),
+  monthFactory(7),
+  monthFactory(8),
+  monthFactory(9),
+  monthFactory(10),
+  monthFactory(11)
 ];

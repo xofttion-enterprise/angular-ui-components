@@ -1,5 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { dateFactory } from '@xofttion-enterprise/utils';
 import {
   ModalComponentService,
   PopupComponentService,
@@ -63,7 +64,9 @@ export class AppComponent {
     private snackbarService: SnackbarComponentService,
     private popupService: PopupComponentService
   ) {
-    console.log(new Date().isLeapYear());
+    const date = dateFactory(2022, 8, 20);
+
+    console.log(date.getDifferenceForHumans());
   }
 
   public onSidenav(element: SidenavMenuElement): void {

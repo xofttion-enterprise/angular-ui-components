@@ -8,7 +8,7 @@ export interface YearModel {
   status: YearModelStatus;
 }
 
-export function YearToModel(
+export function yearFactory(
   value?: number,
   disabled?: boolean,
   selected?: boolean

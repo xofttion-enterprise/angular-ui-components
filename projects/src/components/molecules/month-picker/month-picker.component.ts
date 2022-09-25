@@ -11,14 +11,14 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ComponentDOM } from '../../utils';
-import { MonthModel, MonthsList } from './month-utils';
+import { MonthModel, MONTHS } from './month-utils';
 
 interface MonthPickerStatus {
   disabled: boolean;
 }
 
-export const MIN_VALUE_MONTH = 0;
-export const MAX_VALUE_MONTH = 11;
+export const MONTH_MIN = 0;
+export const MONTH_MAX = 11;
 
 @Component({
   selector: 'xft-month-picker',
@@ -52,7 +52,7 @@ export class MonthPickerComponent
 
   private _value: number;
 
-  public months = MonthsList;
+  public months = MONTHS;
 
   public status: MonthPickerStatus;
 
@@ -92,11 +92,11 @@ export class MonthPickerComponent
   }
 
   public get minMonth(): number {
-    return this.minDate?.getMonth() || MIN_VALUE_MONTH;
+    return this.minDate?.getMonth() || MONTH_MIN;
   }
 
   public get maxMonth(): number {
-    return this.maxDate?.getMonth() || MAX_VALUE_MONTH;
+    return this.maxDate?.getMonth() || MONTH_MAX;
   }
 
   public isSelected(month: MonthModel): boolean {

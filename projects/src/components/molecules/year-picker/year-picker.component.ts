@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ComponentDOM } from '../../utils';
-import { YearModel, YearToModel } from './year-utils';
+import { YearModel, yearFactory } from './year-utils';
 
 export const YEAR_RANGE = 4;
 
@@ -234,7 +234,7 @@ export class YearPickerComponent
   }
 
   private _buildModel(value?: number): YearModel {
-    return YearToModel(value, !value, value === this._value);
+    return yearFactory(value, !value, value === this._value);
   }
 
   private _recalculateRangeYear(

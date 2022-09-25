@@ -4,6 +4,7 @@ import { BottomSheetComponentModule } from './bottom-sheet/bottom-sheet.componen
 import { DateFieldComponentModule } from './date-field/date-field.component.module';
 import { DatePickerComponentModule } from './date-picker/date-picker.component.module';
 import { ModalComponentModule } from './modal/modal.component.module';
+import { NotificationComponentModule } from './notification/notification.component.module';
 import { PageComponentModule } from './page/page.component.module';
 import { PopupComponentModule } from './popup/popup.component.module';
 import { SectionComponentModule } from './section/section.component.module';
@@ -17,6 +18,7 @@ const components = [
   DateFieldComponentModule,
   DatePickerComponentModule,
   ModalComponentModule,
+  NotificationComponentModule,
   PageComponentModule,
   PopupComponentModule,
   SectionComponentModule,

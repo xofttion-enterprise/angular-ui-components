@@ -1,5 +1,5 @@
 export * from './dom';
+export * from './messenger';
 export * from './overlay';
-export * from './text';
 export * from './theme';
 export * from './validators';

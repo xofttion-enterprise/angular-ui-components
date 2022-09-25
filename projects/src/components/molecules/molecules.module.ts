@@ -4,6 +4,7 @@ import { BallotComponentModule } from './ballot/ballot.component.module';
 import { ButtonProgressComponentModule } from './button-progress/button-progress.component.module';
 import { CheckboxLabelComponentModule } from './checkbox-label/checkbox-label.component.module';
 import { DayPickerComponentModule } from './day-picker/day-picker.component.module';
+import { DropdownComponentModule } from './dropdown/dropdown.component.module';
 import { MoneyFieldComponentModule } from './money-field/money-field.component.module';
 import { MonthPickerComponentModule } from './month-picker/month-picker.component.module';
 import { PaginationComponentModule } from './pagination/pagination.component.module';
@@ -21,6 +22,7 @@ const components = [
   ButtonProgressComponentModule,
   CheckboxLabelComponentModule,
   DayPickerComponentModule,
+  DropdownComponentModule,
   MoneyFieldComponentModule,
   MonthPickerComponentModule,
   PaginationComponentModule,

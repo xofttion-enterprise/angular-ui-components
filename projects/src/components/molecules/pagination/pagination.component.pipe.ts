@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { like } from '../../utils/text';
+import { like } from '@xofttion-enterprise/utils';
 
 @Pipe({
   name: 'paginationPipe'

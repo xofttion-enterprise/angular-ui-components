@@ -11,16 +11,16 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import {
-  daysNameMin,
+  changeDay,
+  DAYS_NAME_MIN,
   getDateWeight,
   getDaysMonth
 } from '@xofttion-enterprise/utils';
 import { ComponentDOM } from '../../utils';
 import {
-  DateFactory,
   DayModel,
   DayPickerStatus,
-  DayToModel,
+  dayFactory,
   WeekModel
 } from './day-utils';
 
@@ -58,7 +58,7 @@ export class DayPickerComponent
 
   public status: DayPickerStatus;
 
-  public titles = daysNameMin;
+  public titles = DAYS_NAME_MIN;
 
   public weeks: Array<WeekModel> = [];
 
@@ -262,7 +262,7 @@ export class DayPickerComponent
   private _getDayModel(value?: number): DayModel {
     const overflow = this._isOverflow(this.date, value || 0);
 
-    return DayToModel(value, overflow, !value);
+    return dayFactory(value, overflow, !value);
   }
 
   private _isOverflow(date: Date, day: number): boolean {
@@ -271,7 +271,7 @@ export class DayPickerComponent
 
   private _isOverflowMin(date: Date, day: number): boolean {
     if (this.minDate) {
-      const newDate = DateFactory.setDay(date, day);
+      const newDate = changeDay(date, day);
 
       return getDateWeight(newDate) < getDateWeight(this.minDate);
     }
@@ -281,7 +281,7 @@ export class DayPickerComponent
 
   private _isOverflowMax(date: Date, day: number): boolean {
     if (this.maxDate) {
-      const newDate = DateFactory.setDay(date, day);
+      const newDate = changeDay(date, day);
 
       return getDateWeight(newDate) > getDateWeight(this.maxDate);
     }

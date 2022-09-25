@@ -1,6 +1,6 @@
 {
   "name": "@xofttion-enterprise/components",
-  "version": "13.1.9",
+  "version": "13.1.11",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,7 +23,7 @@
     "@angular/forms": "~13.2.0",
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
-    "@xofttion-enterprise/utils": "^1.1.1",
+    "@xofttion-enterprise/utils": "^1.2.4",
     "async": "^3.2.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

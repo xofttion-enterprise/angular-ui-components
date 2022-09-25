@@ -1,7 +1,9 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { dateFactory } from '@xofttion-enterprise/utils';
 import {
   ModalComponentService,
+  NotificationComponentService,
   PopupComponentService,
   required,
   SidenavMenuElement,
@@ -61,8 +63,13 @@ export class AppComponent {
   constructor(
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService,
-    private popupService: PopupComponentService
-  ) {}
+    private popupService: PopupComponentService,
+    private notificationService: NotificationComponentService
+  ) {
+    const date = dateFactory(2022, 8, 20);
+
+    console.log(date.getDifferenceForHumans());
+  }
 
   public onSidenav(element: SidenavMenuElement): void {
     console.log(element);
@@ -93,6 +100,23 @@ export class AppComponent {
   }
 
   public onProgress(): void {
+    this.notificationService.launch({
+      title: 'Avast antivirus',
+      message:
+        'The split() method takes a pattern and divides a String into an ordered list of substrings by searching for the pattern, puts these substrings into an array, and returns the array.',
+      theme: 'danger',
+      actions: [
+        {
+          label: 'Reportar',
+          onClick: () => {}
+        },
+        {
+          label: 'Ignorar',
+          onClick: () => {}
+        }
+      ]
+    });
+
     this.progress = !this.progress;
   }
 

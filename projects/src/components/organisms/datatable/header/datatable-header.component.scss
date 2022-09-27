@@ -1,0 +1,39 @@
+/*!
+ * Xofttion Datatable Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 27/Sep/2022
+*/
+
+.xft-datatable-header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  z-index: var(--z-index-8);
+  box-sizing: border-box;
+  padding: var(--size-4) var(--size-8);
+  border-radius: var(--size-8) var(--size-8) 0rem 0rem;
+  background: var(--color-theme-300);
+
+  .xft-toolbar {
+    &__content {
+      padding: var(--size-4);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    width: auto;
+  }
+
+  &__action {
+    margin: auto;
+
+    & > .xft-button-action,
+    & > .xft-button-progress {
+      margin: auto var(--size-4);
+    }
+  }
+}

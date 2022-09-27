@@ -4,7 +4,7 @@
  * @license MIT
  * Author: Xofttion Developers
  * Created: 20/Mar/2018
- * Updated: 22/Sep/2022
+ * Updated: 27/Sep/2022
 */
 
 .xft-datatable {
@@ -14,33 +14,6 @@
   border-radius: var(--size-8);
   box-sizing: border-box;
   box-shadow: var(--z-bottom-light-4);
-
-  &__header {
-    position: relative;
-    display: flex;
-    width: 100%;
-    z-index: var(--z-index-8);
-    box-sizing: border-box;
-    padding: var(--size-4) var(--size-8);
-    border-radius: var(--size-8) var(--size-8) 0rem 0rem;
-    background: var(--color-theme-300);
-
-    .xft-toolbar {
-      &__content {
-        padding: var(--size-4);
-      }
-    }
-
-    &__actions {
-      display: flex;
-      width: auto;
-
-      & > .xft-button-action,
-      & > .xft-button-progress {
-        margin: auto var(--size-4);
-      }
-    }
-  }
 
   &__content {
     position: relative;
@@ -275,6 +248,7 @@
     float: left;
     width: 100%;
     overflow: hidden;
-    background-color: var(--color-theme-100);
+    background: var(--color-theme-100);
+    border-radius: 0px 0px 8px var(--size-8);
   }
 }

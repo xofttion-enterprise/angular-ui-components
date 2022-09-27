@@ -1,3 +1,4 @@
+export * from './action';
 export * from './dom';
 export * from './messenger';
 export * from './overlay';

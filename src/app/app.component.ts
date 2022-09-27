@@ -2,6 +2,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { dateFactory } from '@xofttion-enterprise/utils';
 import {
+  ActionDatatable,
+  DatatableHeader,
   ModalComponentService,
   NotificationComponentService,
   PopupComponentService,
@@ -59,6 +61,38 @@ export class AppComponent {
       label: 'Registrar asiento contable'
     }
   ];
+
+  public header: DatatableHeader = {
+    title: 'Catálogo de documentos',
+    subtitle: 'Registrados: 5 documento(s)',
+    actions: [
+      {
+        label: 'Adjuntar',
+        icon: 'attach',
+        progressType: true,
+        progress: () => {
+          return this.progress;
+        },
+        onClick: () => {
+          this.onVisible();
+        }
+      },
+      {
+        label: 'Eliminar',
+        icon: 'trash',
+        onClick: () => {
+          this.onCondense();
+        }
+      },
+      {
+        label: 'Refrescar',
+        icon: 'refresh',
+        onClick: () => {
+          this.onProgress();
+        }
+      }
+    ]
+  };
 
   constructor(
     private modalService: ModalComponentService,

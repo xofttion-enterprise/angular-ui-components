@@ -1,0 +1,17 @@
+<xft-datatable-header
+  [title]="header.title"
+  [subtitle]="header.subtitle"
+  [actions]="header.actions"
+  *ngIf="header"
+>
+</xft-datatable-header>
+
+<div class="xft-datatable__content">
+  <table class="xft-datatable__table">
+    <ng-content select="[title]"></ng-content>
+
+    <ng-content select="[body]"></ng-content>
+  </table>
+</div>
+
+<ng-content select="[footer]"></ng-content>

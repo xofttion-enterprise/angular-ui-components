@@ -1,0 +1,25 @@
+<xft-toolbar [subtitle]="subtitle"> {{ title }} </xft-toolbar>
+
+<ng-content></ng-content>
+
+<div class="xft-datatable-header__actions" *ngIf="actions">
+  <div class="xft-datatable-header__action" *ngFor="let action of actions">
+    <button
+      [xft-button-action]="action.icon"
+      *ngIf="!action.progress"
+      [tooltip]="action.label"
+      (click)="onAction(action)"
+      [hidden]="isHidden(action)"
+      [disabled]="isDisabled(action)"
+    ></button>
+    <xft-button-progress
+      *ngIf="action.progress"
+      [progress]="isProgress(action)"
+      [button]="action.icon"
+      [tooltip]="action.label"
+      (action)="onAction(action)"
+      [hidden]="isHidden(action)"
+      [disabled]="isDisabled(action)"
+    ></xft-button-progress>
+  </div>
+</div>

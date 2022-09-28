@@ -6,7 +6,7 @@ import {
   Renderer2,
   ViewEncapsulation
 } from '@angular/core';
-import { IsDefined } from '@xofttion-enterprise/utils';
+import { isDefined } from '@xofttion-enterprise/utils';
 import { ComponentDOM } from '../../utils';
 
 @Component({
@@ -42,6 +42,6 @@ export class BallotComponent implements OnInit {
   }
 
   public get hasAvatar(): boolean {
-    return IsDefined(this.initials) || IsDefined(this.photo);
+    return isDefined(this.initials) || isDefined(this.photo);
   }
 }

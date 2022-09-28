@@ -26,6 +26,7 @@
       .xft-form {
         &__footer {
           box-shadow: none !important;
+          z-index: initial;
         }
       }
     }

@@ -235,6 +235,23 @@
       }
     }
 
+    .xft-poster {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+
+      &__content {
+        height: var(--size-28);
+        line-height: var(--size-28);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+
     & > a {
       &:hover {
         color: var(--color-theme-700);

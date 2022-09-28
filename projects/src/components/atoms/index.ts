@@ -12,6 +12,8 @@ export * from './icon/icon.component';
 export * from './icon/icon.component.module';
 export * from './input-field/input-field.component';
 export * from './input-field/input-field.component.module';
+export * from './poster/poster.component';
+export * from './poster/poster.component.module';
 export * from './progress-bar/progress-bar.component';
 export * from './progress-bar/progress-bar.component.module';
 export * from './progress-circular/progress-circular.component';

@@ -6,6 +6,7 @@ import { ButtonComponentModule } from './button/button.component.module';
 import { CheckboxComponentModule } from './checkbox/checkbox.component.module';
 import { IconComponentModule } from './icon/icon.component.module';
 import { InputFieldComponentModule } from './input-field/input-field.component.module';
+import { PosterComponentModule } from './poster/poster.component.module';
 import { ProgressBarComponentModule } from './progress-bar/progress-bar.component.module';
 import { ProgressCircularComponentModule } from './progress-circular/progress-circular.component.module';
 import { RadiobuttonComponentModule } from './radiobutton/radiobutton.component.module';
@@ -21,6 +22,7 @@ const components = [
   CheckboxComponentModule,
   IconComponentModule,
   InputFieldComponentModule,
+  PosterComponentModule,
   ProgressBarComponentModule,
   ProgressCircularComponentModule,
   RadiobuttonComponentModule,

@@ -1,0 +1,26 @@
+/*!
+ * Xofttion Poster Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 28/Sep/2022
+*/
+
+.xft-poster {
+  position: relative;
+  float: left;
+  width: auto;
+  height: var(--size-32);
+  line-height: var(--size-32);
+
+  &__content {
+    padding: 0rem var(--size-8);
+    box-sizing: border-box;
+    height: inherit;
+    line-height: inherit;
+    border-radius: var(--size-4);
+    background: var(--gradient-theme-900);
+    color: var(--color-light-900);
+  }
+}

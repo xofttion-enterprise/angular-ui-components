@@ -1,0 +1,41 @@
+<div
+  class="xft-slider__content"
+  [class.xft-slider__content--disabled]="!enabled"
+  [class.xft-slider__content--min]="isMinValue"
+  [class.xft-slider__content--max]="isMaxValue"
+>
+  <label class="xft-slider__label title2-semibold" *ngIf="label">
+    {{ label }}
+  </label>
+
+  <div class="xft-slider__component">
+    <xft-icon
+      class="xft-slider__icon--min"
+      [value]="minIcon"
+      *ngIf="minIcon"
+      (click)="onClickMinValue()"
+    >
+    </xft-icon>
+
+    <div class="xft-slider__track">
+      <div class="xft-slider__track__bar" (click)="onClickTrack($event)">
+        <div class="xft-slider__track__off"></div>
+        <div class="xft-slider__track__on"></div>
+      </div>
+
+      <div class="xft-slider__track__thumb"></div>
+    </div>
+
+    <xft-icon
+      class="xft-slider__icon--max"
+      [value]="maxIcon"
+      *ngIf="maxIcon"
+      (click)="onClickMaxValue()"
+    >
+    </xft-icon>
+  </div>
+
+  <label class="xft-slider__value">
+    {{ value }}
+  </label>
+</div>

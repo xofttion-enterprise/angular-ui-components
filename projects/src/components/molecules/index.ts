@@ -24,6 +24,8 @@ export * from './sidenav-menu/sidenav-menu.component.module';
 export * from './sidenav-menu/sidenav-menu.element';
 export * from './sidenav-profile/sidenav-profile.component';
 export * from './sidenav-profile/sidenav-profile.component.module';
+export * from './slider/slider.component';
+export * from './slider/slider.component.module';
 export * from './switch-label/switch-label.component';
 export * from './switch-label/switch-label.component.module';
 export * from './text-field/text-field.component';

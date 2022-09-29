@@ -1,0 +1,146 @@
+/*!
+ * Xofttion Slider Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 20/Mar/2018
+ * Updated: 29/Sep/2022
+*/
+
+.xft-slider {
+  position: relative;
+  width: 100%;
+  float: left;
+  user-select: none;
+
+  &__content {
+    position: relative;
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    padding: var(--size-4) var(--size-8);
+
+    &--min {
+      .xft-slider__icon--min {
+        color: var(--font-primary-900);
+      }
+
+      .xft-slider__track {
+        &__thumb {
+          background: var(--color-primary-100);
+        }
+      }
+    }
+
+    &--max {
+      .xft-slider__icon--max {
+        color: var(--font-primary-900);
+      }
+    }
+
+    &--disabled {
+      pointer-events: none;
+      opacity: 0.56;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    height: var(--size-16);
+    line-height: var(--size-16);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--font-primary-900);
+  }
+
+  &__component {
+    position: relative;
+    width: 100%;
+    float: left;
+    display: flex;
+  }
+
+  &__icon {
+    &--min {
+      color: var(--font-primary-700);
+      margin: auto var(--size-16) auto 0rem;
+    }
+
+    &--max {
+      color: var(--font-primary-700);
+      margin: auto 0rem auto var(--size-16);
+    }
+  }
+
+  &__track {
+    position: relative;
+    width: 100%;
+    float: left;
+    cursor: default;
+    height: var(--size-4);
+    padding: var(--size-8) 0rem;
+    margin: var(--size-8) 0rem;
+    background: transparent;
+
+    &__bar {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: var(--z-index-2);
+    }
+
+    &__off {
+      position: absolute;
+      width: 100%;
+      height: var(--size-4);
+      overflow: hidden;
+      z-index: var(--z-index-2);
+      background: var(--color-primary-100);
+    }
+
+    &__on {
+      position: absolute;
+      width: 0%;
+      height: var(--size-4);
+      overflow: hidden;
+      z-index: var(--z-index-4);
+      background: var(--gradient-theme-900);
+      transition: width 200ms 0ms var(--standard-curve);
+    }
+
+    &__thumb {
+      position: absolute;
+      top: 0rem;
+      left: 0%;
+      z-index: 2;
+      cursor: default;
+      width: var(--size-20);
+      height: var(--size-20);
+      border-radius: 50%;
+      background: var(--gradient-theme-900);
+      transform: translateX(-50%);
+      transition: left 320ms 0ms var(--standard-curve);
+    }
+  }
+
+  &__value {
+    position: relative;
+    display: block;
+    width: 100%;
+    float: left;
+    height: var(--size-16);
+    line-height: var(--size-16);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--font-primary-900);
+  }
+}

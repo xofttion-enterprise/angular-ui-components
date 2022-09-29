@@ -28,4 +28,12 @@ export class DatatableComponent implements OnInit {
   public ngOnInit(): void {
     this._componentDOM.addClass('xft-datatable');
   }
+
+  public get subtitle(): string {
+    return this.header?.subtitle
+      ? typeof this.header?.subtitle === 'function'
+        ? this.header?.subtitle()
+        : this.header?.subtitle
+      : '';
+  }
 }

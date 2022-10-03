@@ -1,6 +1,6 @@
 {
   "name": "@xofttion-enterprise/components",
-  "version": "13.1.16",
+  "version": "14.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,7 +16,7 @@
   "private": false,
   "dependencies": {
     "@angular/animations": "~14.2.4",
-    "@angular/cdk": "^13.3.2",
+    "@angular/cdk": "^14.2.3",
     "@angular/common": "~14.2.4",
     "@angular/compiler": "~14.2.4",
     "@angular/core": "~14.2.4",

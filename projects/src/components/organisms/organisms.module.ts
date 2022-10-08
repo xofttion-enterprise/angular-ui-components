@@ -5,6 +5,7 @@ import { DatatableComponentModule } from './datatable/datatable.component.module
 import { DatatableHeaderComponentModule } from './datatable/header/datatable-header.component.module';
 import { DateFieldComponentModule } from './date-field/date-field.component.module';
 import { DatePickerComponentModule } from './date-picker/date-picker.component.module';
+import { LottieComponentModule } from './lottie/lottie.component.module';
 import { ModalComponentModule } from './modal/modal.component.module';
 import { NotificationComponentModule } from './notification/notification.component.module';
 import { PageComponentModule } from './page/page.component.module';
@@ -21,6 +22,7 @@ const components = [
   DatatableHeaderComponentModule,
   DateFieldComponentModule,
   DatePickerComponentModule,
+  LottieComponentModule,
   ModalComponentModule,
   NotificationComponentModule,
   PageComponentModule,

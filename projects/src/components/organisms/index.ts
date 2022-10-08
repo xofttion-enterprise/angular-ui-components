@@ -13,6 +13,8 @@ export * from './date-field/date-field.component.module';
 export * from './date-picker/date-picker.component';
 export * from './date-picker/date-picker.component.module';
 export * from './list-field/list-field-element';
+export * from './lottie/lottie.component';
+export * from './lottie/lottie.component.module';
 export * from './modal/modal.component';
 export * from './modal/modal.component.service';
 export * from './modal/modal.component.module';

@@ -4,7 +4,10 @@
   "defaultProject": "xofttion-angular-ui-components",
   "newProjectRoot": "projects",
   "cli": {
-    "analytics": false
+    "analytics": false,
+    "warnings": {
+      "versionMismatch": false
+    }
   },
   "projects": {
     "xofttion-angular-ui-components": {
@@ -32,7 +35,9 @@
               }
             ],
             "styles": ["src/styles.scss"],
-            "scripts": []
+            "scripts": [
+              "node_modules/@lottiefiles/lottie-player/dist/lottie-player.js"
+            ]
           },
           "configurations": {
             "production": {

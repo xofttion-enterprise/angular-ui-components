@@ -21,9 +21,13 @@
 
     <div class="xft-app__content">
       <xft-page>
-        <xft-slider minIcon="refresh" maxIcon="attach"></xft-slider>
+        <xft-lottie [src]="srcLottie" [loop]="true" [speed]="1"> </xft-lottie>
 
-        <xft-section [active]="true">
+        <button (click)="onLottie()">Change lottie</button>
+
+        <xft-section [active]="false">
+          <xft-slider minIcon="refresh" maxIcon="attach"></xft-slider>
+
           <xft-datatable
             class="xft-datatable--overflow-hidden"
             [header]="header"
@@ -54,7 +58,9 @@
                   </xft-avatar>
                 </td>
                 <td class="xft-datatable__td col-sm-17-5 align-center">
-                  <xft-poster xftTheme="danger"><a>7312781873127818</a></xft-poster>
+                  <xft-poster xftTheme="danger"
+                    ><a>7312781873127818</a></xft-poster
+                  >
                 </td>
                 <td class="xft-datatable__td col-sm-35">
                   <a>Cristiano Ronaldo Aveiro</a>

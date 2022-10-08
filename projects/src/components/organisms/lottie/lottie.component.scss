@@ -1,0 +1,18 @@
+/*!
+ * Xofttion Lottie Component
+ * v1.0.0
+ * @license MIT
+ * Author: Xofttion Developers
+ * Created: 08/Oct/2018
+ * Updated: 08/Oct/2022
+*/
+
+.xft-lottie {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  lottie-player {
+    width: 100%;
+  }
+}

@@ -1,6 +1,6 @@
 {
   "name": "@xofttion-enterprise/components",
-  "version": "13.1.16",
+  "version": "13.1.17",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,7 +23,8 @@
     "@angular/forms": "~13.2.0",
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
-    "@xofttion-enterprise/utils": "^1.2.5",
+    "@lottiefiles/lottie-player": "^1.5.7",
+    "@xofttion-enterprise/utils": "^1.2.7",
     "async": "^3.2.3",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",

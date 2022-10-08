@@ -1,4 +1,9 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  OnInit,
+  ViewEncapsulation
+} from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { dateFactory } from '@xofttion-enterprise/utils';
 import {
@@ -19,7 +24,7 @@ import { persons, personsAdd } from './persons';
   styleUrls: ['./app.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   public inputControl = new FormControl('1065642202', [Validators.required]);
 
   public jobControl = new FormControl('Ingeniero de sistemas', [
@@ -45,6 +50,9 @@ export class AppComponent {
   public progress = false;
 
   public requestData = false;
+
+  public srcLottie =
+    'https://assets1.lottiefiles.com/datafiles/HN7OcWNnoqje6iXIiZdWzKxvLIbfeCGTmvXmEm1h/data.json';
 
   public menu: SidenavMenuElement[] = [
     {
@@ -95,6 +103,7 @@ export class AppComponent {
   };
 
   constructor(
+    private _ref: ElementRef,
     private modalService: ModalComponentService,
     private snackbarService: SnackbarComponentService,
     private popupService: PopupComponentService,
@@ -105,8 +114,14 @@ export class AppComponent {
     console.log(date.getDifferenceForHumans());
   }
 
+  public ngOnInit(): void {}
+
   public onSidenav(element: SidenavMenuElement): void {
     console.log(element);
+  }
+
+  public onLottie(): void {
+    this.srcLottie = 'assets/116822-transfer-files.json';
   }
 
   public onAction(): void {
